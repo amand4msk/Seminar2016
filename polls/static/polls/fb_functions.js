@@ -56,7 +56,8 @@ function procBatch(dat) { // handle this batch, request the next batch
 function procRow(dat)
 {
         
-   
+
+    
 	console.log(dat)
     $.post('/polls/like_category/', dat, function(response){
         if(response == 'success') { alert('Yay!');}
