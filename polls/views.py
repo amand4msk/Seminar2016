@@ -11,8 +11,8 @@ def index(request):
 
 
 def like_category(request):
-    likes = 0
-    p = Person(forname="Maria", surname="Schmidt")
-    p.save() 
+    #likes = 0
+    #p = Person(forname="Maria", surname="Schmidt")
+    #p.save() 
 
     return HttpResponse('success')
