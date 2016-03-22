@@ -37,14 +37,7 @@ function myFacebookLogin() {
         
 
 function getMueller() {   // calls the first batch of records
-    
-    $.ajaxSetup({
-    beforeSend: function(xhr, settings) {
-        if (!csrfSafeMethod(settings.type) && !this.crossDomain) {
-            xhr.setRequestHeader("X-CSRFToken", csrftoken);
-        }
-    }
-});
+x
 
 	   FB.api("/es.muellert.wieder/posts",{},function(response) { procBatch(response) } );
 }
@@ -62,6 +55,14 @@ function procBatch(dat) { // handle this batch, request the next batch
 
 function procRow(dat)
 {
+        
+    $.ajaxSetup({
+    beforeSend: function(xhr, settings) {
+        if (!csrfSafeMethod(settings.type) && !this.crossDomain) {
+            xhr.setRequestHeader("X-CSRFToken", csrftoken);
+        }
+    }
+});
 	console.log(dat)
     $.post('/polls/like_category/', dat, function(response){
         if(response == 'success') { alert('Yay!');}
