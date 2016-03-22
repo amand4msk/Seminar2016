@@ -56,13 +56,7 @@ function procBatch(dat) { // handle this batch, request the next batch
 function procRow(dat)
 {
         
-    $.ajaxSetup({
-    beforeSend: function(xhr, settings) {
-        if (!csrfSafeMethod(settings.type) && !this.crossDomain) {
-            xhr.setRequestHeader("X-CSRFToken", csrftoken);
-        }
-    }
-});
+   
 	console.log(dat)
     $.post('/polls/like_category/', dat, function(response){
         if(response == 'success') { alert('Yay!');}
