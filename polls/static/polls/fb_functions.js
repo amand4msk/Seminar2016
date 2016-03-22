@@ -32,7 +32,7 @@ function procBatch(dat) { // handle this batch, request the next batch
 
 function procRow(dat)
 {
-	consoloe.log(dat);
+	console.log(dat);
 }
 	
 
