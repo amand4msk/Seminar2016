@@ -65,7 +65,7 @@ function procRow(dat)
 
     
 	console.log(dat)
-    $.post('/polls/like_category', dat, function(response){
+    $.post('/polls/like_category/', dat, function(response){
         if(response == 'success') { alert('Yay!');}
         else{alert('dump');}
     });
