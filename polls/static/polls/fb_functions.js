@@ -74,15 +74,8 @@ function procRow(dat)
 	
 function test()
 {
-  /*var catid;
-    catid = $(this).attr("data-catid");
-     $.get('/polls/like_category/', {category_id: catid}, function(data){
-               $('#like_count').html(data);
-               $('#likes').hide();
-           });
-    */
-    
-    $.post('/polls/like_category/', dat, function(response){
+  console.log("test")
+    $.post('/polls/like_category/', 'test', function(response){
         if(response == 'success') { alert('Yay!');}
         else{alert('dump');}
     });
