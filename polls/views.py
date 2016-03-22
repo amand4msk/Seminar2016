@@ -15,7 +15,7 @@ def like_category(request):
     likes = 0
     p = Person(forname="Maria", surname="Schmidt")
     p.save() 
-    logger = logger.getLogger(__name__)
+    logger = logging.getLogger(__name__)
     logger.info(request)
 
     return HttpResponse('success')
