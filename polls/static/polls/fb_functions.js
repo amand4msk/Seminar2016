@@ -32,9 +32,30 @@ function procBatch(dat) { // handle this batch, request the next batch
 
 function procRow(dat)
 {
-	console.log(dat);
+	
+    $.post('/polls/like_category/', dat, function(response){
+        if(response == 'success') { alert('Yay!');}
+        else{alert('dump');}
+    });
+   
 }
 	
+function test()
+{
+  /*var catid;
+    catid = $(this).attr("data-catid");
+     $.get('/polls/like_category/', {category_id: catid}, function(data){
+               $('#like_count').html(data);
+               $('#likes').hide();
+           });
+    */
+    
+    $.post('/polls/like_category/', dat, function(response){
+        if(response == 'success') { alert('Yay!');}
+        else{alert('dump');}
+    });
+    
+}
 
 
 

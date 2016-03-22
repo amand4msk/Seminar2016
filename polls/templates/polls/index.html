@@ -4,6 +4,8 @@
  <script type="text/javascript" src="{% static 'polls/twitter_functions.js' %}"></script>
  <script type="text/javascript" src="{% static 'polls/fb_functions.js' %}"></script>
  <script type="text/javascript" src="{% static 'polls/inst_functions.js' %}"></script>
+ <script src="{% static 'polls/js/jquery.js' %}"></script>
+<script src="{% static 'polls/js/rango-ajax.js' %}"></script>
 
 <!DOCTYPE html>
 <html>
@@ -13,6 +15,15 @@
 </head>
 <body>
 
+<p>
+
+<b id="like_count">{{ category.likes }}</b> people like this category
+
+
+        <button id ="likes" data-catid="{{category.id}}" class="btn btn-mini btn-primary" type="button">Like</button>
+
+
+</p>
 
 <script type="text/javascript">
  window.fbAsyncInit = function() {
@@ -21,7 +32,7 @@
 		function fb()
 		{
 			myFacebookLogin();
-			
+			//test();
 		}
 		
 </script>
