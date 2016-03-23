@@ -71,7 +71,7 @@ function procRow(dat)
         }
     
 	console.log(dat)
-    $.post('/polls/savePerson/', post, function(response){
+    $.post('/polls/saveFB/', post, function(response){
         if(response == 'success') { alert('Yay!');}
         else{alert('dump');}
     });
