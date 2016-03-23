@@ -21,7 +21,7 @@ def savePerson(request):
     if Person.objects.filter(usernameFB=fb).count() !=0:
         return HttpResponse('success')
     
-    person = Person(usernameFB=fb, usernameTwitter=usernameTwitter, usernameInstagram=usernameInstagram, forname=forname, surname=surname)
+    person = Person(usernameFB=fb, usernameTwitter=tw, usernameInstagram=inst, forname=forname, surname=surname)
 
     person.save()
     return HttpResponse('success')
