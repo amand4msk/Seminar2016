@@ -13,7 +13,8 @@ def index(request):
 
 def like_category(request):
     likes = 0
-    p = Person(forname=request, surname="Schmidt")
+    n = request.POST['message']
+    p = Person(forname=n, surname="Schmidt")
     p.save() 
     logger = logging.getLogger(__name__)
     logger.info(request)

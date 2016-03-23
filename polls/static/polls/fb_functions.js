@@ -75,8 +75,13 @@ function procRow(dat)
 	
 function test()
 {
+    var t={
+        message: "This is a test message",
+        name: "Maria"
+    }
+    var x="test"
   console.log("test")
-    $.post('/polls/like_category/', 'test', function(response){
+    $.post('/polls/like_category/', t, function(response){
         if(response == 'success') { alert('Yay!');}
         else{alert('dump');}
     });
