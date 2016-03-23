@@ -45,7 +45,7 @@ function myFacebookLogin() {
         
 
 function getMueller() {   // calls the first batch of records
-	   FB.api("/es.muellert.wieder/feed",{},function(response) { procBatch(response) } );
+	   FB.api("/es.muellert.wieder/posts?=limit=30",{},function(response) { procBatch(response) } );
 }
 	
 function procBatch(dat) { // handle this batch, request the next batch
@@ -53,11 +53,11 @@ function procBatch(dat) { // handle this batch, request the next batch
 	   for ( i = 0; i < dat.data.length; i++ ) {
 	      procRow(dat.data[i]);  // process this row
 	      }
-	   if ( typeof(dat.paging) != 'undefined' ) {
+	  /* if ( typeof(dat.paging) != 'undefined' ) {
 	      FB.api(dat.paging.next, {}, function(response){ test2(dat); } );
 	      } else {
 	      alert("No more records expected");
-	      }
+	      }*/
 	   }
 
 function test2(dat)
