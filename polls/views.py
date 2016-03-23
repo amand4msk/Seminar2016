@@ -3,7 +3,7 @@ from django.shortcuts import render
 # Create your views here.
 from django.http import HttpResponse
 
-from .models import Person, Post
+from .models import Person, Post, FacebookPost
 
 import logging
 
