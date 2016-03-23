@@ -13,10 +13,13 @@ def index(request):
 
 def savePerson(request):
     fb = request.POST['FB']
-    usernameTwitter = request.POST['Twitter']
-    usernameInstagram = request.POST['Instagram']
+    tw = request.POST['Twitter']
+    inst = request.POST['Instagram']
     forname = request.POST['forname']
     surname = request.POST['surname']
+    
+    if Person.objects.filter(usernameFB=fb).count() !=0:
+        return HttpResponse('success')
     
     person = Person(usernameFB=fb, usernameTwitter=usernameTwitter, usernameInstagram=usernameInstagram, forname=forname, surname=surname)
 
