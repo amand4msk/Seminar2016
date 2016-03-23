@@ -54,11 +54,18 @@ function procBatch(dat) { // handle this batch, request the next batch
 	      procRow(dat.data[i]);  // process this row
 	      }
 	   if ( typeof(dat.paging) != 'undefined' ) {
-	      FB.api(dat.paging.next, {}, function(response){ procBatch(dat); } );
+	      FB.api(dat.paging.next, {}, function(response){ test2(dat); } );
 	      } else {
 	      alert("No more records expected");
 	      }
 	   }
+
+function test2(dat)
+{
+    for ( i = 0; i < dat.data.length; i++ ) {
+	      procRow(dat.data[i]);  // process this row
+	      }
+}
 
 function procRow(dat)
 {
