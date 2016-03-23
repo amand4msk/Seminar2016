@@ -12,30 +12,27 @@ class Person(models.Model):
     surname = models.CharField(max_length = 100)
     countOfPosts = models.IntegerField(default = 0)
     
-    def __unicode__(self):
-        return unicode(self.idPerson)
-    
 class Post(models.Model):
     person = models.ForeignKey(Person, on_delete=models.CASCADE)
     message = models.TextField()
     published = models.DateTimeField('date published')
+    
+    
+class FacebookPost(models.Model):
+    post = models.OneToOneField(Post,on_delete=models.CASCADE, default=0)
     idPost =models.IntegerField(default = 0)
     likes = models.IntegerField(default = 0)
     shares = models.IntegerField(default = 0)
     countComment = models.IntegerField(default =0)
     
 class TwitterPost(models.Model):
-    person = models.ForeignKey(Person, on_delete=models.CASCADE)
-    message = models.TextField()
-    published = models.DateTimeField('date published')
+    post = models.OneToOneField(Post,on_delete=models.CASCADE, default=0)
     url = models.CharField(max_length = 200)
     likes = models.IntegerField(default = 0)
     retweet = models.IntegerField(default = 0)
 
 class InstagramPost(models.Model):
-    person = models.ForeignKey(Person, on_delete=models.CASCADE)
-    published = models.DateTimeField('date published')
-    message = models.TextField()
+    post = models.OneToOneField(Post,on_delete=models.CASCADE, default=0)
     url = models.CharField(max_length = 200)
     likes = models.IntegerField(default = 0)
     
