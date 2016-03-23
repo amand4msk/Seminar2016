@@ -63,10 +63,15 @@ function procBatch(dat) { // handle this batch, request the next batch
 function procRow(dat)
 {
       
-
+        var post={
+            FB: 'es.muellert.wieder',
+            message: dat['message']
+            created_time: dat['created_time']
+            id: dat['id']
+        }
     
 	console.log(dat)
-    $.post('/polls/savePerson/', dat, function(response){
+    $.post('/polls/savePerson/', post, function(response){
         if(response == 'success') { alert('Yay!');}
         else{alert('dump');}
     });
@@ -75,6 +80,8 @@ function procRow(dat)
 	
 function test()
 {
+    
+    
     var person={
         FB: 'es.muellert.wieder',
         Twitter: 'empty',
@@ -83,7 +90,22 @@ function test()
         surname: 'Mueller',
     }
     
-    $.post('/polls/savePerson/', person, function(response){
+    var post={
+        message: 'test',
+        id: 11234,
+    }
+    
+    var data={
+        FB: 'es.muellert.wieder',
+        message: 'test', 
+    }
+    
+   /* $.post('/polls/savePerson/', person, function(response){
+        if(response == 'success') { alert('Yay!');}
+        else{alert('dump');}
+    });
+    */
+    $.post('/polls/saveFB/', data, function(response){
         if(response == 'success') { alert('Yay!');}
         else{alert('dump');}
     });
