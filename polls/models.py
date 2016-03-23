@@ -19,11 +19,25 @@ class Post(models.Model):
     person = models.ForeignKey(Person, on_delete=models.CASCADE)
     message = models.TextField()
     published = models.DateTimeField('date published')
-    socialNetwork = models.IntegerField(default=0)
-    url =models.CharField(max_length = 200)
+    idPost =models.IntegerField(default = 0)
     likes = models.IntegerField(default = 0)
     shares = models.IntegerField(default = 0)
     countComment = models.IntegerField(default =0)
+    
+class TwitterPost(models.Model):
+    person = models.ForeignKey(Person, on_delete=models.CASCADE)
+    message = models.TextField()
+    published = models.DateTimeField('date published')
+    url = models.CharField(max_length = 200)
+    likes = models.IntegerField(default = 0)
+    retweet = models.IntegerField(default = 0)
+
+class InstagramPost(models.Model):
+    person = models.ForeignKey(Person, on_delete=models.CASCADE)
+    published = models.DateTimeField('date published')
+    message = models.TextField()
+    url = models.CharField(max_length = 200)
+    likes = models.IntegerField(default = 0)
     
 class link(models.Model):
     posts = models.ManyToManyField(Post)

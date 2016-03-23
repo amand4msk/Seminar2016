@@ -17,6 +17,7 @@ def like_category(request):
     p = Person(forname="Thomas", surname="Mueller")
     m = Post(person=p, message=n)
     p.save() 
+    m.save()
     logger = logging.getLogger(__name__)
     logger.info(request)
 
