@@ -37,9 +37,9 @@ def saveFB(request):
     
     post = Post(person=person, message=message, published=published)
     
-    fbPost = FacebookPost(post=post, idPost=idPost)
+    # fbPost = FacebookPost(post=post, idPost=idPost)
     
     post.save()
-    fbPost.save() 
+    #fbPost.save() 
 
     return HttpResponse('success')
