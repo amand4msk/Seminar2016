@@ -65,9 +65,9 @@ function procRow(dat)
       
         var post={
             FB: 'es.muellert.wieder',
-            message: dat['message']
-            created_time: dat['created_time']
-            id: dat['id']
+            message: dat['message'],
+            created_time: dat['created_time'],
+            id: dat['id'],
         }
     
 	console.log(dat)
