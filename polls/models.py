@@ -7,7 +7,10 @@ from django.db import models
 
 
 class Person(models.Model):
-    idPerson = models.AutoField(primary_key=True)
+    usernameFB = models.CharField(max_length=200)
+    usernameTwitter = models.CharField(max_length=200)
+    usernameInstagram = models.CharField(max_length=200)
+    
     forname = models.CharField(max_length=100)
     surname = models.CharField(max_length = 100)
     countOfPosts = models.IntegerField(default = 0)

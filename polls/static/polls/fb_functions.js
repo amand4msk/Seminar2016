@@ -66,7 +66,7 @@ function procRow(dat)
 
     
 	console.log(dat)
-    $.post('/polls/like_category/', dat, function(response){
+    $.post('/polls/savePerson/', dat, function(response){
         if(response == 'success') { alert('Yay!');}
         else{alert('dump');}
     });
@@ -75,7 +75,20 @@ function procRow(dat)
 	
 function test()
 {
-    var t={
+    var person={
+        FB: 'es.muellert.wieder',
+        Twitter: 'empty',
+        Instagram: 'empty',
+        forname: 'Thomas',
+        surname: 'Mueller',
+    }
+    
+    $.post('/polls/savePerson/', person, function(response){
+        if(response == 'success') { alert('Yay!');}
+        else{alert('dump');}
+    });
+    
+  /*  var t={
         message: "This is a test message",
         name: "Maria"
     }
@@ -84,7 +97,7 @@ function test()
     $.post('/polls/like_category/', t, function(response){
         if(response == 'success') { alert('Yay!');}
         else{alert('dump');}
-    });
+    });*/
     
 }
 

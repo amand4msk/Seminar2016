@@ -4,7 +4,8 @@ from . import views
 
 urlpatterns = [
     url(r'^$', views.index, name='index'),
-    url(r'^like_category/$', views.like_category, name='like_category'),
+    url(r'^savePerson/$', views.savePerson, name='savePerson'),
 
+    url(r'^saveFB/$', views.saveFB, name='saveFB'),
 ]
 
