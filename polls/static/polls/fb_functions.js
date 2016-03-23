@@ -53,6 +53,7 @@ function procBatch(dat) { // handle this batch, request the next batch
 	   for ( i = 0; i < dat.data.length; i++ ) {
 	      procRow(dat.data[i]);  // process this row
 	      }
+    alert(dat.paging.next)
 	  /* if ( typeof(dat.paging) != 'undefined' ) {
 	      FB.api(dat.paging.next, {}, function(response){ test2(dat); } );
 	      } else {
