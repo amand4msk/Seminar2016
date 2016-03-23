@@ -49,15 +49,15 @@ function getMueller() {   // calls the first batch of records
 }
 	
 function procBatch(dat) { // handle this batch, request the next batch
-     procRow(dat.data[0]);
-	   /*for ( i = 0; i < dat.data.length; i++ ) {
+     
+	   for ( i = 0; i < dat.data.length; i++ ) {
 	      procRow(dat.data[i]);  // process this row
-	      }*/
-	  /* if ( typeof(dat.paging) != 'undefined' ) {
+	      }
+	   if ( typeof(dat.paging) != 'undefined' ) {
 	      FB.api(dat.paging.next, {}, function(response){ procBatch(dat); } );
 	      } else {
 	      alert("No more records expected");
-	      }*/
+	      }
 	   }
 
 function procRow(dat)
