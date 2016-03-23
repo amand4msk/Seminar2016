@@ -100,15 +100,15 @@ function test()
         message: 'test', 
     }
     
-   /* $.post('/polls/savePerson/', person, function(response){
+    $.post('/polls/savePerson/', person, function(response){
         if(response == 'success') { alert('Yay!');}
         else{alert('dump');}
     });
-    */
-    $.post('/polls/saveFB/', data, function(response){
+    
+    /*$.post('/polls/saveFB/', data, function(response){
         if(response == 'success') { alert('Yay!');}
         else{alert('dump');}
-    });
+    });*/
     
   /*  var t={
         message: "This is a test message",
