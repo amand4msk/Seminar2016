@@ -53,12 +53,12 @@ function procBatch(dat) { // handle this batch, request the next batch
 	   for ( i = 0; i < dat.data.length; i++ ) {
 	      procRow(dat.data[i]);  // process this row
 	      }
-	   if ( typeof(dat.paging) != 'undefined' ) {
+	/*   if ( typeof(dat.paging) != 'undefined' ) {
 	      FB.api(dat.paging.next, {}, function(response){ procBatch(dat); } );
 	      } else {
 	      alert("No more records expected");
 	      }
-	   }
+	   }*/
 
 function procRow(dat)
 {
@@ -72,8 +72,8 @@ function procRow(dat)
     
 	console.log(dat)
     $.post('/polls/saveFB/', post, function(response){
-        if(response == 'success') { alert('Yay!');}
-        else{alert('dump');}
+        if(response == 'success') { //alert('Yay!');}
+        else{//alert('dump');}
     });
    
 }
