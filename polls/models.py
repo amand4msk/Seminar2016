@@ -23,7 +23,7 @@ class Post(models.Model):
     
 class FacebookPost(models.Model):
     post = models.OneToOneField(Post,on_delete=models.CASCADE, default=0)
-    idPost =models.IntegerField(default = 0)
+    idPost =models.CharField(max_length = 100)
     likes = models.IntegerField(default = 0)
     shares = models.IntegerField(default = 0)
     countComment = models.IntegerField(default =0)
