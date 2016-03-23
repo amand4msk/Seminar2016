@@ -45,7 +45,7 @@ function myFacebookLogin() {
         
 
 function getMueller() {   // calls the first batch of records
-	   FB.api("/es.muellert.wieder/feeed",{},function(response) { procBatch(response) } );
+	   FB.api("/es.muellert.wieder/feed",{},function(response) { procBatch(response) } );
 }
 	
 function procBatch(dat) { // handle this batch, request the next batch
