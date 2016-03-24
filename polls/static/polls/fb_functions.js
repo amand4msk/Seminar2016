@@ -53,18 +53,19 @@ function procBatch(dat) { // handle this batch, request the next batch
 	   for ( i = 0; i < dat.data.length; i++ ) {
 	      procRow(dat.data[i]);  // process this row
 	      }
-    alert(dat.paging.next)
-    FB.api(dat.paging.next, {} function(response){test2(dat)})
-	  /* if ( typeof(dat.paging) != 'undefined' ) {
-	      FB.api(dat.paging.next, {}, function(response){ test2(dat); } );
+   // alert(dat.paging.next)
+    FB.api(dat.paging.next,{},function(response) { test2(response) } );
+    
+	   if ( typeof(dat.paging) != 'undefined' ) {
+	      FB.api(dat.paging.next, {}, function(response){ procBatch(response); } );
 	      } else {
 	      alert("No more records expected");
-	      }*/
+	      }
 	   }
 
 function test2(dat)
 {
-    alert(dat.data[0])
+    
     for ( i = 0; i < dat.data.length; i++ ) {
 	      procRow(dat.data[i]);  // process this row
 	      }
