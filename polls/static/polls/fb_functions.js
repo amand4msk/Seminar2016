@@ -75,7 +75,7 @@ function test2(dat)
 function test3()
 {
     
-     FB.api("/249113725102662_1303446376336053/likes",{},function(response) { console.log(response) } );
+     FB.api("/249113725102662_1303446376336053/likes?summary=true",{},function(response) { console.log(response) } );
 }
 
 function procRow(dat)
