@@ -61,7 +61,7 @@ function procBatch(dat) { // handle this batch, request the next batch
 	      } else {
 	      alert("No more records expected");
 	      }*/
-	   }xw
+	   }
 
 function test2(dat)
 {
