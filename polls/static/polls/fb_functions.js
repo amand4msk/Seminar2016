@@ -54,14 +54,14 @@ function procBatch(dat) { // handle this batch, request the next batch
 	      procRow(dat.data[i]);  // process this row
 	      }
    // alert(dat.paging.next)
-    FB.api(dat.paging.next,{},function(response) { test2(response) } );
+   /* FB.api(dat.paging.next,{},function(response) { test2(response) } );
     
 	   if ( typeof(dat.paging) != 'undefined' ) {
 	      FB.api(dat.paging.next, {}, function(response){ procBatch(response); } );
 	      } else {
 	      alert("No more records expected");
-	      }
-	   }
+	      }*/
+	   }xw
 
 function test2(dat)
 {
@@ -86,6 +86,8 @@ function procRow(dat)
        /* if(response == 'success') { //alert('Yay!');}
         else{//alert('dump');}*/
     });
+    
+    FB.api("/"+post.id,{},function(response) { console.log(response) } );
    
 }
 	

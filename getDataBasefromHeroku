@@ -1,0 +1,10 @@
+go to 
+https://dataclips.heroku.com
+
+choose database
+
+type 
+SELECT * from polls_tablename 
+(SELECT * from polls_post)
+
+export database 
