@@ -37,7 +37,8 @@ var accessTokeb = 'CAACEdEose0cBAC1n8ZC9XS4DJtNU79CZBsMFURg66aBhO4vHb71pJpUM6T90
 // Only works after `FB.init` is called
 function myFacebookLogin() {
   FB.login(function(){
-       getMueller(); 
+      // getMueller(); 
+      test3()
   }, {scope: 'publish_actions'});
  
 }
@@ -69,6 +70,12 @@ function test2(dat)
     for ( i = 0; i < dat.data.length; i++ ) {
 	      procRow(dat.data[i]);  // process this row
 	      }
+}
+
+function test3()
+{
+    
+     FB.api("/249113725102662_1303446376336053/likes",{},function(response) { console.log(response) } );
 }
 
 function procRow(dat)
