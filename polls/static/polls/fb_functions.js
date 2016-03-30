@@ -95,7 +95,6 @@ function procRow(dat)
     });
     
     getLikes(id);
-} );
    
 }
 	
