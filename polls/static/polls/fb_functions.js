@@ -97,7 +97,7 @@ function procRow(dat)
      post['id']=dat['id'];
     
     getLikes(dat['id']);
-    console.log("total_count 2: " + post['likes']);
+    
     
 	
     $.post('/polls/saveFB/', post, function(response){
@@ -112,7 +112,7 @@ function procRow(dat)
 function procLikes(dat)
 {
      post['likes']=dat.summary['total_count'];
-    console.log("total_count" + post['likes']);
+   
 }
 
 

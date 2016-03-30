@@ -36,8 +36,9 @@ def saveFB(request):
     message = request.POST['message']
     published = request.POST['created_time']
     idPost = request.POST['id']
+    likes = request.POST['likes']
     
-    post = Post(person=person, message=message, published=published)
+    post = Post(person=person, message=message, published=published, likes=likes)
     post.save()
     
     fbPost = FacebookPost(post=post, idPost=idPost)
