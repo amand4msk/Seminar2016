@@ -82,7 +82,7 @@ function test2(dat)
 
 function getLikes(postId)
 {
-    console.log(post['message']);
+    console.log("ID: "+ post['id']);
     FB.api("/"+ postId + "/likes?summary=true",{},function(response) { 
          post['likes']=response.summary['total_count'];
       
@@ -99,7 +99,7 @@ function procRow(dat)
     getLikes(dat['id']);
     console.log("total_count 2: " + post['likes']);
     
-	console.log("message: " + post['message']); 
+	
     $.post('/polls/saveFB/', post, function(response){
        /* if(response == 'success') { //alert('Yay!');}
         else{//alert('dump');}*/
