@@ -37,8 +37,8 @@ var accessTokeb = 'CAACEdEose0cBAC1n8ZC9XS4DJtNU79CZBsMFURg66aBhO4vHb71pJpUM6T90
 // Only works after `FB.init` is called
 function myFacebookLogin() {
   FB.login(function(){
-      // getMueller(); 
-      test3()
+      getMueller(); 
+      
   }, {scope: 'publish_actions'});
  
 }
@@ -70,12 +70,12 @@ function test2(dat)
     for ( i = 0; i < dat.data.length; i++ ) {
 	      procRow(dat.data[i]);  // process this row
 	      }
-}
+}q
 
-function test3()
+function getLikes(id)
 {
     
-     FB.api("/249113725102662_1303446376336053/likes?summary=true",{},function(response) { console.log(response.summary['total_count']) } );
+     FB.api("/"+ id+ "/likes?summary=true",{},function(response) { console.log(response.summary['total_count']) } );
 }
 
 function procRow(dat)
@@ -94,7 +94,8 @@ function procRow(dat)
         else{//alert('dump');}*/
     });
     
-    FB.api("/"+post.id,{},function(response) { console.log(response) } );
+    getLikes(id);
+} );
    
 }
 	

@@ -20,7 +20,7 @@ def savePerson(request):
     surname = request.POST['surname']
     
     if Person.objects.filter(usernameFB=fb).count() !=0:
-        return HttpResponse('success')
+        Person.objects.get(usernameFB=fb).delete()
     
     person = Person(usernameFB=fb, usernameTwitter=tw, usernameInstagram=inst, forname=forname, surname=surname)
 
@@ -31,6 +31,7 @@ def saveFB(request):
     usernameFB = request.POST['FB']
     person = Person.objects.get(usernameFB=usernameFB)
     countOfPosts = person.countOfPosts +1 
+    person.save() 
     
     message = request.POST['message']
     published = request.POST['created_time']
