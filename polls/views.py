@@ -27,7 +27,7 @@ def savePerson(request):
     person.save()
     return HttpResponse('success')
     
-def saveFB(request):
+def savePost(request):
     usernameFB = request.POST['FB']
     person = Person.objects.get(usernameFB=usernameFB)
     countOfPosts = person.countOfPosts +1 
@@ -36,12 +36,15 @@ def saveFB(request):
     message = request.POST['message']
     published = request.POST['created_time']
     idPost = request.POST['id']
-   # likes = request.POST['likes']
+   
     
     post = Post(person=person, message=message, published=published, likes=8)
     post.save()
     
-    fbPost = FacebookPost(post=post, idPost=idPost)
+def saveFB(request):
+    idPost = request.POST['id']
+    likes = request.POST['likes']
+    fbPost = FacebookPost(post=post, idPost=idPost, likes=likes)
     
     
     fbPost.save() 

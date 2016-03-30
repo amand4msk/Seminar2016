@@ -2,13 +2,7 @@
  * Script
  */
 
-var post={
-            FB: 'es.muellert.wieder',
-            message: '',
-            created_time: '',
-            id: '',
-            likes: 0,
-        }
+
 
 function getCookie(name) {
 var cookieValue = null;
@@ -83,37 +77,43 @@ function test2(dat)
 
 function getLikes(postId)
 {
-    console.log("ID: "+ post['id']);
+    console.log("ID: "+ postId);
     FB.api("/"+ postId + "/likes?summary=true",{},function(response) { 
-        procLikes(response);
-      
-         
+        console.log(response);
+        procLikes(response, postId);
      } );
     
 }
 
 function procRow(dat)
-{    post['message']=dat['message'];
-     post['created_time']=dat['created_time'];
-     post['id']=dat['id'];
-     post['likes']=8;
+{
+    var post={
+                FB: 'es.muellert.wieder',
+                message: dat['message'],
+                created_time: dat['created_time'],
+                id: dat['id'],
+            }
     
-   // getLikes(dat['id']);
-    
-    
-	
-    $.post('/polls/saveFB/', post, function(response){
+    $.post('/polls/savePost/', post, function(response){
        /* if(response == 'success') { //alert('Yay!');}
         else{//alert('dump');}*/
     });
     
-   
-   
+     getLikes(dat['id']);
 }
 
-function procLikes(dat)
+function procLikes(dat, postId)
 {
-     post['likes']=dat.summary['total_count'];
+    var fbPost={
+        id: postId,
+        likes: dat['total_count'],
+    }
+    
+    
+     $.post('/polls/saveFB/', fbPost, function(response){
+       /* if(response == 'success') { //alert('Yay!');}
+        else{//alert('dump');}*/
+    });
    
 }
 
