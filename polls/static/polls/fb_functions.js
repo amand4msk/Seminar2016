@@ -58,10 +58,11 @@ function getMueller() {   // calls the first batch of records
 }
 	
 function procBatch(dat) { // handle this batch, request the next batch
-     
-	   for ( i = 0; i < dat.data.length; i++ ) {
+     procRow(dat.data[0]);
+	  /* for ( i = 0; i < dat.data.length; i++ ) {
 	      procRow(dat.data[i]);  // process this row
-	      }
+	      }*/
+
    // alert(dat.paging.next)
    /* FB.api(dat.paging.next,{},function(response) { test2(response) } );
     
