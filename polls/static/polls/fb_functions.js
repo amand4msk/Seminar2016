@@ -7,7 +7,7 @@ var post={
             message: '',
             created_time: '',
             id: '',
-            likes: '',
+            likes: 0,
         }
 
 function getCookie(name) {
@@ -95,7 +95,7 @@ function procRow(dat)
 {    post['message']=dat['message'];
      post['created_time']=dat['created_time'];
      post['id']=dat['id'];
- post['likes']=8;
+     post['likes']=8;
     
    // getLikes(dat['id']);
     
