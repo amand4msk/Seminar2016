@@ -85,8 +85,8 @@ function getLikes(postId)
 function procRow(dat)
 {
       
-     var total_count = getLikes(dat['id']);
-    console.log(total_count);
+    var total_count = getLikes(dat['id']);
+    console.log("total_count 2: " + total_count);
     
         var post={
             FB: 'es.muellert.wieder',
