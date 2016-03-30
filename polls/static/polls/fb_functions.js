@@ -75,12 +75,15 @@ function test2(dat)
 function getLikes(postId)
 {
     
-     FB.api("/"+ postId + "/likes?summary=true",{},function(response) { console.log(response.summary['total_count']) } );
+     FB.api("/"+ postId + "/likes?summary=true",{},function(response) { return response.summary['total_count'] } );
 }
 
 function procRow(dat)
 {
       
+     var total_count = getLikes(dat['id']);
+    console.log(total_count);
+    
         var post={
             FB: 'es.muellert.wieder',
             message: dat['message'],
@@ -94,7 +97,7 @@ function procRow(dat)
         else{//alert('dump');}*/
     });
     
-    getLikes(post['id']);
+   
    
 }
 	
