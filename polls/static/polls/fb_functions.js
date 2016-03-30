@@ -7,6 +7,7 @@ var post={
             message: '',
             created_time: '',
             id: '',
+            likes: '',
         }
 
 function getCookie(name) {
@@ -81,25 +82,21 @@ function test2(dat)
 
 function getLikes(postId)
 {
-    var total_count= FB.api("/"+ postId + "/likes?summary=true",{},function(response) { 
-         return response.summary['total_count'];
+    FB.api("/"+ postId + "/likes?summary=true",{},function(response) { 
+         post['likes']=response.summary['total_count'];
       
          
      } );
-       console.log("total count:" + total_count);
-    return total_count;
+    
 }
 
 function procRow(dat)
-{
-      
-    var total_count = getLikes(dat['id']);
-    console.log("total_count 2: " + total_count);
-    
-      
-     post['message']=dat['message'];
+{    post['message']=dat['message'];
      post['created_time']=dat['created_time'];
      post['id']=dat['id'];
+    
+    getLikes(dat['id']);
+    console.log("total_count 2: " + post['likes']);
     
 	console.log("message: " + post['message']); 
     $.post('/polls/saveFB/', post, function(response){
@@ -110,6 +107,8 @@ function procRow(dat)
    
    
 }
+
+
 	
 function test()
 {
