@@ -72,10 +72,10 @@ function test2(dat)
 	      }
 }
 
-function getLikes(id)
+function getLikes(postId)
 {
     
-     FB.api("/"+ id+ "/likes?summary=true",{},function(response) { console.log(response.summary['total_count']) } );
+     FB.api("/"+ postId + "/likes?summary=true",{},function(response) { console.log(response.summary['total_count']) } );
 }
 
 function procRow(dat)
@@ -94,7 +94,7 @@ function procRow(dat)
         else{//alert('dump');}*/
     });
     
-    getLikes(id);
+    getLikes(post['id']);
    
 }
 	
