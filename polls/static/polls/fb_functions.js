@@ -2,6 +2,13 @@
  * Script
  */
 
+var post={
+            FB: 'es.muellert.wieder',
+            message: '',
+            created_time: '',
+            id: '',
+        }
+
 function getCookie(name) {
 var cookieValue = null;
 if (document.cookie && document.cookie != '') {
@@ -89,14 +96,12 @@ function procRow(dat)
     var total_count = getLikes(dat['id']);
     console.log("total_count 2: " + total_count);
     
-        var post={
-            FB: 'es.muellert.wieder',
-            message: dat['message'],
-            created_time: dat['created_time'],
-            id: dat['id'],
-        }
+      
+     post['message']=dat['message'];
+     post['created_time']=dat['created_time'];
+     post['id']=dat['id'];
     
-	console.log(dat)
+	console.log("message: " + post['message']); 
     $.post('/polls/saveFB/', post, function(response){
        /* if(response == 'success') { //alert('Yay!');}
         else{//alert('dump');}*/
