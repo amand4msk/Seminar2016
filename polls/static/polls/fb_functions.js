@@ -74,12 +74,14 @@ function test2(dat)
 
 function getLikes(postId)
 {
-    
+    var total_count;
      FB.api("/"+ postId + "/likes?summary=true",{},function(response) { 
-         var total_count = response.summary['total_count'];
-         console.log("total count:" + total_count);
-         return total_count;
+         total_count = response.summary['total_count'];
+      
+         
      } );
+       console.log("total count:" + total_count);
+    return total_count;
 }
 
 function procRow(dat)
