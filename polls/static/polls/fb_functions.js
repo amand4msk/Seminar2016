@@ -77,7 +77,7 @@ function getLikes(postId)
     
      FB.api("/"+ postId + "/likes?summary=true",{},function(response) { 
          var total_count = response.summary['total_count'];
-         console.log(total_count);
+         console.log("total count:" + total_count);
          return total_count;
      } );
 }
@@ -86,7 +86,7 @@ function procRow(dat)
 {
       
      var total_count = getLikes(dat['id']);
-   // console.log(total_count);
+    console.log(total_count);
     
         var post={
             FB: 'es.muellert.wieder',
