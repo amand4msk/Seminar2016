@@ -95,8 +95,9 @@ function procRow(dat)
 {    post['message']=dat['message'];
      post['created_time']=dat['created_time'];
      post['id']=dat['id'];
+ post['likes']=8;
     
-    getLikes(dat['id']);
+   // getLikes(dat['id']);
     
     
 	
@@ -132,6 +133,7 @@ function test()
     var post={
         message: 'test',
         id: 11234,
+        
     }
     
     var data={
