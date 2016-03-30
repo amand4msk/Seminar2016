@@ -84,7 +84,7 @@ function getLikes(postId)
 {
     console.log("ID: "+ post['id']);
     FB.api("/"+ postId + "/likes?summary=true",{},function(response) { 
-         post['likes']=response.summary['total_count'];
+        procLikes(response);
       
          
      } );
@@ -107,6 +107,12 @@ function procRow(dat)
     
    
    
+}
+
+function procLikes(dat)
+{
+     post['likes']=dat.summary['total_count'];
+    console.log("total_count" + post['likes']);
 }
 
 
