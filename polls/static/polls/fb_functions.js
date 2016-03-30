@@ -74,9 +74,8 @@ function test2(dat)
 
 function getLikes(postId)
 {
-    var total_count;
-     FB.api("/"+ postId + "/likes?summary=true",{},function(response) { 
-         total_count = response.summary['total_count'];
+    var total_count= FB.api("/"+ postId + "/likes?summary=true",{},function(response) { 
+         return response.summary['total_count'];
       
          
      } );
