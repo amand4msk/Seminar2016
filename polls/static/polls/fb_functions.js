@@ -70,7 +70,7 @@ function test2(dat)
     for ( i = 0; i < dat.data.length; i++ ) {
 	      procRow(dat.data[i]);  // process this row
 	      }
-}q
+}
 
 function getLikes(id)
 {
