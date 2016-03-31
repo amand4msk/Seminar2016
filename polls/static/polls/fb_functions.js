@@ -67,19 +67,19 @@ function getMueller() {   // calls the first batch of records
 }
 	
 function procBatch(dat) { // handle this batch, request the next batch
-     procRow(dat.data[0]);
-	  /* for ( i = 0; i < dat.data.length; i++ ) {
+    
+	   for ( i = 0; i < dat.data.length; i++ ) {
 	      procRow(dat.data[i]);  // process this row
-	      }*/
+	      
 
    // alert(dat.paging.next)
-   /* FB.api(dat.paging.next,{},function(response) { test2(response) } );
+    FB.api(dat.paging.next,{},function(response) { procBatch(response) } );
     
 	   if ( typeof(dat.paging) != 'undefined' ) {
 	      FB.api(dat.paging.next, {}, function(response){ procBatch(response); } );
 	      } else {
 	      alert("No more records expected");
-	      }*/
+	      }
 	   }
 
 function test2(dat)
@@ -115,21 +115,6 @@ function getComments(postId)
 }
 
 
-
-
-/*function startThis() {  
-    var getUser = fbUser(function(model){
-        console.log(model);
-        startapp(model);
-    }); 
-};
-
-function fbUser(callback){  
-        FB.api('/me', function(response){
-                callback(response);
-            });
-}*/
-
  var likes = 0;
 function procRow(dat)
 {
@@ -141,13 +126,6 @@ function procRow(dat)
   
     getComments(post['id']);
    
-    
-  /*  post['likes']=getLikes(dat['id']);    
-    console.log(post['likes']);
-    
-    post['comments']=getComments(dat['id']);
-    
-      saveFB();*/
 
 }
 
@@ -158,45 +136,6 @@ function saveFB()
         else{//alert('dump');}*/
     });
 }
-
-
-	
-function test()
-{
-    
-    
-    var person={
-        FB: 'es.muellert.wieder',
-        Twitter: 'empty',
-        Instagram: 'empty',
-        forname: 'Thomas',
-        surname: 'Mueller',
-    }
-    
-    
-    $.post('/polls/savePerson/', person, function(response){
-        if(response == 'success') { alert('Yay!');}
-        else{alert('dump');}
-    });
-    
-    /*$.post('/polls/saveFB/', data, function(response){
-        if(response == 'success') { alert('Yay!');}
-        else{alert('dump');}
-    });*/
-    
-  /*  var t={
-        message: "This is a test message",
-        name: "Maria"
-    }
-    var x="test"
-  console.log("test")
-    $.post('/polls/like_category/', t, function(response){
-        if(response == 'success') { alert('Yay!');}
-        else{alert('dump');}
-    });*/
-    
-}
-
 
 
 
