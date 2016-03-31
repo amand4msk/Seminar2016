@@ -131,8 +131,9 @@ function procRow(dat)
     post['created_time']= dat['created_time'];
     post['id']=dat['id']; 
     
-   var likes = getComments(function(model){
-       console.log(model); 
+   var likes = 0;
+    getComments(function(model){
+       likes = model; 
    }); 
     console.log("likes: " + likes); 
     
