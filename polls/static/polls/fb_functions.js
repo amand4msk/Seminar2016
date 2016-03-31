@@ -134,8 +134,9 @@ function procRow(dat)
   
     getComments(function(model){
        likes = model; 
+       console.log("likes: " + likes); 
    }); 
-    console.log("likes: " + likes); 
+   
     
   /*  post['likes']=getLikes(dat['id']);    
     console.log(post['likes']);
