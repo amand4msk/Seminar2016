@@ -109,10 +109,10 @@ function getComments(postId)
 
 function getShares(postId)
 {
-    FB.api("/"+ postId + "/sharedposts?summary=true",{},function(response) { 
+    FB.api("/"+ postId + "/sharedposts",{},function(response) { 
        
-        console.log("shares: " + response.summary['total_count']);
-        post['shares']=response.summary['total_count'];
+        console.log("shares: " + response);
+        //post['shares']=response.summary['total_count'];
 
      } );
 }
