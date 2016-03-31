@@ -109,7 +109,7 @@ function getComments(postId)
 
 function getShares(postId)
 {
-    FB.api("/"+ postId + "/sharedposts?summary=true",{},function(response) { 
+    FB.api("/"+ postId + "/sharedposts",{},function(response) { 
        
         console.log("shares: " + response);
         //post['shares']=response.summary['total_count'];
@@ -123,6 +123,8 @@ function procRow(dat)
     post['message']= dat['message'];
     post['created_time']= dat['created_time'];
     post['id']=dat['id']; 
+    
+    console.log("shares: " + dat['shares']);
               
     getLikes(dat['id']);    
     getComments(dat['id']);
