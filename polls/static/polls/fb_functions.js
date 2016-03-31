@@ -101,7 +101,7 @@ function getLikes(postId)
 function getComments(postId)
 {
     FB.api("/"+ postId + "/comments?summary=true",{},function(response) { 
-        console.log(response.summary['total_count']);
+        console.log("commentS: "+ response.summary['total_count']);
         post['comments']=response.summary['total_count'];
 
      } );
@@ -110,7 +110,8 @@ function getComments(postId)
 function getShares(postId)
 {
     FB.api("/"+ postId + "/sharedposts?summary=true",{},function(response) { 
-        console.log(response.summary['total_count']);
+        console.log(response); 
+        console.log("shares: " + response.summary['total_count']);
         post['shares']=response.summary['total_count'];
 
      } );
