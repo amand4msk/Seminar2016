@@ -41,6 +41,11 @@ def savePost(request):
     published = request.POST['created_time']
     idPost = request.POST['id']
     
+    print person
+    print message
+    print published
+    print idPost
+    
     post = Post(person=person,idPost=idPost, message=message, published=published)
     post.save()
 
