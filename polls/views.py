@@ -42,7 +42,7 @@ def saveFB(request):
     post.save()
     
     fbPost = FacebookPost(post=post, idPost=idPost, likes=likes)
-    
+    #countComment
     
     fbPost.save() 
 

@@ -9,6 +9,8 @@ var post={
                 created_time: '',
                 id: '',
                 likes: 0,
+                comments: 0,
+                shares: 0,
             }
 
 
@@ -91,9 +93,27 @@ function getLikes(postId)
         console.log(response.summary['total_count']);
         post['likes']=response.summary['total_count'];
         console.log(post['likes']);
-        saveFB(); 
+       // saveFB(); 
      } );
     
+}
+
+function getComments(postId)
+{
+    FB.api("/"+ postId + "/comments?summary=true",{},function(response) { 
+        console.log(response.summary['total_count']);
+        post['comments']=response.summary['total_count'];
+
+     } );
+}
+
+function getShares(postId)
+{
+    FB.api("/"+ postId + "/sharedposts?summary=true",{},function(response) { 
+        console.log(response.summary['total_count']);
+        post['shares']=response.summary['total_count'];
+
+     } );
 }
 
 function procRow(dat)
