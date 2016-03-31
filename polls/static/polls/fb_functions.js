@@ -66,8 +66,7 @@ function myFacebookLogin() {
 
 function getMueller() {   // calls the first batch of records
 	   FB.api("/es.muellert.wieder/posts",{},function(response) 
-              {     console.log(response);
-                    procBatch(response);
+              {procBatch(response);
                
                                                                 } );
 }
@@ -79,7 +78,7 @@ function procBatch(dat) { // handle this batch, request the next batch
 	      }
 
         
-	   if ( typeof(dat.paging) != 'undefined' && x < 7 ) {
+	   if ( typeof(dat.paging) != 'undefined' && x < 4 ) {
            x = x+ 1,
 	      FB.api(dat.paging.next, {}, function(response){ procBatch(response); } );
 	      } else {
@@ -93,6 +92,7 @@ function done()
     alert("done");
     alert(x); 
 }
+
 
 
 function getLikes(callback)
@@ -117,6 +117,21 @@ function getComments(callback)
 }
 
 
+
+
+/*function startThis() {  
+    var getUser = fbUser(function(model){
+        console.log(model);
+        startapp(model);
+    }); 
+};
+
+function fbUser(callback){  
+        FB.api('/me', function(response){
+                callback(response);
+            });
+}*/
+
  var likes = 0;
 function procRow(dat)
 {
@@ -124,12 +139,37 @@ function procRow(dat)
     post['message']= dat['message'];
     post['created_time']= dat['created_time'];
     post['id']=dat['id']; 
-  
-
-  $.post('/polls/savePost/', post, function(response){
+    
+      $.post('/polls/savePost/', post, function(response){
        /* if(response == 'success') { //alert('Yay!');}
         else{//alert('dump');}*/
     });
+    
+   var likesValue  = 0;
+    var commentValue = 0;
+    
+    var likes = getLikes(function(model){
+       console.log(model); 
+        post['likes']=model; 
+        likesValue = 1;
+        if(commentValue == 1)
+            {
+                saveFB();
+            }
+    });
+    
+    var comments = getComments(function(model){
+       console.log(model); 
+        post['comments']=model; 
+        commentValue = 1;
+        if(likesValue == 1)
+            {
+                saveFB(); 
+            }
+    });
+    
+
+
 }
 
 function saveFB()
