@@ -45,6 +45,8 @@ def savePost(request):
     
     post = Post(person=person,idPost=idPost, message=message, published=published)
     post.save()
+     return HttpResponse('success')
+
 
 def saveFB(request):
     idPost = request.POST['id']
