@@ -97,7 +97,7 @@ function getLikes(postId)
 
 function procRow(dat)
 {
-    
+    test();
     post['message']= dat['message'];
     post['created_time']= dat['created_time'];
     post['id']=dat['id']; 
@@ -110,21 +110,6 @@ function procRow(dat)
     });
     
     
-}
-
-function procLikes(dat, postId)
-{
-    var fbPost={
-        id: postId,
-        likes: dat.summary['total_count'],
-    }
-    
-    
-     $.post('/polls/saveFB/', fbPost, function(response){
-       /* if(response == 'success') { //alert('Yay!');}
-        else{//alert('dump');}*/
-    });
-   
 }
 
 
@@ -141,16 +126,6 @@ function test()
         surname: 'Mueller',
     }
     
-    var post={
-        message: 'test',
-        id: 11234,
-        
-    }
-    
-    var data={
-        FB: 'es.muellert.wieder',
-        message: 'test', 
-    }
     
     $.post('/polls/savePerson/', person, function(response){
         if(response == 'success') { alert('Yay!');}
