@@ -98,8 +98,8 @@ function getLikes(callback)
     console.log("ID: "+ post['id']);
     FB.api("/"+ post['id'] + "/likes?summary=true",{},function(response) { 
        
-        post['likes'] = response.summary['total_count'];
-        
+        //post['likes'] = response.summary['total_count'];
+        callback(response.summary['total_count'])
       
      } );
     
@@ -108,7 +108,9 @@ function getLikes(callback)
 function getComments(callback)
 {
     FB.api("/"+ post['id'] + "/comments?summary=true",{},function(response) { 
-          post['comments'] = response.summary['total_count'];
+         // post['comments'] = response.summary['total_count'];
+        
+         callback(response.summary['total_count'])
      } );
 }
 
