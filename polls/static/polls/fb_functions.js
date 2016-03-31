@@ -95,7 +95,7 @@ function test2(dat)
 
 function getLikes(callback)
 {
-    console.log("ID: "+ postId);
+    console.log("ID: "+ post['id']);
     FB.api("/"+ post['id'] + "/likes?summary=true",{},function(response) { 
        
         post['likes'] = response.summary['total_count'];
