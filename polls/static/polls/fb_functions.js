@@ -111,7 +111,7 @@ function getShares(postId)
 {
     FB.api("/"+ postId + "/sharedposts",{},function(response) { 
        
-        console.log(response['shares']);
+        console.log(response);
         //post['shares']=response.summary['total_count'];
 
      } );
