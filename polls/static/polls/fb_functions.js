@@ -156,7 +156,7 @@ function procRow(dat)
         likesValue = 1;
         if(commentValue == 1)
             {
-                saveFB();
+               // saveFB();
             }
     });
     
@@ -166,7 +166,7 @@ function procRow(dat)
         commentValue = 1;
         if(likesValue == 1)
             {
-                saveFB(); 
+             //   saveFB(); 
             }
     });
     
