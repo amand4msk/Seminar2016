@@ -91,7 +91,7 @@ function getLikes(postId)
     console.log("ID: "+ postId);
     FB.api("/"+ postId + "/likes?summary=true",{},function(response) { 
        
-        post['likes'] = response.summary['total_count']);
+        post['likes'] = response.summary['total_count'];
         
         saveFB(); 
      } );
