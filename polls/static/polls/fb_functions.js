@@ -67,21 +67,21 @@ function getMueller() {   // calls the first batch of records
 }
 	
 function procBatch(dat) { // handle this batch, request the next batch
-    
-	   for ( i = 0; i < dat.data.length; i++ ) {
+     procRow(dat.data[0]);
+	  /* for ( i = 0; i < dat.data.length; i++ ) {
 	      procRow(dat.data[i]);  // process this row
-	      
+	      }*/
 
    // alert(dat.paging.next)
-    FB.api(dat.paging.next,{},function(response) { procBatch(response) } );
+   /* FB.api(dat.paging.next,{},function(response) { test2(response) } );
     
 	   if ( typeof(dat.paging) != 'undefined' ) {
 	      FB.api(dat.paging.next, {}, function(response){ procBatch(response); } );
 	      } else {
 	      alert("No more records expected");
-	      }
+	      }*/
 	   }
-}
+
 function test2(dat)
 {
     
@@ -90,32 +90,42 @@ function test2(dat)
 	      }
 }
 
-function getLikes(postId)
+function getLikes(callback)
 {
     console.log("ID: "+ postId);
-    FB.api("/"+ postId + "/likes?summary=true",{},function(response) { 
+    FB.api("/"+ post['id'] + "/likes?summary=true",{},function(response) { 
        
         post['likes'] = response.summary['total_count'];
         
-     
+      
      } );
     
 }
 
-function getComments(postId)
+function getComments(callback)
 {
-    FB.api("/"+ postId + "/comments?summary=true",{},function(response) { 
+    FB.api("/"+ post['id'] + "/comments?summary=true",{},function(response) { 
           post['comments'] = response.summary['total_count'];
-          
-        
-        
-       
-      
      } );
 }
 
 
 
+
+/*function startThis() {  
+    var getUser = fbUser(function(model){
+        console.log(model);
+        startapp(model);
+    }); 
+};
+
+function fbUser(callback){  
+        FB.api('/me', function(response){
+                callback(response);
+            });
+}*/
+
+ var likes = 0;
 function procRow(dat)
 {
    
@@ -123,12 +133,33 @@ function procRow(dat)
     post['created_time']= dat['created_time'];
     post['id']=dat['id']; 
     
-  
-    getComments(post['id']);
-    getLikes(post['id']);
-
+   var likesValue  = 0;
+    var commentValue = 0;
     
-       saveFB(); 
+    var likes = getLikes(function(model){
+       console.log(model); 
+        likesValue = 1;
+    });
+    
+    var comments = getComments(function(model){
+       console.log(model); 
+        commentValue = 1;
+    });
+    
+    var x = 0;
+    
+    while (x < 0)
+        {
+            if(likesValue == 1 && commentValue == 1)
+                {
+                    x = 1; 
+                }
+                
+        }
+    
+    console.log(likes);
+   
+
 }
 
 function saveFB()
