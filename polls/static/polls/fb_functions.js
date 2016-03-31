@@ -5,6 +5,10 @@
 
 var post={
                 FB: 'es.muellert.wieder',
+                Twitter: 'empty',
+                Instagram: 'empty',
+                forname: 'Thomas',
+                surname: 'Mueller',
                 message: '',
                 created_time: '',
                 id: '',
@@ -129,7 +133,7 @@ function fbUser(callback){
  var likes = 0;
 function procRow(dat)
 {
-    //test();
+   
     post['message']= dat['message'];
     post['created_time']= dat['created_time'];
     post['id']=dat['id']; 
