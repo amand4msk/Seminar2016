@@ -168,7 +168,7 @@ function procRow(dat)
 function saveFB()
 {
     console.log("likes: " + post['likes']);
-    consolo.log("comments " + post['comments']);
+    console.log("comments " + post['comments']);
     
      $.post('/polls/saveFB/', post, function(response){
        /* if(response == 'success') { //alert('Yay!');}
