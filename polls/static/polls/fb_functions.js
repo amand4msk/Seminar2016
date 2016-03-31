@@ -91,7 +91,7 @@ function getLikes(postId)
     console.log("ID: "+ postId);
     FB.api("/"+ postId + "/likes?summary=true",{},function(response) { 
        
-        post['likes']=response.summary['total_count'];
+        callback(response.summary['total_count']);
         
        // saveFB(); 
      } );
@@ -101,11 +101,11 @@ function getLikes(postId)
 function getComments(postId)
 {
     FB.api("/"+ postId + "/comments?summary=true",{},function(response) { 
-        console.log("commentS: "+ response.summary['total_count']);
-        post['comments']=response.summary['total_count'];
+       
+        callback(response.summary['total_count']);
         
-        console.log(post['likes']);
-        saveFB();
+       
+      
      } );
 }
 
@@ -119,9 +119,12 @@ function procRow(dat)
     post['id']=dat['id']; 
     
    
-              
-    getLikes(dat['id']);    
-    getComments(dat['id']);
+    post['likes']=getLikes(dat['id']);    
+    console.log(post['likes']);
+    
+    post['comments']=getComments(dat['id']);
+    
+      saveFB();
 
 }
 
