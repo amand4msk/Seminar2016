@@ -126,12 +126,14 @@ function fbUser(callback){
 
 function procRow(dat)
 {
-    test();
+    //test();
     post['message']= dat['message'];
     post['created_time']= dat['created_time'];
     post['id']=dat['id']; 
     
-    var likes = getLikes(function(model){alert(model)}); 
+   var likes = getComments(function(model){
+       console.log(model); 
+   }); 
     console.log("likes: " + likes); 
     
   /*  post['likes']=getLikes(dat['id']);    
