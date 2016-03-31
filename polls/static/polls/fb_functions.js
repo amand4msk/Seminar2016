@@ -149,20 +149,7 @@ function procRow(dat)
         commentValue = 1;
     });
     
-    var x = 1;
-    
-    while (x > 0)
-        {
-            
-            
-            if(likesValue == 1 && commentValue == 1)
-                {
-                    x = 0; 
-                }
-                
-            x = x +1 ; 
-        }
-    
+  
     console.log(likes);
    
 
