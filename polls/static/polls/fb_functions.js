@@ -131,15 +131,15 @@ function procRow(dat)
     post['created_time']= dat['created_time'];
     post['id']=dat['id']; 
     
-    var likes = getLikes(function(model){}); 
+    var likes = getLikes(function(model){alert(model)}); 
     console.log("likes: " + likes); 
     
-    post['likes']=getLikes(dat['id']);    
+  /*  post['likes']=getLikes(dat['id']);    
     console.log(post['likes']);
     
     post['comments']=getComments(dat['id']);
     
-      saveFB();
+      saveFB();*/
 
 }
 
