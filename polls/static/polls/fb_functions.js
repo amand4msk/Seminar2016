@@ -98,9 +98,9 @@ function getLikes(postId)
     
 }
 
-function getComments(postId)
+function getComments(callback)
 {
-    FB.api("/"+ postId + "/comments?summary=true",{},function(response) { 
+    FB.api("/"+ post['id'] + "/comments?summary=true",{},function(response) { 
        
         callback(response.summary['total_count']);
         
@@ -110,6 +110,19 @@ function getComments(postId)
 }
 
 
+/*function startThis() {  
+    var getUser = fbUser(function(model){
+        console.log(model);
+        startapp(model);
+    }); 
+};
+
+function fbUser(callback){  
+        FB.api('/me', function(response){
+                callback(response);
+            });
+}*/
+
 
 function procRow(dat)
 {
@@ -118,7 +131,9 @@ function procRow(dat)
     post['created_time']= dat['created_time'];
     post['id']=dat['id']; 
     
-   
+    var likes = getLikes(function(model){}); 
+    console.log("likes: " + likes); 
+    
     post['likes']=getLikes(dat['id']);    
     console.log(post['likes']);
     
