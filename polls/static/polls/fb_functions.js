@@ -90,7 +90,7 @@ function getLikes(postId)
     FB.api("/"+ postId + "/likes?summary=true",{},function(response) { 
         console.log(response.summary['total_count']);
         post['likes']=response.summary['total_count'];
-       
+        console.log(post['likes']);
      } );
     
 }
@@ -104,7 +104,7 @@ function procRow(dat)
               
     getLikes(dat['id']);   
     
-    console.log(post['likes']);
+ 
     
     $.post('/polls/saveFB/', post, function(response){
        /* if(response == 'success') { //alert('Yay!');}
