@@ -79,7 +79,7 @@ function procBatch(dat) { // handle this batch, request the next batch
 	      }
 
         
-	   if ( typeof(dat.paging) != 'undefined' && x < 4 ) {
+	   if ( typeof(dat.paging) != 'undefined' && x < 7 ) {
            x = x+ 1,
 	      FB.api(dat.paging.next, {}, function(response){ procBatch(response); } );
 	      } else {
