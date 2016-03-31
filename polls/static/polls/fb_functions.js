@@ -63,7 +63,10 @@ function myFacebookLogin() {
         
 
 function getMueller() {   // calls the first batch of records
-	   FB.api("/es.muellert.wieder/request_history",{},function(response) { console.log(response) } );
+	   FB.api("/es.muellert.wieder/posts",{},function(response) 
+              { console.log(response) 
+                console.log(response.data[0]['actions'])
+                                                                } );
 }
 	
 function procBatch(dat) { // handle this batch, request the next batch
