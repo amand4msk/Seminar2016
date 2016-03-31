@@ -143,22 +143,33 @@ function procRow(dat)
     
     var likes = getLikes(function(model){
        console.log(model); 
+        post['likes']=model; 
         likesValue = 1;
+        if(commentValue == 1)
+            {
+                saveFB();
+            }
     });
     
     var comments = getComments(function(model){
        console.log(model); 
+        post['comments']=model; 
         commentValue = 1;
+        if(likesValue == 1)
+            {
+                saveFB(); 
+            }
     });
     
-  
-    console.log(likes);
-   
+
 
 }
 
 function saveFB()
 {
+    console.log("likes: " + post['likes']);
+    consolo.log("comments " + post['comments']);
+    
      $.post('/polls/saveFB/', post, function(response){
        /* if(response == 'success') { //alert('Yay!');}
         else{//alert('dump');}*/
