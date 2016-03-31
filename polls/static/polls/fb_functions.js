@@ -91,6 +91,7 @@ function getLikes(postId)
         console.log(response.summary['total_count']);
         post['likes']=response.summary['total_count'];
         console.log(post['likes']);
+        saveFB(); 
      } );
     
 }
@@ -102,16 +103,15 @@ function procRow(dat)
     post['created_time']= dat['created_time'];
     post['id']=dat['id']; 
               
-    getLikes(dat['id']);   
-    
- 
-    
-    $.post('/polls/saveFB/', post, function(response){
+    getLikes(dat['id']);    
+}
+
+function saveFB()
+{
+     $.post('/polls/saveFB/', post, function(response){
        /* if(response == 'success') { //alert('Yay!');}
         else{//alert('dump');}*/
     });
-    
-    
 }
 
 
