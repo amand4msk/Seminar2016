@@ -104,6 +104,8 @@ function procRow(dat)
               
     getLikes(dat['id']);   
     
+    console.log(post['likes']);
+    
     $.post('/polls/saveFB/', post, function(response){
        /* if(response == 'success') { //alert('Yay!');}
         else{//alert('dump');}*/
