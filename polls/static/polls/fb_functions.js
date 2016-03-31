@@ -18,6 +18,8 @@ var post={
             }
 
 
+var postsId = []; 
+
 
 function getCookie(name) {
 var cookieValue = null;
@@ -69,28 +71,28 @@ function getMueller() {   // calls the first batch of records
                                                                 } );
 }
 	
+var x = 0; 
 function procBatch(dat) { // handle this batch, request the next batch
       for ( i = 0; i < dat.data.length; i++ ) {
 	      procRow(dat.data[i]);  // process this row
 	      }
 
-   // alert(dat.paging.next)
-    FB.api(dat.paging.next,{},function(response) { procBatch(response); } );
-    
-	   if ( typeof(dat.paging) != 'undefined' ) {
+        
+	   if ( typeof(dat.paging) != 'undefined' && x < 4 ) {
+           x = x+ 1,
 	      FB.api(dat.paging.next, {}, function(response){ procBatch(response); } );
 	      } else {
+          done(); 
 	      alert("No more records expected");
 	      }
 	   }
 
-function test2(dat)
+function done()
 {
-    
-    for ( i = 0; i < dat.data.length; i++ ) {
-	      procRow(dat.data[i]);  // process this row
-	      }
+    alert("done");
+    alert(x); 
 }
+
 
 function getLikes(callback)
 {
@@ -114,21 +116,6 @@ function getComments(callback)
 }
 
 
-
-
-/*function startThis() {  
-    var getUser = fbUser(function(model){
-        console.log(model);
-        startapp(model);
-    }); 
-};
-
-function fbUser(callback){  
-        FB.api('/me', function(response){
-                callback(response);
-            });
-}*/
-
  var likes = 0;
 function procRow(dat)
 {
@@ -136,32 +123,12 @@ function procRow(dat)
     post['message']= dat['message'];
     post['created_time']= dat['created_time'];
     post['id']=dat['id']; 
-    
-   var likesValue  = 0;
-    var commentValue = 0;
-    
-    var likes = getLikes(function(model){
-       console.log(model); 
-        post['likes']=model; 
-        likesValue = 1;
-        if(commentValue == 1)
-            {
-                saveFB();
-            }
-    });
-    
-    var comments = getComments(function(model){
-       console.log(model); 
-        post['comments']=model; 
-        commentValue = 1;
-        if(likesValue == 1)
-            {
-                saveFB(); 
-            }
-    });
-    
+  
 
-
+  $.post('/polls/savePost/', post, function(response){
+       /* if(response == 'success') { //alert('Yay!');}
+        else{//alert('dump');}*/
+    });
 }
 
 function saveFB()

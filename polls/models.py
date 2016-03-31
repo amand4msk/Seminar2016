@@ -19,10 +19,10 @@ class Post(models.Model):
     person = models.ForeignKey(Person, on_delete=models.CASCADE)
     message = models.TextField()
     published = models.DateTimeField('date published')
+    idPost =models.CharField(max_length = 100)
     
     
 class FacebookPost(models.Model):
-    post = models.OneToOneField(Post,on_delete=models.CASCADE, default=0)
     idPost =models.CharField(max_length = 100)
     likes = models.IntegerField(default = 0)
     shares = models.IntegerField(default = 0)
