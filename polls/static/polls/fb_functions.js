@@ -103,19 +103,11 @@ function getComments(postId)
     FB.api("/"+ postId + "/comments?summary=true",{},function(response) { 
         console.log("commentS: "+ response.summary['total_count']);
         post['comments']=response.summary['total_count'];
-
+        saveFB();
      } );
 }
 
-function getShares(postId)
-{
-    FB.api("/"+ postId + "/sharedposts",{},function(response) { 
-       
-        console.log(response);
-        //post['shares']=response.summary['total_count'];
 
-     } );
-}
 
 function procRow(dat)
 {
@@ -128,7 +120,7 @@ function procRow(dat)
               
     getLikes(dat['id']);    
     getComments(dat['id']);
-    getShares(dat['id']);
+
 }
 
 function saveFB()
