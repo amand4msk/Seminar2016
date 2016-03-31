@@ -111,7 +111,7 @@ function getShares(postId)
 {
     FB.api("/"+ postId + "/sharedposts",{},function(response) { 
        
-        console.log("shares: " + response);
+        console.log(response['shares']);
         //post['shares']=response.summary['total_count'];
 
      } );
@@ -124,7 +124,7 @@ function procRow(dat)
     post['created_time']= dat['created_time'];
     post['id']=dat['id']; 
     
-    console.log("shares: " + dat['shares']);
+   
               
     getLikes(dat['id']);    
     getComments(dat['id']);
