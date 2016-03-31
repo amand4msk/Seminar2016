@@ -17,13 +17,13 @@ class Person(models.Model):
     
 class Post(models.Model):
     person = models.ForeignKey(Person, on_delete=models.CASCADE)
-    message = models.TextField()
+    message = models.TextField(default='')
     published = models.DateTimeField('date published')
-    idPost =models.CharField(max_length = 100)
+    idPost =models.CharField(max_length = 100, default=0)
     
     
 class FacebookPost(models.Model):
-    idPost =models.CharField(max_length = 100)
+    idPost =models.CharField(max_length = 100, default=0)
     likes = models.IntegerField(default = 0)
     shares = models.IntegerField(default = 0)
     countComment = models.IntegerField(default =0)
