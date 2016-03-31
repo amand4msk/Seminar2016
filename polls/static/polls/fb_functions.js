@@ -64,8 +64,8 @@ function myFacebookLogin() {
 
 function getMueller() {   // calls the first batch of records
 	   FB.api("/es.muellert.wieder/posts",{},function(response) 
-              { console.log(response) 
-                console.log(response.data[0]['actions'])
+              {procBatch(response);
+               
                                                                 } );
 }
 	
