@@ -123,7 +123,7 @@ function fbUser(callback){
             });
 }*/
 
-
+ var likes = 0;
 function procRow(dat)
 {
     //test();
@@ -131,7 +131,7 @@ function procRow(dat)
     post['created_time']= dat['created_time'];
     post['id']=dat['id']; 
     
-   var likes = 0;
+  
     getComments(function(model){
        likes = model; 
    }); 
