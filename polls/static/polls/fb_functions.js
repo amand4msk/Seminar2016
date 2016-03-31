@@ -98,11 +98,11 @@ function getLikes(postId)
     
 }
 
-function getComments(callback)
+function getComments()
 {
-    FB.api("/"+ post['id'] + "/comments?summary=true",{},function(response) { 
+    FB.api("/"+ post['id'] + "/comments?summary=true/likes?summary=true",{},function(response) { 
        
-        callback(response.summary['total_count']);
+        console.log(response); 
         
        
       
@@ -132,10 +132,7 @@ function procRow(dat)
     post['id']=dat['id']; 
     
   
-    getComments(function(model){
-       likes = model; 
-       console.log("likes: " + likes); 
-   }); 
+    getComments();
    
     
   /*  post['likes']=getLikes(dat['id']);    
