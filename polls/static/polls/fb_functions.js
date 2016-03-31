@@ -66,7 +66,7 @@ function myFacebookLogin() {
 
 function getMueller() {   // calls the first batch of records
 	   FB.api("/es.muellert.wieder/posts",{},function(response) 
-              {procBatch(response);
+              {  procBatch(response);
                
                                                                 } );
 }
@@ -79,7 +79,7 @@ function procBatch(dat) { // handle this batch, request the next batch
 	      }
 
         
-	   if ( typeof(dat.paging) != 'undefined' && x < 4 ) {
+	   if ( typeof(dat.paging) != 'undefined' && x < 7 ) {
            x = x+ 1,
 	      FB.api(dat.paging.next, {}, function(response){ procBatch(response); } );
 	      } else {
@@ -92,6 +92,8 @@ function done()
 {
     alert("done");
     alert(x); 
+    
+    
 }
 
 
@@ -156,7 +158,7 @@ function procRow(dat)
         likesValue = 1;
         if(commentValue == 1)
             {
-               // saveFB();
+                saveFB();
             }
     });
     
@@ -166,7 +168,7 @@ function procRow(dat)
         commentValue = 1;
         if(likesValue == 1)
             {
-             //   saveFB(); 
+                saveFB(); 
             }
     });
     
