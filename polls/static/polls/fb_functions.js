@@ -125,7 +125,7 @@ function procRow(dat)
     
   
     getComments(post['id']);
-   getLikes(postId);
+    getLikes(post['id']);
 
     
        saveFB(); 
