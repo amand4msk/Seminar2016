@@ -97,7 +97,7 @@ function getLikes(postId)
        
         post['likes'] = response.summary['total_count'];
         
-        saveFB(); 
+     
      } );
     
 }
@@ -106,7 +106,7 @@ function getComments(postId)
 {
     FB.api("/"+ postId + "/comments?summary=true",{},function(response) { 
           post['comments'] = response.summary['total_count'];
-          getLikes(postId);
+          
         
         
        
@@ -125,8 +125,10 @@ function procRow(dat)
     
   
     getComments(post['id']);
-   
+   getLikes(postId);
 
+    
+       saveFB(); 
 }
 
 function saveFB()
