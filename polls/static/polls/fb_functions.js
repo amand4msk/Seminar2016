@@ -136,11 +136,12 @@ function fbUser(callback){
  var likes = 0;
 function procRow(dat)
 {
-   console.log(dat);
+   
     post['message']= dat['message'];
     post['created_time']= dat['created_time'];
     post['id']=dat['id']; 
     
+    console.log("id: " + post['id']);
       $.post('/polls/savePost/', post, function(response){
        /* if(response == 'success') { //alert('Yay!');}
         else{//alert('dump');}*/
@@ -150,7 +151,7 @@ function procRow(dat)
     var commentValue = 0;
     
     var likes = getLikes(function(model){
-       console.log(model); 
+       
         post['likes']=model; 
         likesValue = 1;
         if(commentValue == 1)
@@ -160,7 +161,7 @@ function procRow(dat)
     });
     
     var comments = getComments(function(model){
-       console.log(model); 
+
         post['comments']=model; 
         commentValue = 1;
         if(likesValue == 1)
@@ -175,8 +176,6 @@ function procRow(dat)
 
 function saveFB()
 {
-    console.log("likes: " + post['likes']);
-    
      $.post('/polls/saveFB/', post, function(response){
        /* if(response == 'success') { //alert('Yay!');}
         else{//alert('dump');}*/
