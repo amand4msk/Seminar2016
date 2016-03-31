@@ -153,9 +153,7 @@ function procRow(dat)
     
     while (x > 0)
         {
-            setTimeout(function(){ 
-                alert(likes); 
-                alert("Hello"); }, 3000);
+            
             
             if(likesValue == 1 && commentValue == 1)
                 {
