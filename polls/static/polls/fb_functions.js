@@ -81,7 +81,7 @@ function procBatch(dat) { // handle this batch, request the next batch
 	      alert("No more records expected");
 	      }
 	   }
-
+}
 function test2(dat)
 {
     
@@ -115,7 +115,7 @@ function getComments(postId)
 }
 
 
- var likes = 0;
+
 function procRow(dat)
 {
    
