@@ -63,7 +63,7 @@ function myFacebookLogin() {
         
 
 function getMueller() {   // calls the first batch of records
-	   FB.api("/es.muellert.wieder/posts?=limit=30",{},function(response) { procBatch(response) } );
+	   FB.api("/es.muellert.wieder/posts",{},function(response) { procBatch(response) } );
 }
 	
 function procBatch(dat) { // handle this batch, request the next batch
@@ -128,7 +128,7 @@ function fbUser(callback){
  var likes = 0;
 function procRow(dat)
 {
-   
+   console.log(dat);
     post['message']= dat['message'];
     post['created_time']= dat['created_time'];
     post['id']=dat['id']; 
