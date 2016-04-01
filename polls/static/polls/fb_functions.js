@@ -4,11 +4,11 @@
 
 
 var post={
-                FB: 'es.muellert.wieder',
+                FB: '',
                 Twitter: 'empty',
                 Instagram: 'empty',
-                forname: 'Thomas',
-                surname: 'Mueller',
+                forname: '',
+                surname: '',
                 message: '',
                 created_time: '',
                 id: '',
@@ -67,16 +67,30 @@ function myFacebookLogin() {
 function getMueller() {   // calls the first batch of records
      var person = document.getElementById("textbox1").value;
     
+     post['FB']=person;
+     
+      FB.api("/"+ person,{},function(response) 
+              {  procPerson(response);
+               
+                                                                } );
+    
 	  FB.api("/"+ person + "/posts",{},function(response) 
               {  procBatch(response);
                
                                                                 } );
 }
+
+function procPerson(dat)
+{
+    post['forname']=dat['first_name'];
+    post['surname']=dat['last_name'];
+    console.log(dat['first_name'] + " " + dat['last_name']); 
+}
 	
 var x = 0; 
 function procBatch(dat) { // handle this batch, request the next batch
-    //  procRow(dat.data[0]); 
-    for ( i = 0; i < dat.data.length; i++ ) {
+  procRow(dat.data[0]); 
+  /*  for ( i = 0; i < dat.data.length; i++ ) {
 	      procRow(dat.data[i]);  // process this row
 	      }
 
@@ -87,7 +101,7 @@ function procBatch(dat) { // handle this batch, request the next batch
 	      } else {
           done(); 
 	      alert("No more records expected");
-          }
+          }*/
     
 	   }
 
