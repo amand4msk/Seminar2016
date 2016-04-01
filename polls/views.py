@@ -12,25 +12,26 @@ def index(request):
     return render(request, 'polls/index.html')
 
 
+def getField(field request):
+    if field in request.POST:
+        return request.POST[field]
+    else:
+        return ''
+
 def savePerson(request):
-    fb = request.POST['FB']
-    tw = request.POST['Twitter']
-    inst = request.POST['Instagram']
     
-    if 'first_name' in request.POST:
-        first_name = request.POST['first_name']
-    else:
-        first_name = ''
-        
-    if 'last_name' in request.POST:
-        last_name = request.POST['last_name']
-    else:
-        last_name = ''
+    fb = getField('FB', request)
+    tw = getField('Twitter', request)
+    inst = getField('Instagram', request)
+    first_name =getField('first_name', request)
+    last_name =getField('last_name', request)
+    name =getField('name', request)
+
     
     if Person.objects.filter(usernameFB=fb).count() !=0:
         Person.objects.get(usernameFB=fb).delete()
     
-    person = Person(usernameFB=fb, usernameTwitter=tw, usernameInstagram=inst, last_name=last_name, first_name=first_name)
+    person = Person(usernameFB=fb, usernameTwitter=tw, usernameInstagram=inst, last_name=last_name, first_name=first_name, name=name)
 
     person.save()
     return HttpResponse('success')

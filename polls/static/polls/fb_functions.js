@@ -9,6 +9,7 @@ var post={
                 Instagram: 'empty',
                 forname: '',
                 surname: '',
+                name: '',
                 message: '',
                 created_time: '',
                 id: '',
@@ -82,10 +83,10 @@ function getMueller() {   // calls the first batch of records
 
 function procPerson(dat)
 {
-    console.log(dat); 
     post['forname']=dat['first_name'];
     post['surname']=dat['last_name'];
-    console.log(dat['first_name'] + " " + dat['last_name']); 
+    post['name']=dat['name'];
+    
 }
 	
 var x = 0; 
