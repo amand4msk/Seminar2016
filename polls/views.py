@@ -16,13 +16,21 @@ def savePerson(request):
     fb = request.POST['FB']
     tw = request.POST['Twitter']
     inst = request.POST['Instagram']
-    forname = request.POST['forname']
-    surname = request.POST['surname']
+    
+    if 'first_name' in request.POST:
+        first_name = request.POST['first_name']
+    else:
+        first_name = ''
+        
+    if 'last_name' in request.POST:
+        last_name = request.POST['last_name']
+    else:
+        last_name = ''
     
     if Person.objects.filter(usernameFB=fb).count() !=0:
         Person.objects.get(usernameFB=fb).delete()
     
-    person = Person(usernameFB=fb, usernameTwitter=tw, usernameInstagram=inst, forname=forname, surname=surname)
+    person = Person(usernameFB=fb, usernameTwitter=tw, usernameInstagram=inst, last_name=last_name, first_name=first_name)
 
     person.save()
     return HttpResponse('success')

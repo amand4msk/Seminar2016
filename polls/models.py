@@ -11,8 +11,9 @@ class Person(models.Model):
     usernameTwitter = models.CharField(max_length=200)
     usernameInstagram = models.CharField(max_length=200)
     
-    forname = models.CharField(max_length=100)
-    surname = models.CharField(max_length = 100)
+    name = models.CharField(max_length=100, default='')
+    first_name = models.CharField(max_length=100, default='')
+    last_name = models.CharField(max_length = 100, default='')
     countOfPosts = models.IntegerField(default = 0)
     
 class Post(models.Model):
