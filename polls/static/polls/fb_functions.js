@@ -97,8 +97,8 @@ function procPerson(dat)
 	
 var x = 0; 
 function procBatch(dat) { // handle this batch, request the next batch
-  procRow(dat.data[0]); 
-  /*  for ( i = 0; i < dat.data.length; i++ ) {
+  //procRow(dat.data[0]); 
+    for ( i = 0; i < dat.data.length; i++ ) {
 	      procRow(dat.data[i]);  // process this row
 	      }
 
@@ -107,19 +107,13 @@ function procBatch(dat) { // handle this batch, request the next batch
            
 	      FB.api(dat.paging.next, {}, function(response){ procBatch(response); } );
 	      } else {
-          done(); 
+          
 	      alert("No more records expected");
-          }*/
+          }
     
 	   }
 
-function done()
-{
-    alert("done");
-    alert(x); 
-    
-    
-}
+
 
 
 
