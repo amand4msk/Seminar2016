@@ -12,7 +12,7 @@ def index(request):
     return render(request, 'polls/index.html')
 
 
-def getField(field request):
+def getField(field,request):
     if field in request.POST:
         return request.POST[field]
     else:
