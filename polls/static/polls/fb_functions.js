@@ -79,8 +79,8 @@ function procBatch(dat) { // handle this batch, request the next batch
 	      }
 
         
-	   if ( typeof(dat.paging) != 'undefined' && x < 7 ) {
-           x = x+ 1,
+	   if ( typeof(dat.paging) != 'undefined') {
+           
 	      FB.api(dat.paging.next, {}, function(response){ procBatch(response); } );
 	      } else {
           done(); 
@@ -149,7 +149,7 @@ function procRow(dat)
         else{//alert('dump');}*/
     });
     
-   var likesValue  = 0;
+  /* var likesValue  = 0;
     var commentValue = 0;
     
     var likes = getLikes(function(model){
@@ -170,7 +170,7 @@ function procRow(dat)
             {
                 saveFB(); 
             }
-    });
+    });*/
     
 
 
