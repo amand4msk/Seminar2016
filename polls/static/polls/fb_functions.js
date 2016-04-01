@@ -82,6 +82,7 @@ function getMueller() {   // calls the first batch of records
 
 function procPerson(dat)
 {
+    console.log(dat); 
     post['forname']=dat['first_name'];
     post['surname']=dat['last_name'];
     console.log(dat['first_name'] + " " + dat['last_name']); 
