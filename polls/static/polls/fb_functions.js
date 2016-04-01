@@ -65,10 +65,12 @@ function myFacebookLogin() {
         
 
 function getMueller() {   // calls the first batch of records
-	   FB.api("/es.muellert.wieder/posts",{},function(response) 
+     var first = document.getElementById("textbox1").value;
+    alert(first);
+	 /*  FB.api("/es.muellert.wieder/posts",{},function(response) 
               {  procBatch(response);
                
-                                                                } );
+                                                                } );*/
 }
 	
 var x = 0; 
