@@ -46,9 +46,11 @@ def savePost(request):
     countOfPosts = person.countOfPosts +1 
     person.save() 
     
-    message = request.POST['message']
-    published = request.POST['created_time']
-    idPost = request.POST['id']
+    
+    
+    message = getField('message', request)
+    published = getField('created_time', request)
+    idPost = getField('id', request)
     
 
     
