@@ -39,8 +39,8 @@ def savePerson(request):
 def savePost(request):
     usernameFB = request.POST['FB']
     
-    if Person.objects.filter(usernameFB=usernameFB).count() ==0:
-        savePerson(request)
+    #if Person.objects.filter(usernameFB=usernameFB).count() ==0:
+     #   savePerson(request)
     
     person = Person.objects.get(usernameFB=usernameFB)
     countOfPosts = person.countOfPosts +1 

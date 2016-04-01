@@ -75,10 +75,7 @@ function getMueller() {   // calls the first batch of records
                
                                                                 } );
     
-	  FB.api("/"+ person + "/posts",{},function(response) 
-              {  procBatch(response);
-               
-                                                                } );
+	 
 }
 
 function procPerson(dat)
@@ -86,6 +83,15 @@ function procPerson(dat)
     post['forname']=dat['first_name'];
     post['surname']=dat['last_name'];
     post['name']=dat['name'];
+    console.log(dat['name']);
+    
+    $.post('/polls/savePerson/', post, function(response){
+       /* if(response == 'success') { //alert('Yay!');}
+        else{//alert('dump');}*/
+    });
+    
+     FB.api("/"+ post['FB'] + "/posts",{},function(response) 
+              {  procBatch(response);} );
     
 }
 	

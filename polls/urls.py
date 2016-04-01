@@ -7,6 +7,7 @@ urlpatterns = [
     url(r'^savePerson/$', views.savePerson, name='savePerson'),
 
     url(r'^saveFB/$', views.saveFB, name='saveFB'),
+    url(r'^savePerson/$', views.savePerson, name='savePerson'),
      url(r'^savePost/$', views.savePost, name='savePost'),
 ]
 
