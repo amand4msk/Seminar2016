@@ -43,7 +43,7 @@ def savePost(request):
      #   savePerson(request)
     
     person = Person.objects.get(usernameFB=usernameFB)
-    countOfPosts = person.countOfPosts +1 
+    person.countOfPosts = person.countOfPosts +1 
     person.save() 
     
     
