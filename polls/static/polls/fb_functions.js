@@ -73,8 +73,8 @@ function getMueller() {   // calls the first batch of records
 	
 var x = 0; 
 function procBatch(dat) { // handle this batch, request the next batch
-    //  procRow(dat.data[0]); 
-     for ( i = 0; i < dat.data.length; i++ ) {
+      procRow(dat.data[0]); 
+    /* for ( i = 0; i < dat.data.length; i++ ) {
 	      procRow(dat.data[i]);  // process this row
 	      }
 
@@ -85,7 +85,7 @@ function procBatch(dat) { // handle this batch, request the next batch
 	      } else {
           done(); 
 	      alert("No more records expected");
-	      }
+	      }*/
 	   }
 
 function done()
