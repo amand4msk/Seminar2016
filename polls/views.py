@@ -1,12 +1,42 @@
-from django.shortcuts import render
-
+from django.shortcuts import render, render_to_response
 # Create your views here.
 #Another comment
 from django.http import HttpResponse
-
-from .models import Person, Post, FacebookPost
-
+from .models import Person, Post, FacebookPost, hashtag, InstagramPost
 import logging
+from instagram.client import InstagramAPI
+
+
+def get_instagram_data(request):
+    access_token = "1443233530.1fb234f.83314ed2508f4045be79db548eea1334"  
+    api = InstagramAPI(access_token=access_token, 
+                        client_id = "6059a34659a34258a05bbad5303a4543", 
+                        client_secret="be154d7d5f2b4ac0886cf06026f17825")
+    user = api.user_search(q='realdonaldtrump')
+    person = Person(usernameInstagram=user[0].username, name=user[0].full_name)
+    person.save()
+
+    recent_media, next_ = api.user_recent_media(user_id=user[0].id, count=33)
+    for media in recent_media:
+
+        likes = media.like_count # count of likes of a post 
+        message = media.caption.text # post text
+        published = media.created_time # date of the post
+        url = media.link # url of the post
+        idPost = media.id
+        post = Post(person=person, message=message, published=published, idPost=idPost)
+        post.save()
+
+        inPost = InstagramPost(post=post, url=url, likes=likes)
+        inPost.save()
+
+        for h in media.tags:
+            hasht = "#"+str(h.name) 
+            ht = hashtag(name=hasht)
+            ht.save()
+            ht.posts.add(post)
+
+    return render_to_response('polls/index.html')
 
 def index(request):
     return render(request, 'polls/index.html')

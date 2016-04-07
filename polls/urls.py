@@ -8,6 +8,7 @@ urlpatterns = [
 
     url(r'^saveFB/$', views.saveFB, name='saveFB'),
     url(r'^savePerson/$', views.savePerson, name='savePerson'),
-     url(r'^savePost/$', views.savePost, name='savePost'),
+ 	url(r'^savePost/$', views.savePost, name='savePost'),
+ 	url(r'^get_instagram_data/', views.get_instagram_data, name='get_instagram_data'),
 ]
 
