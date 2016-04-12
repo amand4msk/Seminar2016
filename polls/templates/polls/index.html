@@ -54,10 +54,17 @@
 
 
 <p> hello world</p>
-<input type="text" name="textbox1" id="textbox1" /> 
+<form action="get_username/" method="post">
+	{% csrf_token %}
+	<input type="text" name="textbox1" id="textbox1" /> 
+	<input type="submit" name="get_Instagram_Data" value="get Instagram Data">
+</form>
+
+<!--
 <input type="button" onclick="fb()" value="get FB Data">
 <input type="button" onclick="twitter()" value="get Twitter Data">
 <input type="button" onclick="window.location.href='get_instagram_data/'" value="get Instagram Data">
+-->
 
 
 </body>

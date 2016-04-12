@@ -1,18 +1,24 @@
 from django.shortcuts import render, render_to_response
 # Create your views here.
 #Another comment
-from django.http import HttpResponse
+from django.http import HttpResponse, HttpResponseRedirect
 from .models import Person, Post, FacebookPost, hashtag, InstagramPost
 import logging
 from instagram.client import InstagramAPI
 
+def get_username(request):
+    if request.method == 'POST':
+        username = request.POST['textbox1']
+        get_instagram_data(username)
+    return HttpResponseRedirect('/polls/')
 
-def get_instagram_data(request):
+def get_instagram_data(username):
     access_token = "1443233530.1fb234f.83314ed2508f4045be79db548eea1334"  
     api = InstagramAPI(access_token=access_token, 
                         client_id = "6059a34659a34258a05bbad5303a4543", 
                         client_secret="be154d7d5f2b4ac0886cf06026f17825")
-    user = api.user_search(q='realdonaldtrump')
+    instagram_username = username
+    user = api.user_search(q=instagram_username)
     person = Person(usernameInstagram=user[0].username, name=user[0].full_name)
     person.save()
 
@@ -20,7 +26,11 @@ def get_instagram_data(request):
     for media in recent_media:
 
         likes = media.like_count # count of likes of a post 
-        message = media.caption.text # post text
+        try:
+            message = media.caption.text # post text
+        except AttributeError:
+            message = ""
+            pass            
         published = media.created_time # date of the post
         url = media.link # url of the post
         idPost = media.id
@@ -35,8 +45,7 @@ def get_instagram_data(request):
             ht = hashtag(name=hasht)
             ht.save()
             ht.posts.add(post)
-
-    return render_to_response('polls/index.html')
+    return HttpResponse('success')
 
 def index(request):
     return render(request, 'polls/index.html')

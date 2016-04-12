@@ -10,5 +10,6 @@ urlpatterns = [
     url(r'^savePerson/$', views.savePerson, name='savePerson'),
  	url(r'^savePost/$', views.savePost, name='savePost'),
  	url(r'^get_instagram_data/', views.get_instagram_data, name='get_instagram_data'),
+ 	url(r'^get_username/', views.get_username, name='get_username'),
 ]
 
