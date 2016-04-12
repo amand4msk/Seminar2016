@@ -8,5 +8,6 @@ urlpatterns = [
 
     url(r'^saveFB/$', views.saveFB, name='saveFB'),
     url(r'^get_all_tweets/', views.get_all_tweets, name='get_all_tweets'),
+    url(r'^get_username/', views.get_username, name='get_username'),
 ]
 

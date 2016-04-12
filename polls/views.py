@@ -1,7 +1,7 @@
 from django.shortcuts import render, render_to_response
 
 # Create your views here.
-from django.http import HttpResponse
+from django.http import HttpResponse, HttpResponseRedirect
 
 from .models import Person, Post, FacebookPost, TwitterPost, link, hashtag, comment
 from dateutil.parser import parse
@@ -14,9 +14,14 @@ consumer_secret = "vldfWfXDTVYJzJ0rKWAdTsdJRGQaElN4NjBh1ljEwj5kzqpjVB"
 access_key = "840300386-OObp0Uk2kGfp4y5KFtC7evyaIYsA9ZIE64ozeB3w"
 access_secret = "krL6FvULRsvw5FInqbwkJNPMnBslYQwPFQ9I0bNuxmli4"
 
+def get_username(request):
+    if request.method == 'POST':
+        username = request.POST['textbox1']
+        get_all_tweets(username)
+    return HttpResponseRedirect('/polls/')
 
-def get_all_tweets(request):
-    screen_name = "realDonaldTrump"
+def get_all_tweets(username):
+    screen_name = username
     auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
     auth.set_access_token(access_key, access_secret)
     api = tweepy.API(auth)
@@ -39,21 +44,20 @@ def get_all_tweets(request):
 
     for tweet in alltweets:
         message = tweet.text.encode("utf-8")
-        date = tweet._json['user']['created_at']
-        d = parse(date)
-        published = d.strftime('%Y-%m-%d %H:%M:%S')
+        published = tweet.created_at
         url = "https://twitter.com/"+str(tweet._json['user']['screen_name'])+"/status/"+str(tweet.id)
         likes = tweet.favorite_count
         retweet = tweet.retweet_count
+        idPost = tweet.id
 
-        post = Post(person=person, message=message, published=published)
+        post = Post(person=person, message=message, published=published, idPost=idPost)
         post.save()
 
         twPost = TwitterPost(post=post, url=url, likes=likes, retweet=retweet)
         twPost.save() 
 
         for h in tweet.entities['hashtags']:
-            hasht = "#"+str(h['text'])
+            hasht = "#"+str(h['text'].encode("utf-8"))
             ht = hashtag(name=hasht)
             ht.save()
             ht.posts.add(post)
@@ -64,7 +68,7 @@ def get_all_tweets(request):
             lk.save()
             lk.posts.add(post)
 
-    return render_to_response('polls/index.html')
+    return HttpResponse('success')
 
 
 def saveTwitter(request):

@@ -19,6 +19,7 @@ class Post(models.Model):
     person = models.ForeignKey(Person, on_delete=models.CASCADE)
     message = models.TextField()
     published = models.DateTimeField('date published')
+    idPost =models.CharField(max_length = 100, default = 0)
     
     
 class FacebookPost(models.Model):
