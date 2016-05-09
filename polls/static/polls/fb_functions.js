@@ -179,7 +179,7 @@ function procRow(dat)
 
 function saveFB(postId)
 {
-     post['id']=dat['id']; 
+     post['id']=postId; 
     console.log("fb: " + postId);
     
     
