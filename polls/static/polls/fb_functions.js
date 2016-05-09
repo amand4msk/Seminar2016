@@ -104,7 +104,7 @@ function procBatch(dat) { // handle this batch, request the next batch
 	      }*/
 
         
-	   if ( typeof(dat.paging) != 'undefined') {
+	 /*  if ( typeof(dat.paging) != 'undefined') {
            
 	      FB.api(dat.paging.next, {}, function(response){ procBatch(response); } );
 	      } else {
@@ -112,7 +112,7 @@ function procBatch(dat) { // handle this batch, request the next batch
 	      alert("No more records expected");
           }
     
-	   }
+	   }*/
 
 
 

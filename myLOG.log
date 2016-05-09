@@ -9128,3 +9128,4 @@ Traceback (most recent call last):
   File "/Volumes/HD_DATEN 1/BENUTZER/MARIA/UNI/FS 2016/Web Seminr/project/seminar2016/polls/views.py", line 79, in selectQuery
     cursor.execute("SELECT * FROM post")
 OperationalError: no such table: post
+[09/May/2016 18:30:27] DEBUG [django.db.backends:89] (0.001) SELECT "polls_facebookpost"."id", "polls_facebookpost"."idPost", "polls_facebookpost"."likes", "polls_facebookpost"."shares", "polls_facebookpost"."countComment" FROM "polls_facebookpost" LIMIT 21; args=()
