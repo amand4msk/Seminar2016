@@ -97,16 +97,14 @@ function procPerson(dat)
 	
 var x = 0; 
 function procBatch(dat) { // handle this batch, request the next batch
-  procRow(dat.data[0]); 
-    procRow(dat.data[1]);
-    procRow(dat.data[2]); 
+
     //dat.data.length
-   /* for ( i = 0; i < 3; i++ ) {
+    for ( i = 0; i < dat.data.length; i++ ) {
 	      procRow(dat.data[i]);  // process this row
-	      }*/
+	      }
 
         
-	 /*  if ( typeof(dat.paging) != 'undefined') {
+	   if ( typeof(dat.paging) != 'undefined') {
            
 	      FB.api(dat.paging.next, {}, function(response){ procBatch(response); } );
 	      } else {
@@ -114,7 +112,7 @@ function procBatch(dat) { // handle this batch, request the next batch
 	      alert("No more records expected");
           }
     
-	   }*/
+	   }
 
 }
 
