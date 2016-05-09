@@ -1,4 +1,6 @@
 from django.shortcuts import render
+import logging
+log = logging.getLogger(__name__)
 
 # Create your views here.
 #Another comment
@@ -7,6 +9,7 @@ from django.http import HttpResponse
 from .models import Person, Post, FacebookPost
 
 import logging
+from analyseData.analyseData import getPersons, test, getcoOccurenceMatrix, getPosts, getPostsByDate
 
 def index(request):
     return render(request, 'polls/index.html')
@@ -68,3 +71,31 @@ def saveFB(request):
     fbPost.save() 
 
     return HttpResponse('success')
+
+
+def wordCloud(request):
+    data = test(request.POST['filename'], int(request.POST['numberOfTopics']))
+    '''log.debug("Hey there it works!!")
+    log.info("Hey there it works!!")
+    log.warn("Hey there it works!!")
+    log.error("Hey there it works!!")'''
+    return HttpResponse(data)
+
+def coOccurence(request):
+    numberOfWords = 10
+    data = getcoOccurenceMatrix(request.POST['filename'], numberOfWords)
+    return HttpResponse(data)
+
+def initTemplate(request):
+    data = getPersons()
+    return  HttpResponse(data)
+
+
+def posts(request):
+    data = getPosts(request.POST['filename'])
+    return HttpResponse(data)
+
+def postsByDate(request):
+    data = getPostsByDate(request.POST['filename'])
+    return HttpResponse(data)
+    
