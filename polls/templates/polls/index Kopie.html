@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+ {% csrf_token %}
+ <script src="{% static 'polls/js/d3.v3.min.js' %}"></script>
+<link rel="stylesheet" type="text/css" href="{% static 'polls/index.css' %}">
+
+ <script src="{% static 'polls/js/jquery.js' %}"></script>
+<script src="{% static 'polls/js/rango-ajax.js' %}"></script>
+<script src="{% static 'polls/js/getCookie.js' %}"></script>
+
+<script src="{% static 'polls/js/d3.layout.cloud.js' %}"></script>
+<script src="{% static 'polls/js/jquery.blockUI.js' %}"></script>
+
+<script src="{% static 'polls/js/cooccurMatrix.js' %}"></script>
+<script src="{% static 'polls/js/cloud.js' %}"></script>
+<script src="{% static 'polls/js/pointCloud.js' %}"></script>
+<script src="{% static 'polls/js/showPostTimeline.js' %}"></script>
+
+<script src="{% static 'polls/js/visualizeTopics.js' %}"></script>
+<html>
+	
+	
+<style>
+.link {
+  fill: none;
+  stroke: #666;
+  stroke-width: 1.5px;
+}
+
+.node circle {
+  stroke: #fff;
+  stroke-width: 1.5px;
+}
+
+text {
+  font: 10px sans-serif;
+  pointer-events: none;
+}
+</style>
+
+<head>
+<title>Facebook Login JavaScript Example</title>
+
+
+<body>
+	
+	<div class="HEAD" style="width:100%, height:500px">
+		
+		<div style="padding-top: 10px">
+			<label>Choose a person:
+				<select id="selectPerson" name="selectPerson" onChange="getDataForPerson()";>
+        		</select>
+   		 	</label>
+			
+		</div>
+		
+			<div class="inHEAD" >
+				<p> Posts from </p>
+				<p>[] to [] </p>
+			</div>
+		
+			<div class="inHEAD">
+				<p> Identify topics </p>
+		  	 	 <p> Number of topics:   
+	  				<input id="numberOfTopics" type="number" name="quantity" min="1" max="15" value="10" style="height:15px;">
+	  				 <input type="button" id="getClouds" onclick="getWordCloud()" value="Show word clouds" style=" height:10px;" ></p>
+	  		</div>
+		
+			<div class="inHEAD">
+				<p></p>
+		  	  	<p><input type="button" id="occurenceButton" onclick="getOccurenceMatrix()" value="Show word matrix"></p>
+		  	 </div>
+		
+			 <div class="inHEAD">
+				<p></p>
+		  	  	<p><input type="button" id="occurenceButton" onclick="getOccurenceMatrix()" value="Show timeline"></p>
+		  	 </div>
+	  	 
+		  	  <div class="inHEAD">
+				<p></p>
+		  	  	<p><input type="button" id="occurenceButton" onclick="getOccurenceMatrix()" value="Compare reactions"></p>
+		  	 </div>
+		
+			<div class="inHEAD">
+		  	  		<input type="button" id="backButton" onclick="backFromViewPosts()" value="Return">
+		  	</div>
+		
+	</div>
+
+	
+	                            
+	  <div id="drawing" style="width:100%; height:80vh;"> 
+	  	<p id ="textbox"></p>
+	  	</div>
+	  
+
+	
+
+</body>
+</head>
+
+<script type="text/javascript">
+
+			var colors = 
+			[d3.rgb(106, 90, 205),
+			d3.rgb(12, 67, 199),
+			d3.rgb(255, 127, 36),
+			d3.rgb(151, 255, 255),
+			d3.rgb(0, 139, 0),
+			d3.rgb(107, 142, 35),
+			d3.rgb(255, 20, 147),
+			d3.rgb(255, 69, 0),
+			d3.rgb(186,85 , 211),
+			d3.rgb(255, 215, 0),
+			d3.rgb(255, 127, 80)];
+			
+			
+	var files = [];
+	var names = [];
+	var selectedPerson;
+	var buttonWordCloud; 
+	window.onload = init();
+	
+	function showValue(newValue)
+	{
+		document.getElementById("range").innerHTML=newValue;
+	}
+	
+	function createDiv(id)
+	{
+		var div = document.createElement("div");
+			div.id=id;
+			
+			document.getElementById("drawing").appendChild(div);
+		return div;
+	}
+
+	function getDataForPerson()
+	{
+		var buttonWordCloud = document.getElementById("getClouds");
+		var p = document.getElementById("textbox");
+		selectedPerson = document.getElementById("selectPerson").value;
+		if(selectedPerson < names.length)
+		{
+			p.innerHTML='';
+			buttonWordCloud.disabled=false;
+			var file=files[selectedPerson];
+			
+			 var post={
+    	 		filename : file
+    		 };
+    		 
+    		 
+    		 cleanScreen();
+
+
+			$.post('/polls/postsByDate/', post, function(response){
+
+				var obj = JSON.parse(response);
+				console.log(obj);
+				
+				
+			    
+			    var div = createDiv('postTimeline');
+			    div.style.width = "70%";
+			    div.style.height = "80vh";
+			    
+			    
+			    div.style.marginRight ="20px";
+			     div.style.display = "inline-block";
+			     
+			     var selectedPersonText = document.getElementById('selectPerson').options[document.getElementById('selectPerson').selectedIndex].text;
+				var div = createDiv('container');
+					div.id ="box2";
+					div.style.display="inline-block";
+					div.style.width = "29%";
+					
+			     
+			    var text = document.createElement("div");
+			 			text.id = "scrollableTextbox";
+			 			text.style.marginTop = "50px";
+			 			text.style.height ="70vh";
+			 			div.appendChild(text);
+			 			
+			 	
+			 			
+			   			text.innerHTML ="This graphic shows how much " +
+			   			                 selectedPersonText + " posted in the differenct social networks "
+			   			                 + " in the different years and months"
+			   			                 + " <br> If you click on one of the points you can see the posts made in this "
+			   			                 + "month";
+
+				showPostTimeline(obj, "#postTimeline", "scrollableTextbox");
+				
+				
+
+			   
+			  	
+				
+			});
+		}	
+		else
+		{
+			buttonWordCloud.disabled=true; 
+		}
+			
+			
+		
+	}
+
+	function init()
+	{
+		
+		var div = createDiv("textbox");
+		div.class = "SHOW_TEXT";
+		div.innerHTML = "Choose a person!";
+		div.style.marginTop ="10px";
+	
+		var buttonWordCloud = document.getElementById("getClouds");
+		buttonWordCloud.disabled=true; 
+		
+		$.post('/polls/initTemplate/', "Test", function(response){
+
+			var obj = JSON.parse(response);
+			var select = document.getElementById("selectPerson");
+			
+			var option1 = document.createElement("option");
+			option1.value=obj.length;
+			option1.selected="";
+			option1.innerHTML='';
+				
+				select.appendChild(option1);
+			
+			for(var i = 0; i < obj.length; i++ ){
+				files.push(obj[i]["filename"]);
+				names.push(obj[i]["show"]);
+				
+				var option1 = document.createElement("option");
+				option1.value=i;
+				option1.selected="";
+				option1.innerHTML= obj[i]["show"];
+				
+				select.appendChild(option1);
+			}
+			
+		
+			
+		});
+	}
+
+			
+	function backFromViewPosts()
+		{
+			var iDiv = document.getElementById("clouds");
+			iDiv.style.display = 'block';           // Hide
+			
+			var divPosts = document.getElementById("posts");
+			divPosts.style.display ='none';
+
+			
+			var backButton = document.getElementById("backButton");
+			backButton.style.display = 'none';
+			
+			var buttonWordCloud = document.getElementById("getClouds");
+			buttonWordCloud.style.display = 'block';
+		}
+			
+   
+
+	function cleanScreen()
+	{
+		var el = document.getElementById('drawing');
+		 while ( el.firstChild ) el.removeChild( el.firstChild );
+	}
+
+	function getOccurenceMatrix()
+	{
+		cleanScreen();
+		
+		
+		
+		var div = createDiv('occurence');
+        div.style.width="70%";
+        div.style.textAlign ="center";
+      
+
+		var file=files[selectedPerson]; 
+		var post={
+		 	filename: file
+		 };
+		 
+		 $.post('/polls/coOccurence/', post, function(response){
+         	var run = false;
+       		var obj = JSON.parse(response);
+       		console.log(obj["graph"]);
+       		
+       		drawMatrix("#occurence", obj["graph"], obj["minValue"], obj["maxValue"]);
+
+			var div = createDiv('container');
+			div.id ="box2";
+			div.style.display="inline-block";
+			div.style.height = "670px";
+			
+			 var text = document.createElement("div");
+			 			text.id = "informationBox";	
+			   			text.innerHTML ="The word matrix shows how often the 50 most used words are appearing together."
+			   							+ "<br> As darker the color as more often they appear together"
+			   							+ "<br> The colour white indicates that they don't appear together at all"
+			   							+ "<br><br> If you go over the field with your mouse you can see the count of apperances";
+			        	div.appendChild(text);
+			       
+       });
+		 
+	}
+	
+	function drawPosts(obj, tag, maxPost)
+	{
+		var div = document.createElement("div");
+		div.id ="pointCloud";
+		div.style.height = "80%";
+		div.style.width ="100%"; 
+		div.style.backgroundColor ="green"; 
+		
+		document.getElementById("drawing").appendChild(div); 
+		
+		var textbox = document.getElementById("textbox");			  
+		drawPointCloud(obj , "#pointCloud" , textbox,maxPost);
+	}
+
+    function getWordCloud()
+    {	 
+	    cleanScreen();	
+		//var div = createDiv('clouds');
+		
+    	 var inp = document.getElementById("numberOfTopics");
+    	 var topics = inp.value; 
+    	 var file=files[selectedPerson];
+    	 
+    	/* var el = document.getElementById('clouds');
+		while ( el.firstChild ) el.removeChild( el.firstChild );*/
+
+    	 
+    	 var post={
+    	 				numberOfTopics: topics,
+    	 				filename : file
+    	 };
+
+            	
+    	$.blockUI({ 
+    		 message: '<h1>Please wait a moment while the topics are calculated...</h1>',
+    		 css: { 
+            border: 'none', 
+            padding: '15px', 
+            backgroundColor: '#000', 
+            '-webkit-border-radius': '10px', 
+            '-moz-border-radius': '10px', 
+            opacity: .5, 
+            color: '#fff' 
+        }
+			}); 
+ 
+    	$(document).ajaxStop($.unblockUI); 
+    	
+    	
+    	$.post('/polls/wordCloud/', post, function(response){
+
+				var objArr = JSON.parse(response);
+				console.log(objArr);
+				
+				var obj = objArr["topicsDescription"];
+				
+	            var parentId = 0;
+	       					    
+			    var div = createDiv('clouds');
+			    div.style.width = "70%";
+				div.style.height = "900px";
+			      div.style.marginRight ="20px";
+			      div.style.marginTop ="-20px";
+			     div.style.display = "inline-block";
+
+	       	   visualizeTopic(objArr["links"],objArr["nodes"], obj, obj);
+	       	
+			    
+			    
+			 
+			     
+			     var selectedPersonText = document.getElementById('selectPerson').options[document.getElementById('selectPerson').selectedIndex].text;
+				var div = createDiv('container');
+					div.id ="box2";
+					div.style.display="inline-block";
+					div.style.width = "29%";
+					
+			     
+			    var text = document.createElement("div");
+			 			text.id = "scrollableTextbox";
+			 			text.style.marginTop = "50px";
+			 			text.style.height ="70vh";
+			 			div.appendChild(text);
+			 			
+			 	
+			 			
+			   			text.innerHTML ="This graphic shows how much " +
+			   			                 selectedPersonText + " posted in the differenct social networks "
+			   			                 + " in the different years and months"
+			   			                 + " <br> If you click on one of the points you can see the posts made in this "
+			   			                 + "month";
+
+				//showPostTimeline(obj, "#postTimeline", "scrollableTextbox");
+				
+				
+
+			   
+			  	
+				
+			});
+			
+			}
+    	
+
+
+    
+</script>
+

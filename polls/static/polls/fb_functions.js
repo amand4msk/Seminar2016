@@ -65,8 +65,9 @@ function myFacebookLogin() {
         
         
 
-function getMueller() {   // calls the first batch of records
+function fb() {   // calls the first batch of records
      var person = document.getElementById("textbox1").value;
+    console.log(person);
     
      post['FB']=person;
      
