@@ -198,8 +198,7 @@ function procRow(dat)
 function saveFB()
 {
      $.post('/polls/saveFB/', post, function(response){
-       /* if(response == 'success') { //alert('Yay!');}
-        else{//alert('dump');}*/
+       console.log(response);
     });
 }
 

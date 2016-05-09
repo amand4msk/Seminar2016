@@ -81,6 +81,7 @@ def selectQuery(request):
     result = cursor.fetchall() 
     for r in result:
         print(r)
+    return HttpResponse(result)
 
 def wordCloud(request):
     data = test(request.POST['filename'], int(request.POST['numberOfTopics']))
