@@ -1,5 +1,6 @@
 from django.shortcuts import render
 import logging
+import sqlite3
 log = logging.getLogger(__name__)
 
 # Create your views here.
@@ -72,6 +73,9 @@ def saveFB(request):
 
     return HttpResponse('success')
 
+def selectQuery(request):
+    connection = sqlite3.connect("db.sqlite3")
+    console.log("yup")
 
 def wordCloud(request):
     data = test(request.POST['filename'], int(request.POST['numberOfTopics']))

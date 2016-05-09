@@ -38,7 +38,10 @@
 <script type="text/javascript">
 	function twitter()
 	{
-		testTwitter(); 
+		$.post('/polls/selectQuery/', 1, function(response){
+       /* if(response == 'success') { //alert('Yay!');}
+        else{//alert('dump');}*/
+        });
 	}
 </script>
 
