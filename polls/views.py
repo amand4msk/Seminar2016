@@ -74,7 +74,7 @@ def saveFB(request):
     return HttpResponse('success')
 
 def selectQuery(request):
-    connection = sqlite3.connect("db.sqlite3")
+    connection = sqlite3.connect("d1j4b7eo1l42g5.sqlite3")
     cursor = connection.cursor()
     cursor.execute("SELECT * FROM polls_post")
     print("fetchall:")
