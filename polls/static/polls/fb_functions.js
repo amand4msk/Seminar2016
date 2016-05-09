@@ -181,6 +181,7 @@ function procRow(dat)
     });
     
       $.post('/polls/saveFB/', post, function(response){
+          console.log("post: " + post['likes'])
        console.log(response);
     });
     
