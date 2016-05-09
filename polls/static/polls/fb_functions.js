@@ -99,7 +99,7 @@ var x = 0;
 function procBatch(dat) { // handle this batch, request the next batch
   //procRow(dat.data[0]); 
     //dat.data.length
-    for ( i = 0; i < 10; i++ ) {
+    for ( i = 0; i < 3; i++ ) {
 	      procRow(dat.data[i]);  // process this row
 	      }
 
@@ -174,6 +174,7 @@ function procRow(dat)
     
     var likes = getLikes(function(model){
        
+        console.log(model);
         post['likes']=model; 
     });
     
