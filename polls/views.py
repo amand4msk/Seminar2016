@@ -9,7 +9,7 @@ from django.http import HttpResponse
 from .models import Person, Post, FacebookPost
 
 import logging
-from analyseData.analyseData import getPersons, test, getcoOccurenceMatrix, getPosts, getPostsByDate
+#from analyseData.analyseData import getPersons, test, getcoOccurenceMatrix, getPosts, getPostsByDate
 
 def index(request):
     return render(request, 'polls/index.html')
