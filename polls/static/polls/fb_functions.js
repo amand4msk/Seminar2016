@@ -120,7 +120,7 @@ function procBatch(dat) { // handle this batch, request the next batch
 
 
 
-function getLikes(callback, postId)
+function getLikes(postId)
 {
     console.log("ID: "+ postId);
     FB.api("/"+ postId + "/likes?summary=true",{},function(response) { 
@@ -179,17 +179,22 @@ function procRow(dat)
 
 function saveFB(postId)
 {
+     post['id']=dat['id']; 
     console.log("fb: " + postId);
-     var likes = getLikes(function(model, postId){
-
-                console.log(model);
-                post['likes']=model; 
-            });
-
-              $.post('/polls/saveFB/', post, function(response){
+    
+    
+     FB.api("/"+ postId + "/likes?summary=true",{},function(response) { 
+        console.log(response)
+        post['likes'] = response.summary['total_count'];
+         
+          $.post('/polls/saveFB/', post, function(response){
                   console.log("post: " + post['likes'])
                    console.log(response);
             });
+      
+     } );
+
+             
 }
 
 
