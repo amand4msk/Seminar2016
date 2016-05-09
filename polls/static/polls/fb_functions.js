@@ -120,10 +120,10 @@ function procBatch(dat) { // handle this batch, request the next batch
 
 
 
-function getLikes(callback)
+function getLikes(callback, postId)
 {
-    console.log("ID: "+ post['id']);
-    FB.api("/"+ post['id'] + "/likes?summary=true",{},function(response) { 
+    console.log("ID: "+ postId);
+    FB.api("/"+ postId + "/likes?summary=true",{},function(response) { 
         console.log(response)
         //post['likes'] = response.summary['total_count'];
         callback(response.summary['total_count'])
@@ -160,15 +160,27 @@ function fbUser(callback){
  var likes = 0;
 function procRow(dat)
 {
-   
+
+       
     post['message']= dat['message'];
     post['created_time']= dat['created_time'];
     post['id']=dat['id']; 
     
     console.log("id: " + post['id']);
+    
       $.post('/polls/savePost/', post, function(response){
        if(response == 'success') { 
-                 var likes = getLikes(function(model){
+                saveFB(dat['id']);
+       }
+        
+    });
+
+}
+
+function saveFB(postId)
+{
+    console.log("fb: " + postId);
+     var likes = getLikes(function(model, postId){
 
                 console.log(model);
                 post['likes']=model; 
@@ -178,33 +190,6 @@ function procRow(dat)
                   console.log("post: " + post['likes'])
                    console.log(response);
             });
-       }
-        
-    });
-    
-
-    
-  
-    
-  /*  var comments = getComments(function(model){
-
-        post['comments']=model; 
-        commentValue = 1;
-        if(likesValue == 1)
-            {
-                saveFB(); 
-            }
-    });*/
-    
-
-
-}
-
-function saveFB()
-{
-     $.post('/polls/saveFB/', post, function(response){
-       console.log(response);
-    });
 }
 
 
