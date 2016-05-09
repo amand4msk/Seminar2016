@@ -66,8 +66,7 @@ def savePost(request):
 def saveFB(request):
     idPost = request.POST['id']
     likes = request.POST['likes']
-    comments=request.POST['comments']
-    fbPost = FacebookPost(idPost=idPost, likes=likes, countComment=comments, shares=0)
+    fbPost = FacebookPost(idPost=idPost, likes=likes, countComment=0, shares=0)
     
     fbPost.save() 
 

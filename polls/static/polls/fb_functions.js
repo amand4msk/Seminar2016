@@ -98,7 +98,8 @@ function procPerson(dat)
 var x = 0; 
 function procBatch(dat) { // handle this batch, request the next batch
   //procRow(dat.data[0]); 
-    for ( i = 0; i < dat.data.length; i++ ) {
+    //dat.data.length
+    for ( i = 0; i < 10; i++ ) {
 	      procRow(dat.data[i]);  // process this row
 	      }
 
@@ -174,11 +175,10 @@ function procRow(dat)
     var likes = getLikes(function(model){
        
         post['likes']=model; 
-        likesValue = 1;
-        if(commentValue == 1)
-            {
-                saveFB();
-            }
+    });
+    
+      $.post('/polls/saveFB/', post, function(response){
+       console.log(response);
     });
     
   /*  var comments = getComments(function(model){
