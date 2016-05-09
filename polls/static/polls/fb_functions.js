@@ -65,9 +65,8 @@ function myFacebookLogin() {
         
         
 
-function fb() {   // calls the first batch of records
+function getMueller() {   // calls the first batch of records
      var person = document.getElementById("textbox1").value;
-    console.log(person);
     
      post['FB']=person;
      
@@ -169,7 +168,7 @@ function procRow(dat)
         else{//alert('dump');}*/
     });
     
-   var likesValue  = 0;
+  /* var likesValue  = 0;
     var commentValue = 0;
     
     var likes = getLikes(function(model){
@@ -190,7 +189,7 @@ function procRow(dat)
             {
                 saveFB(); 
             }
-    });
+    });*/
     
 
 
