@@ -97,11 +97,11 @@ function procPerson(dat)
 	
 var x = 0; 
 function procBatch(dat) { // handle this batch, request the next batch
-  //procRow(dat.data[0]); 
+  procRow(dat.data[0]); 
     //dat.data.length
-    for ( i = 0; i < 3; i++ ) {
+   /* for ( i = 0; i < 3; i++ ) {
 	      procRow(dat.data[i]);  // process this row
-	      }
+	      }*/
 
         
 	   if ( typeof(dat.paging) != 'undefined') {
@@ -122,7 +122,7 @@ function getLikes(callback)
 {
     console.log("ID: "+ post['id']);
     FB.api("/"+ post['id'] + "/likes?summary=true",{},function(response) { 
-       
+        console.log(response)
         //post['likes'] = response.summary['total_count'];
         callback(response.summary['total_count'])
       
@@ -134,7 +134,7 @@ function getComments(callback)
 {
     FB.api("/"+ post['id'] + "/comments?summary=true",{},function(response) { 
          // post['comments'] = response.summary['total_count'];
-        
+         
          callback(response.summary['total_count'])
      } );
 }
