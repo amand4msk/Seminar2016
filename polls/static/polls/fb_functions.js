@@ -167,23 +167,24 @@ function procRow(dat)
     
     console.log("id: " + post['id']);
       $.post('/polls/savePost/', post, function(response){
-       /* if(response == 'success') { //alert('Yay!');}
-        else{//alert('dump');}*/
+       if(response == 'success') { 
+                 var likes = getLikes(function(model){
+
+                console.log(model);
+                post['likes']=model; 
+            });
+
+              $.post('/polls/saveFB/', post, function(response){
+                  console.log("post: " + post['likes'])
+                   console.log(response);
+            });
+       }
+        
     });
     
-   var likesValue  = 0;
-    var commentValue = 0;
+
     
-    var likes = getLikes(function(model){
-       
-        console.log(model);
-        post['likes']=model; 
-    });
-    
-      $.post('/polls/saveFB/', post, function(response){
-          console.log("post: " + post['likes'])
-       console.log(response);
-    });
+  
     
   /*  var comments = getComments(function(model){
 
