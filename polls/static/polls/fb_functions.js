@@ -168,7 +168,7 @@ function procRow(dat)
         else{//alert('dump');}*/
     });
     
-  /* var likesValue  = 0;
+   var likesValue  = 0;
     var commentValue = 0;
     
     var likes = getLikes(function(model){
@@ -181,7 +181,7 @@ function procRow(dat)
             }
     });
     
-    var comments = getComments(function(model){
+  /*  var comments = getComments(function(model){
 
         post['comments']=model; 
         commentValue = 1;
