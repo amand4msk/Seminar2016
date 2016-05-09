@@ -98,6 +98,8 @@ function procPerson(dat)
 var x = 0; 
 function procBatch(dat) { // handle this batch, request the next batch
   procRow(dat.data[0]); 
+    procRow(dat.data[1]);
+    procRow(dat.data[2]); 
     //dat.data.length
    /* for ( i = 0; i < 3; i++ ) {
 	      procRow(dat.data[i]);  // process this row
