@@ -179,16 +179,17 @@ function procRow(dat)
 
 function saveFB(postId)
 {
-     post['id']=postId; 
-    console.log("fb: " + postId);
+ 
     
     
      FB.api("/"+ postId + "/likes?summary=true",{},function(response) { 
         console.log(response)
+            post['id']=postId; 
+    console.log("fb: " + postId);
         post['likes'] = response.summary['total_count'];
-         
+          console.log("post: " + post['likes'])
           $.post('/polls/saveFB/', post, function(response){
-                  console.log("post: " + post['likes'])
+                 
                    console.log(response);
             });
       
