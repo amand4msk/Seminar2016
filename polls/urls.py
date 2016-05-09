@@ -13,8 +13,8 @@ urlpatterns = [
      url(r'^initTemplate/$', views.initTemplate, name='initTemplate'),
      url(r'^coOccurence/$', views.coOccurence, name='coOccurence'),
      url(r'^posts/$', views.posts, name='posts'),
-     url(r'^postsByDate/$', views.postsByDate, name='postsByDate')
-    url(r'^selectQuery/$', views.selectQuery, name='selectQuery')
+     url(r'^postsByDate/$', views.postsByDate, name='postsByDate'),
+     url(r'^selectQuery/$', views.selectQuery, name='selectQuery')
     
     
 ]

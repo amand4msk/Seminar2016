@@ -75,7 +75,12 @@ def saveFB(request):
 
 def selectQuery(request):
     connection = sqlite3.connect("db.sqlite3")
-    console.log("yup")
+    cursor = connection.cursor()
+    cursor.execute("SELECT * FROM post")
+    print("fetchall:")
+    result = cursor.fetchall() 
+    for r in result:
+        print(r)
 
 def wordCloud(request):
     data = test(request.POST['filename'], int(request.POST['numberOfTopics']))

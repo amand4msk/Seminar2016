@@ -9021,3 +9021,110 @@ KeyError: 10
             WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
             ORDER BY name; args=None
 [09/May/2016 07:27:50] DEBUG [django.db.backends:89] (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+[09/May/2016 10:34:33] DEBUG [django.db.backends:89] (0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+[09/May/2016 10:34:33] DEBUG [django.db.backends:89] (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+[09/May/2016 10:34:43] WARNING [django.request:182] Not Found: /
+[09/May/2016 10:34:43] DEBUG [django.template:927] Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/template/base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [name] in u"<RegexURLResolver <module 'polls.urls' from '/Volumes/HD_DATEN 1/BENUTZER/MARIA/UNI/FS 2016/Web Seminr/project/seminar2016/polls/urls.py'> (None:None) ^polls/>"
+[09/May/2016 10:34:43] DEBUG [django.template:927] Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/template/base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [name] in u'<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>'
+[09/May/2016 10:34:46] WARNING [django.request:182] Not Found: /
+[09/May/2016 10:34:46] DEBUG [django.template:927] Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/template/base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [name] in u"<RegexURLResolver <module 'polls.urls' from '/Volumes/HD_DATEN 1/BENUTZER/MARIA/UNI/FS 2016/Web Seminr/project/seminar2016/polls/urls.py'> (None:None) ^polls/>"
+[09/May/2016 10:34:46] DEBUG [django.template:927] Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/template/base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [name] in u'<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>'
+[09/May/2016 10:34:47] ERROR [django.request:284] Internal Server Error: /polls/wordCloud/
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Volumes/HD_DATEN 1/BENUTZER/MARIA/UNI/FS 2016/Web Seminr/project/seminar2016/polls/views.py", line 81, in wordCloud
+    data = test(request.POST['filename'], int(request.POST['numberOfTopics']))
+NameError: global name 'test' is not defined
+[09/May/2016 10:34:49] WARNING [django.request:182] Not Found: /polls
+[09/May/2016 10:34:49] DEBUG [django.template:927] Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/template/base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [name] in u"<RegexURLResolver <module 'polls.urls' from '/Volumes/HD_DATEN 1/BENUTZER/MARIA/UNI/FS 2016/Web Seminr/project/seminar2016/polls/urls.py'> (None:None) ^polls/>"
+[09/May/2016 10:34:49] DEBUG [django.template:927] Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/template/base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [name] in u'<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>'
+[09/May/2016 10:34:50] ERROR [django.request:284] Internal Server Error: /polls/wordCloud/
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Volumes/HD_DATEN 1/BENUTZER/MARIA/UNI/FS 2016/Web Seminr/project/seminar2016/polls/views.py", line 81, in wordCloud
+    data = test(request.POST['filename'], int(request.POST['numberOfTopics']))
+NameError: global name 'test' is not defined
+[09/May/2016 10:34:53] ERROR [django.request:284] Internal Server Error: /polls/selectQuery/
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Volumes/HD_DATEN 1/BENUTZER/MARIA/UNI/FS 2016/Web Seminr/project/seminar2016/polls/views.py", line 78, in selectQuery
+    console.log("yup")
+NameError: global name 'console' is not defined
+[09/May/2016 10:35:00] ERROR [django.request:284] Internal Server Error: /polls/selectQuery/
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Volumes/HD_DATEN 1/BENUTZER/MARIA/UNI/FS 2016/Web Seminr/project/seminar2016/polls/views.py", line 78, in selectQuery
+    console.log("yup")
+NameError: global name 'console' is not defined
+[09/May/2016 10:36:00] DEBUG [django.db.backends:89] (0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+[09/May/2016 10:36:00] DEBUG [django.db.backends:89] (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+[09/May/2016 10:36:03] DEBUG [django.db.backends:89] (0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+[09/May/2016 10:36:03] DEBUG [django.db.backends:89] (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+[09/May/2016 10:36:21] DEBUG [django.db.backends:89] (0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+[09/May/2016 10:36:21] DEBUG [django.db.backends:89] (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+[09/May/2016 10:36:27] ERROR [django.request:284] Internal Server Error: /polls/selectQuery/
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Volumes/HD_DATEN 1/BENUTZER/MARIA/UNI/FS 2016/Web Seminr/project/seminar2016/polls/views.py", line 79, in selectQuery
+    cursor.execute("SELECT * FROM post")
+OperationalError: no such table: post
+[09/May/2016 10:36:38] ERROR [django.request:284] Internal Server Error: /polls/selectQuery/
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Volumes/HD_DATEN 1/BENUTZER/MARIA/UNI/FS 2016/Web Seminr/project/seminar2016/polls/views.py", line 79, in selectQuery
+    cursor.execute("SELECT * FROM post")
+OperationalError: no such table: post
