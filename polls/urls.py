@@ -9,5 +9,6 @@ urlpatterns = [
     url(r'^saveFB/$', views.saveFB, name='saveFB'),
     url(r'^savePerson/$', views.savePerson, name='savePerson'),
      url(r'^savePost/$', views.savePost, name='savePost'),
+     url(r'^cosineSimilarity/$', views.cosineSimilarity, name='cosineSimilarity'),
 ]
 
