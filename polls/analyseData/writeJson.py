@@ -5,8 +5,8 @@ def write(model, feature_names, n_top_words,tf, numberOfTopics, messages, dates,
 
     
     
-    rangeX=10
-    rangeY=40
+    rangeX=3
+    rangeY=10
     
     doc_topic = model.transform(tf)
     documentsPerTopic = dict()
@@ -24,35 +24,7 @@ def write(model, feature_names, n_top_words,tf, numberOfTopics, messages, dates,
         doc["date"]=dates[i]
         doc["postId"]=postIds[i]
         documentsPerTopic[max].append(doc)
-        
-    
-    
-    idsPerTopics = []
-    for i in range(0, len(documentsPerTopic)):
-        postIds = []
-        for j in range(0, len(documentsPerTopic[i])):
-            postIds.append(documentsPerTopic[i][j]["postId"])
-        idsPerTopics.append(postIds)
-        
-    sum = 0
-    countSame = []
-    for i in range(0, len(idsPerTopics)):
-        countSame.append([])
-        for j in range(0, len(idsPerTopics)):
-            countSame[i].append(0)
-    
-    for i in range(0, len(idsPerTopics)-1):
-        sum += len(idsPerTopics[i])
-        for j in range(i+1, len(idsPerTopics)):
-            for k in range(0, len(idsPerTopics[j])):               
-                docId1 = idsPerTopics[j][k]
-                if docId1 in idsPerTopics[i]:
-                    countSame[i][j] = countSame[i][j]+1
-              
-    print(len(messages))      
-    print(sum)
-    print(countSame)
-    
+            
         
    # for k in documentsPerTopic:
     #    print("Topic "+ str(k) + " :" + str(documentsPerTopic[k]))
@@ -89,46 +61,51 @@ def write(model, feature_names, n_top_words,tf, numberOfTopics, messages, dates,
        topics.append(topicDic)
        j = j+1
     
-
-        
-    
-    
     k = 0
+    x=0
     c = 0
     returnArr = dict()
+    data = []
+    returnArr["name"] ="topics"
+    returnArr["children"]=data
     
-    links = []
-    nodes = []
+    min = -1
+    max = 0
+    
     for topic in topics:
-        words = topic["words"]
-        print("length: " + str(len(words)))
-        for i in range(0, 4):
-            node = dict()
-            print(k*5+i)
-            node["id"]=k*5+i
-            node["group"]=k
-            node["caption"]=str(words[i]["text"])
-            nodes.append(node)
-            link = dict()
-            link["source"] = k*5+i
-            link["target"] = k*5+i+1
-            links.append(link)
-        node["id"]=k*5+4
-        node["group"]=k
-        node["caption"]=str(words[4]["text"])
-        nodes.append(node)            
-        link = dict()
-        link["source"] = k*5+4
-        link["target"] = k*5
-        links.append(link)
+        if min==-1:
+            min = topic["numberofDocus"]
+        else:
+            v = topic["numberofDocus"]
+            if v > max:
+                max = v
+            
+            if v < min: 
+                min = v 
+        
+    k =0 
+    for topic in topics:
+        d = dict()
+        d["name"]="topic"
+        d["group"]=k
+        d["numberOfDocus"]=topic["numberofDocus"]
+        d["words"]=topic["words"]
+        d["posts"]=topic["posts"]
+        children=[]
+        v = topic["numberofDocus"]
+        a = (v-min) / (max-min+0.0)
+        b = a*(rangeY-rangeX)+rangeX
+        for i in range(5):
+            c = dict()
+            c["name"]=topic["words"][i]["text"]
+            c["size"]=int(b)
+            c["group"]=k
+            children.append(c)
+        k=k+1
+        d["children"]=children
+        data.append(d)
+        
 
-        k = k+1
-    
-    returnArr["topicsDescription"]=topics
-    returnArr["links"]=links
-    returnArr["nodes"]=nodes
-       
-   
     json_data = json.dumps(returnArr)
 
     

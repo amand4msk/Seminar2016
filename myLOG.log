@@ -9129,3 +9129,1932 @@ Traceback (most recent call last):
     cursor.execute("SELECT * FROM post")
 OperationalError: no such table: post
 [09/May/2016 18:30:27] DEBUG [django.db.backends:89] (0.001) SELECT "polls_facebookpost"."id", "polls_facebookpost"."idPost", "polls_facebookpost"."likes", "polls_facebookpost"."shares", "polls_facebookpost"."countComment" FROM "polls_facebookpost" LIMIT 21; args=()
+[09/May/2016 19:50:10] DEBUG [django.db.backends:89] (0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+[09/May/2016 19:50:10] DEBUG [django.db.backends:89] (0.003) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+[09/May/2016 19:50:21] WARNING [django.request:182] Not Found: /
+[09/May/2016 19:50:21] DEBUG [django.template:927] Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/template/base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [name] in u"<RegexURLResolver <module 'polls.urls' from '/Volumes/HD_DATEN 1/BENUTZER/MARIA/UNI/FS 2016/Web Seminr/project/seminar2016/polls/urls.pyc'> (None:None) ^polls/>"
+[09/May/2016 19:50:21] DEBUG [django.template:927] Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/template/base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [name] in u'<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>'
+[09/May/2016 19:50:25] WARNING [django.request:182] Not Found: /
+[09/May/2016 19:50:25] DEBUG [django.template:927] Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/template/base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [name] in u"<RegexURLResolver <module 'polls.urls' from '/Volumes/HD_DATEN 1/BENUTZER/MARIA/UNI/FS 2016/Web Seminr/project/seminar2016/polls/urls.pyc'> (None:None) ^polls/>"
+[09/May/2016 19:50:25] DEBUG [django.template:927] Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/template/base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [name] in u'<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>'
+[09/May/2016 19:50:26] ERROR [django.request:284] Internal Server Error: /polls/wordCloud/
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Volumes/HD_DATEN 1/BENUTZER/MARIA/UNI/FS 2016/Web Seminr/project/seminar2016/polls/views.py", line 86, in wordCloud
+    data = test(request.POST['filename'], int(request.POST['numberOfTopics']))
+NameError: global name 'test' is not defined
+[09/May/2016 19:50:28] WARNING [django.request:182] Not Found: /polls
+[09/May/2016 19:50:28] DEBUG [django.template:927] Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/template/base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [name] in u"<RegexURLResolver <module 'polls.urls' from '/Volumes/HD_DATEN 1/BENUTZER/MARIA/UNI/FS 2016/Web Seminr/project/seminar2016/polls/urls.pyc'> (None:None) ^polls/>"
+[09/May/2016 19:50:28] DEBUG [django.template:927] Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/template/base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [name] in u'<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>'
+[09/May/2016 19:50:29] ERROR [django.request:284] Internal Server Error: /polls/wordCloud/
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Volumes/HD_DATEN 1/BENUTZER/MARIA/UNI/FS 2016/Web Seminr/project/seminar2016/polls/views.py", line 86, in wordCloud
+    data = test(request.POST['filename'], int(request.POST['numberOfTopics']))
+NameError: global name 'test' is not defined
+[09/May/2016 19:50:33] ERROR [django.request:284] Internal Server Error: /polls/wordCloud/
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Volumes/HD_DATEN 1/BENUTZER/MARIA/UNI/FS 2016/Web Seminr/project/seminar2016/polls/views.py", line 86, in wordCloud
+    data = test(request.POST['filename'], int(request.POST['numberOfTopics']))
+NameError: global name 'test' is not defined
+[09/May/2016 19:51:15] ERROR [django.request:284] Internal Server Error: /polls/initTemplate/
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Volumes/HD_DATEN 1/BENUTZER/MARIA/UNI/FS 2016/Web Seminr/project/seminar2016/polls/views.py", line 99, in initTemplate
+    data = getPersons()
+NameError: global name 'getPersons' is not defined
+[09/May/2016 19:51:22] ERROR [django.request:284] Internal Server Error: /polls/initTemplate/
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Volumes/HD_DATEN 1/BENUTZER/MARIA/UNI/FS 2016/Web Seminr/project/seminar2016/polls/views.py", line 99, in initTemplate
+    data = getPersons()
+NameError: global name 'getPersons' is not defined
+[09/May/2016 19:52:55] DEBUG [django.db.backends:89] (0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+[09/May/2016 19:52:55] DEBUG [django.db.backends:89] (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+[09/May/2016 19:57:59] DEBUG [django.db.backends:89] (0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+[09/May/2016 19:57:59] DEBUG [django.db.backends:89] (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+[09/May/2016 20:04:21] DEBUG [django.db.backends:89] (0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+[09/May/2016 20:04:21] DEBUG [django.db.backends:89] (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+[09/May/2016 20:06:23] DEBUG [django.db.backends:89] (0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+[09/May/2016 20:06:23] DEBUG [django.db.backends:89] (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+[09/May/2016 20:06:33] ERROR [django.request:284] Internal Server Error: /polls/wordCloud/
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Volumes/HD_DATEN 1/BENUTZER/MARIA/UNI/FS 2016/Web Seminr/project/seminar2016/polls/views.py", line 86, in wordCloud
+    data = test(request.POST['filename'], int(request.POST['numberOfTopics']))
+  File "/Volumes/HD_DATEN 1/BENUTZER/MARIA/UNI/FS 2016/Web Seminr/project/seminar2016/polls/analyseData/analyseData.py", line 97, in test
+    return writeJson.write(lda, tf_feature_names, 20,tf,n_topics, messagesText, dates, postIds)
+  File "/Volumes/HD_DATEN 1/BENUTZER/MARIA/UNI/FS 2016/Web Seminr/project/seminar2016/polls/analyseData/writeJson.py", line 92, in write
+    node["size"]=word[4]["size"]
+KeyError: 4
+[09/May/2016 20:07:21] DEBUG [django.db.backends:89] (0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+[09/May/2016 20:07:21] DEBUG [django.db.backends:89] (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+[09/May/2016 20:07:50] DEBUG [django.db.backends:89] (0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+[09/May/2016 20:07:50] DEBUG [django.db.backends:89] (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+[09/May/2016 20:09:53] DEBUG [django.db.backends:89] (0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+[09/May/2016 20:09:53] DEBUG [django.db.backends:89] (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+[09/May/2016 20:10:21] DEBUG [django.db.backends:89] (0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+[09/May/2016 20:10:21] DEBUG [django.db.backends:89] (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+[09/May/2016 20:10:42] DEBUG [django.db.backends:89] (0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+[09/May/2016 20:10:42] DEBUG [django.db.backends:89] (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+[09/May/2016 20:10:57] ERROR [django.request:284] Internal Server Error: /polls/wordCloud/
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Volumes/HD_DATEN 1/BENUTZER/MARIA/UNI/FS 2016/Web Seminr/project/seminar2016/polls/views.py", line 86, in wordCloud
+    data = test(request.POST['filename'], int(request.POST['numberOfTopics']))
+  File "/Volumes/HD_DATEN 1/BENUTZER/MARIA/UNI/FS 2016/Web Seminr/project/seminar2016/polls/analyseData/analyseData.py", line 97, in test
+    return writeJson.write(lda, tf_feature_names, 20,tf,n_topics, messagesText, dates, postIds)
+  File "/Volumes/HD_DATEN 1/BENUTZER/MARIA/UNI/FS 2016/Web Seminr/project/seminar2016/polls/analyseData/writeJson.py", line 79, in write
+    print("id: " + k*5+i)
+TypeError: cannot concatenate 'str' and 'int' objects
+[09/May/2016 20:11:21] DEBUG [django.db.backends:89] (0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+[09/May/2016 20:11:21] DEBUG [django.db.backends:89] (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+[09/May/2016 20:12:55] DEBUG [django.db.backends:89] (0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+[09/May/2016 20:12:55] DEBUG [django.db.backends:89] (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+[09/May/2016 20:18:02] DEBUG [django.db.backends:89] (0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+[09/May/2016 20:18:02] DEBUG [django.db.backends:89] (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+[09/May/2016 20:20:47] DEBUG [django.db.backends:89] (0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+[09/May/2016 20:20:47] DEBUG [django.db.backends:89] (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+[09/May/2016 20:23:09] DEBUG [django.db.backends:89] (0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+[09/May/2016 20:23:09] DEBUG [django.db.backends:89] (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+[09/May/2016 20:24:52] DEBUG [django.db.backends:89] (0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+[09/May/2016 20:24:52] DEBUG [django.db.backends:89] (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+[09/May/2016 20:26:02] DEBUG [django.db.backends:89] (0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+[09/May/2016 20:26:02] DEBUG [django.db.backends:89] (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+[09/May/2016 20:30:17] DEBUG [django.db.backends:89] (0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+[09/May/2016 20:30:17] DEBUG [django.db.backends:89] (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+[09/May/2016 20:30:24] DEBUG [django.db.backends:89] (0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+[09/May/2016 20:30:24] DEBUG [django.db.backends:89] (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+[09/May/2016 20:32:19] DEBUG [django.db.backends:89] (0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+[09/May/2016 20:32:19] DEBUG [django.db.backends:89] (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+[09/May/2016 20:33:37] DEBUG [django.db.backends:89] (0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+[09/May/2016 20:33:37] DEBUG [django.db.backends:89] (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+[09/May/2016 20:34:45] DEBUG [django.db.backends:89] (0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+[09/May/2016 20:34:45] DEBUG [django.db.backends:89] (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+[09/May/2016 20:35:05] DEBUG [django.db.backends:89] (0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+[09/May/2016 20:35:05] DEBUG [django.db.backends:89] (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+[09/May/2016 20:36:58] DEBUG [django.db.backends:89] (0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+[09/May/2016 20:36:58] DEBUG [django.db.backends:89] (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+[09/May/2016 20:46:45] DEBUG [django.db.backends:89] (0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+[09/May/2016 20:46:45] DEBUG [django.db.backends:89] (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+[10/May/2016 10:10:43] DEBUG [django.db.backends:89] (0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+[10/May/2016 10:10:43] DEBUG [django.db.backends:89] (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+[10/May/2016 10:10:50] WARNING [django.request:182] Not Found: /
+[10/May/2016 10:10:50] DEBUG [django.template:927] Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/template/base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [name] in u"<RegexURLResolver <module 'polls.urls' from '/Volumes/HD_DATEN 1/BENUTZER/MARIA/UNI/FS 2016/Web Seminr/project/seminar2016/polls/urls.pyc'> (None:None) ^polls/>"
+[10/May/2016 10:10:50] DEBUG [django.template:927] Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/template/base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [name] in u'<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>'
+[10/May/2016 10:10:51] ERROR [django.request:284] Internal Server Error: /polls/wordCloud/
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Volumes/HD_DATEN 1/BENUTZER/MARIA/UNI/FS 2016/Web Seminr/project/seminar2016/polls/views.py", line 86, in wordCloud
+    data = test(request.POST['filename'], int(request.POST['numberOfTopics']))
+  File "/Library/Python/2.7/site-packages/django/utils/datastructures.py", line 85, in __getitem__
+    raise MultiValueDictKeyError(repr(key))
+MultiValueDictKeyError: "'filename'"
+[10/May/2016 10:10:51] ERROR [django.request:284] Internal Server Error: /polls/wordCloud/
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Volumes/HD_DATEN 1/BENUTZER/MARIA/UNI/FS 2016/Web Seminr/project/seminar2016/polls/views.py", line 86, in wordCloud
+    data = test(request.POST['filename'], int(request.POST['numberOfTopics']))
+  File "/Library/Python/2.7/site-packages/django/utils/datastructures.py", line 85, in __getitem__
+    raise MultiValueDictKeyError(repr(key))
+MultiValueDictKeyError: "'filename'"
+[10/May/2016 10:10:55] ERROR [django.request:284] Internal Server Error: /polls/wordCloud/
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Volumes/HD_DATEN 1/BENUTZER/MARIA/UNI/FS 2016/Web Seminr/project/seminar2016/polls/views.py", line 86, in wordCloud
+    data = test(request.POST['filename'], int(request.POST['numberOfTopics']))
+  File "/Library/Python/2.7/site-packages/django/utils/datastructures.py", line 85, in __getitem__
+    raise MultiValueDictKeyError(repr(key))
+MultiValueDictKeyError: "'filename'"
+[10/May/2016 14:58:15] DEBUG [django.db.backends:89] (0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+[10/May/2016 14:58:15] DEBUG [django.db.backends:89] (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+[10/May/2016 15:00:07] DEBUG [django.db.backends:89] (0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+[10/May/2016 15:00:07] DEBUG [django.db.backends:89] (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+[10/May/2016 15:01:49] DEBUG [django.db.backends:89] (0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+[10/May/2016 15:01:49] DEBUG [django.db.backends:89] (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+[10/May/2016 15:02:39] DEBUG [django.db.backends:89] (0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+[10/May/2016 15:02:39] DEBUG [django.db.backends:89] (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+[10/May/2016 15:03:13] DEBUG [django.db.backends:89] (0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+[10/May/2016 15:03:13] DEBUG [django.db.backends:89] (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+[10/May/2016 15:06:37] DEBUG [django.db.backends:89] (0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+[10/May/2016 15:06:37] DEBUG [django.db.backends:89] (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+[10/May/2016 15:06:49] ERROR [django.request:284] Internal Server Error: /polls/wordCloud/
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Volumes/HD_DATEN 1/BENUTZER/MARIA/UNI/FS 2016/Web Seminr/project/seminar2016/polls/views.py", line 86, in wordCloud
+    data = test(request.POST['filename'], int(request.POST['numberOfTopics']))
+  File "/Volumes/HD_DATEN 1/BENUTZER/MARIA/UNI/FS 2016/Web Seminr/project/seminar2016/polls/analyseData/analyseData.py", line 97, in test
+    return writeJson.write(lda, tf_feature_names, 20,tf,n_topics, messagesText, dates, postIds)
+  File "/Volumes/HD_DATEN 1/BENUTZER/MARIA/UNI/FS 2016/Web Seminr/project/seminar2016/polls/analyseData/writeJson.py", line 84, in write
+    link["group"]=k
+UnboundLocalError: local variable 'link' referenced before assignment
+[10/May/2016 15:07:07] DEBUG [django.db.backends:89] (0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+[10/May/2016 15:07:07] DEBUG [django.db.backends:89] (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+[10/May/2016 15:35:02] DEBUG [django.db.backends:89] (0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+[10/May/2016 15:35:02] DEBUG [django.db.backends:89] (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+[10/May/2016 15:37:51] DEBUG [django.db.backends:89] (0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+[10/May/2016 15:37:51] DEBUG [django.db.backends:89] (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+[10/May/2016 15:41:39] DEBUG [django.db.backends:89] (0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+[10/May/2016 15:41:39] DEBUG [django.db.backends:89] (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+[10/May/2016 15:41:55] DEBUG [django.db.backends:89] (0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+[10/May/2016 15:41:55] DEBUG [django.db.backends:89] (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+[10/May/2016 15:43:33] DEBUG [django.db.backends:89] (0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+[10/May/2016 15:43:33] DEBUG [django.db.backends:89] (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+[10/May/2016 15:53:28] DEBUG [django.db.backends:89] (0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+[10/May/2016 15:53:28] DEBUG [django.db.backends:89] (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+[10/May/2016 15:58:55] DEBUG [django.db.backends:89] (0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+[10/May/2016 15:58:55] DEBUG [django.db.backends:89] (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+[10/May/2016 15:59:03] DEBUG [django.db.backends:89] (0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+[10/May/2016 15:59:03] DEBUG [django.db.backends:89] (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+[10/May/2016 16:22:19] DEBUG [django.db.backends:89] (0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+[10/May/2016 16:22:19] DEBUG [django.db.backends:89] (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+[10/May/2016 16:36:24] WARNING [django.request:182] Not Found: /
+[10/May/2016 16:36:24] DEBUG [django.template:927] Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/template/base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [name] in u"<RegexURLResolver <module 'polls.urls' from '/Volumes/HD_DATEN 1/BENUTZER/MARIA/UNI/FS 2016/Web Seminr/project/seminar2016/polls/urls.pyc'> (None:None) ^polls/>"
+[10/May/2016 16:36:24] DEBUG [django.template:927] Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/template/base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [name] in u'<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>'
+[10/May/2016 16:36:37] DEBUG [django.db.backends:89] (0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+[10/May/2016 16:36:37] DEBUG [django.db.backends:89] (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+[10/May/2016 16:37:26] DEBUG [django.db.backends:89] (0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+[10/May/2016 16:37:26] DEBUG [django.db.backends:89] (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+[10/May/2016 16:37:47] DEBUG [django.db.backends:89] (0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+[10/May/2016 16:37:47] DEBUG [django.db.backends:89] (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+[10/May/2016 18:18:51] DEBUG [django.db.backends:89] (0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+[10/May/2016 18:18:51] DEBUG [django.db.backends:89] (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+[10/May/2016 19:51:48] DEBUG [django.db.backends:89] (0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+[10/May/2016 19:51:48] DEBUG [django.db.backends:89] (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+[10/May/2016 19:54:12] DEBUG [django.db.backends:89] (0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+[10/May/2016 19:54:12] DEBUG [django.db.backends:89] (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+[10/May/2016 19:54:17] DEBUG [django.db.backends:89] (0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+[10/May/2016 19:54:17] DEBUG [django.db.backends:89] (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+[10/May/2016 19:55:34] DEBUG [django.db.backends:89] (0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+[10/May/2016 19:55:34] DEBUG [django.db.backends:89] (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+[10/May/2016 19:56:27] DEBUG [django.db.backends:89] (0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+[10/May/2016 19:56:27] DEBUG [django.db.backends:89] (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+[10/May/2016 19:56:43] DEBUG [django.db.backends:89] (0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+[10/May/2016 19:56:43] DEBUG [django.db.backends:89] (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+[10/May/2016 19:57:20] DEBUG [django.db.backends:89] (0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+[10/May/2016 19:57:20] DEBUG [django.db.backends:89] (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+[10/May/2016 19:57:26] DEBUG [django.db.backends:89] (0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+[10/May/2016 19:57:26] DEBUG [django.db.backends:89] (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+[10/May/2016 19:57:36] DEBUG [django.db.backends:89] (0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+[10/May/2016 19:57:36] DEBUG [django.db.backends:89] (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+[10/May/2016 19:57:59] DEBUG [django.db.backends:89] (0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+[10/May/2016 19:57:59] DEBUG [django.db.backends:89] (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+[10/May/2016 19:58:14] DEBUG [django.db.backends:89] (0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+[10/May/2016 19:58:14] DEBUG [django.db.backends:89] (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+[10/May/2016 19:58:18] DEBUG [django.db.backends:89] (0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+[10/May/2016 19:58:18] DEBUG [django.db.backends:89] (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+[10/May/2016 19:59:20] ERROR [django.request:284] Internal Server Error: /polls/wordCloud/
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Volumes/HD_DATEN 1/BENUTZER/MARIA/UNI/FS 2016/Web Seminr/project/seminar2016/polls/views.py", line 86, in wordCloud
+    data = test(request.POST['filename'], int(request.POST['numberOfTopics']))
+  File "/Volumes/HD_DATEN 1/BENUTZER/MARIA/UNI/FS 2016/Web Seminr/project/seminar2016/polls/analyseData/analyseData.py", line 97, in test
+    return writeJson.write(lda, tf_feature_names, 20,tf,n_topics, messagesText, dates, postIds)
+  File "/Volumes/HD_DATEN 1/BENUTZER/MARIA/UNI/FS 2016/Web Seminr/project/seminar2016/polls/analyseData/writeJson.py", line 77, in write
+    min = len(topic[numberofDocus])
+NameError: global name 'numberofDocus' is not defined
+[10/May/2016 19:59:46] DEBUG [django.db.backends:89] (0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+[10/May/2016 19:59:46] DEBUG [django.db.backends:89] (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+[10/May/2016 19:59:55] ERROR [django.request:284] Internal Server Error: /polls/wordCloud/
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Volumes/HD_DATEN 1/BENUTZER/MARIA/UNI/FS 2016/Web Seminr/project/seminar2016/polls/views.py", line 86, in wordCloud
+    data = test(request.POST['filename'], int(request.POST['numberOfTopics']))
+  File "/Volumes/HD_DATEN 1/BENUTZER/MARIA/UNI/FS 2016/Web Seminr/project/seminar2016/polls/analyseData/analyseData.py", line 97, in test
+    return writeJson.write(lda, tf_feature_names, 20,tf,n_topics, messagesText, dates, postIds)
+  File "/Volumes/HD_DATEN 1/BENUTZER/MARIA/UNI/FS 2016/Web Seminr/project/seminar2016/polls/analyseData/writeJson.py", line 77, in write
+    min = len(topic["numberofDocus"])
+TypeError: object of type 'int' has no len()
+[10/May/2016 20:00:30] DEBUG [django.db.backends:89] (0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+[10/May/2016 20:00:30] DEBUG [django.db.backends:89] (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+[10/May/2016 20:01:31] DEBUG [django.db.backends:89] (0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+[10/May/2016 20:01:31] DEBUG [django.db.backends:89] (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+[10/May/2016 20:02:10] DEBUG [django.db.backends:89] (0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+[10/May/2016 20:02:10] DEBUG [django.db.backends:89] (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+[10/May/2016 20:54:10] DEBUG [django.db.backends:89] (0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+[10/May/2016 20:54:10] DEBUG [django.db.backends:89] (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+[10/May/2016 20:56:05] DEBUG [django.db.backends:89] (0.002) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+[10/May/2016 20:56:05] DEBUG [django.db.backends:89] (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+[10/May/2016 20:56:47] DEBUG [django.db.backends:89] (0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+[10/May/2016 20:56:47] DEBUG [django.db.backends:89] (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+[10/May/2016 20:59:31] DEBUG [django.db.backends:89] (0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+[10/May/2016 20:59:31] DEBUG [django.db.backends:89] (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+[10/May/2016 21:01:09] DEBUG [django.db.backends:89] (0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+[10/May/2016 21:01:09] DEBUG [django.db.backends:89] (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+[10/May/2016 21:10:46] DEBUG [django.db.backends:89] (0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+[10/May/2016 21:10:46] DEBUG [django.db.backends:89] (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+[10/May/2016 21:10:49] DEBUG [django.db.backends:89] (0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+[10/May/2016 21:10:49] DEBUG [django.db.backends:89] (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+[10/May/2016 21:27:38] DEBUG [django.db.backends:89] (0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+[10/May/2016 21:27:38] DEBUG [django.db.backends:89] (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+[10/May/2016 21:43:15] WARNING [django.request:182] Not Found: /polls/app.js
+[10/May/2016 21:43:15] DEBUG [django.template:927] Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/template/base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [name] in u'<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>'
+[10/May/2016 21:43:19] ERROR [django.request:284] Internal Server Error: /polls/wordCloud/
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Volumes/HD_DATEN 1/BENUTZER/MARIA/UNI/FS 2016/Web Seminr/project/seminar2016/polls/views.py", line 86, in wordCloud
+    data = test(request.POST['filename'], int(request.POST['numberOfTopics']))
+  File "/Library/Python/2.7/site-packages/django/utils/datastructures.py", line 85, in __getitem__
+    raise MultiValueDictKeyError(repr(key))
+MultiValueDictKeyError: "'filename'"
+[10/May/2016 21:43:19] WARNING [django.request:182] Not Found: /polls/app.js
+[10/May/2016 21:43:19] DEBUG [django.template:927] Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/template/base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [name] in u'<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>'
+[10/May/2016 21:43:44] WARNING [django.request:182] Not Found: /polls/app.js
+[10/May/2016 21:43:44] DEBUG [django.template:927] Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/template/base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [name] in u'<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>'
+[12/May/2016 14:34:35] DEBUG [django.db.backends:89] (0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+[12/May/2016 14:34:35] DEBUG [django.db.backends:89] (0.001) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+[12/May/2016 14:34:36] WARNING [django.request:182] Not Found: /
+[12/May/2016 14:34:36] DEBUG [django.template:927] Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/template/base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [name] in u"<RegexURLResolver <module 'polls.urls' from '/Volumes/HD_DATEN 1/BENUTZER/MARIA/UNI/FS 2016/Web Seminr/project/seminar2016/polls/urls.pyc'> (None:None) ^polls/>"
+[12/May/2016 14:34:36] DEBUG [django.template:927] Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/template/base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [name] in u'<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>'
+[12/May/2016 14:34:36] WARNING [django.request:182] Not Found: /favicon.ico
+[12/May/2016 14:34:36] DEBUG [django.template:927] Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/template/base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [name] in u"<RegexURLResolver <module 'polls.urls' from '/Volumes/HD_DATEN 1/BENUTZER/MARIA/UNI/FS 2016/Web Seminr/project/seminar2016/polls/urls.pyc'> (None:None) ^polls/>"
+[12/May/2016 14:34:36] DEBUG [django.template:927] Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/template/base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [name] in u'<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>'
+[12/May/2016 14:34:36] WARNING [django.request:182] Not Found: /apple-touch-icon-precomposed.png
+[12/May/2016 14:34:36] DEBUG [django.template:927] Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/template/base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [name] in u"<RegexURLResolver <module 'polls.urls' from '/Volumes/HD_DATEN 1/BENUTZER/MARIA/UNI/FS 2016/Web Seminr/project/seminar2016/polls/urls.pyc'> (None:None) ^polls/>"
+[12/May/2016 14:34:36] DEBUG [django.template:927] Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/template/base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [name] in u'<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>'
+[12/May/2016 14:34:37] WARNING [django.request:182] Not Found: /apple-touch-icon.png
+[12/May/2016 14:34:37] DEBUG [django.template:927] Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/template/base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [name] in u"<RegexURLResolver <module 'polls.urls' from '/Volumes/HD_DATEN 1/BENUTZER/MARIA/UNI/FS 2016/Web Seminr/project/seminar2016/polls/urls.pyc'> (None:None) ^polls/>"
+[12/May/2016 14:34:37] DEBUG [django.template:927] Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/template/base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [name] in u'<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>'
+[12/May/2016 14:34:37] WARNING [django.request:182] Not Found: /apple-touch-icon-precomposed.png
+[12/May/2016 14:34:37] DEBUG [django.template:927] Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/template/base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [name] in u"<RegexURLResolver <module 'polls.urls' from '/Volumes/HD_DATEN 1/BENUTZER/MARIA/UNI/FS 2016/Web Seminr/project/seminar2016/polls/urls.pyc'> (None:None) ^polls/>"
+[12/May/2016 14:34:37] WARNING [django.request:182] Not Found: /favicon.ico
+[12/May/2016 14:34:37] DEBUG [django.template:927] Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/template/base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [name] in u'<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>'
+[12/May/2016 14:34:37] DEBUG [django.template:927] Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/template/base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [name] in u"<RegexURLResolver <module 'polls.urls' from '/Volumes/HD_DATEN 1/BENUTZER/MARIA/UNI/FS 2016/Web Seminr/project/seminar2016/polls/urls.pyc'> (None:None) ^polls/>"
+[12/May/2016 14:34:37] DEBUG [django.template:927] Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/template/base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [name] in u'<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>'
+[12/May/2016 14:34:37] WARNING [django.request:182] Not Found: /apple-touch-icon.png
+[12/May/2016 14:34:37] DEBUG [django.template:927] Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/template/base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [name] in u"<RegexURLResolver <module 'polls.urls' from '/Volumes/HD_DATEN 1/BENUTZER/MARIA/UNI/FS 2016/Web Seminr/project/seminar2016/polls/urls.pyc'> (None:None) ^polls/>"
+[12/May/2016 14:34:37] DEBUG [django.template:927] Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/template/base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [name] in u'<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>'
+[12/May/2016 14:34:37] WARNING [django.request:182] Not Found: /apple-touch-icon-precomposed.png
+[12/May/2016 14:34:37] DEBUG [django.template:927] Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/template/base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [name] in u"<RegexURLResolver <module 'polls.urls' from '/Volumes/HD_DATEN 1/BENUTZER/MARIA/UNI/FS 2016/Web Seminr/project/seminar2016/polls/urls.pyc'> (None:None) ^polls/>"
+[12/May/2016 14:34:37] DEBUG [django.template:927] Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/template/base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [name] in u'<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>'
+[12/May/2016 14:34:37] WARNING [django.request:182] Not Found: /apple-touch-icon.png
+[12/May/2016 14:34:37] DEBUG [django.template:927] Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/template/base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [name] in u"<RegexURLResolver <module 'polls.urls' from '/Volumes/HD_DATEN 1/BENUTZER/MARIA/UNI/FS 2016/Web Seminr/project/seminar2016/polls/urls.pyc'> (None:None) ^polls/>"
+[12/May/2016 14:34:37] DEBUG [django.template:927] Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/template/base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [name] in u'<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>'
+[12/May/2016 14:34:38] WARNING [django.request:182] Not Found: /apple-touch-icon-precomposed.png
+[12/May/2016 14:34:38] DEBUG [django.template:927] Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/template/base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [name] in u"<RegexURLResolver <module 'polls.urls' from '/Volumes/HD_DATEN 1/BENUTZER/MARIA/UNI/FS 2016/Web Seminr/project/seminar2016/polls/urls.pyc'> (None:None) ^polls/>"
+[12/May/2016 14:34:38] DEBUG [django.template:927] Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/template/base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [name] in u'<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>'
+[12/May/2016 14:34:38] WARNING [django.request:182] Not Found: /apple-touch-icon.png
+[12/May/2016 14:34:38] DEBUG [django.template:927] Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/template/base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [name] in u"<RegexURLResolver <module 'polls.urls' from '/Volumes/HD_DATEN 1/BENUTZER/MARIA/UNI/FS 2016/Web Seminr/project/seminar2016/polls/urls.pyc'> (None:None) ^polls/>"
+[12/May/2016 14:34:38] DEBUG [django.template:927] Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/template/base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [name] in u'<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>'
+[13/May/2016 06:25:29] DEBUG [django.db.backends:89] (0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+[13/May/2016 06:25:29] DEBUG [django.db.backends:89] (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+[13/May/2016 06:25:37] WARNING [django.request:182] Not Found: /
+[13/May/2016 06:25:37] DEBUG [django.template:927] Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/template/base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [name] in u"<RegexURLResolver <module 'polls.urls' from '/Volumes/HD_DATEN 1/BENUTZER/MARIA/UNI/FS 2016/Web Seminr/project/seminar2016/polls/urls.pyc'> (None:None) ^polls/>"
+[13/May/2016 06:25:37] DEBUG [django.template:927] Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/template/base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [name] in u'<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>'
+[13/May/2016 06:46:44] DEBUG [django.db.backends:89] (0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+[13/May/2016 06:46:44] DEBUG [django.db.backends:89] (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+[13/May/2016 06:57:32] DEBUG [django.db.backends:89] (0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+[13/May/2016 06:57:32] DEBUG [django.db.backends:89] (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+[13/May/2016 07:00:21] ERROR [django.request:284] Internal Server Error: /polls/getPostSummary/
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Volumes/HD_DATEN 1/BENUTZER/MARIA/UNI/FS 2016/Web Seminr/project/seminar2016/polls/views.py", line 112, in getPostSummary
+    data = getPostSummary(request.POST['filename'], request.POST['timerange'], request.POST['value'])
+  File "/Library/Python/2.7/site-packages/django/utils/datastructures.py", line 85, in __getitem__
+    raise MultiValueDictKeyError(repr(key))
+MultiValueDictKeyError: "'timerange'"
+[13/May/2016 07:00:53] ERROR [django.request:284] Internal Server Error: /polls/getPostSummary/
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Volumes/HD_DATEN 1/BENUTZER/MARIA/UNI/FS 2016/Web Seminr/project/seminar2016/polls/views.py", line 112, in getPostSummary
+    data = getPostSummary(request.POST['filename'], request.POST['timerange'], request.POST['value'])
+TypeError: getPostSummary() takes exactly 1 argument (3 given)
+[13/May/2016 07:01:21] DEBUG [django.db.backends:89] (0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+[13/May/2016 07:01:21] DEBUG [django.db.backends:89] (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+[13/May/2016 07:01:39] DEBUG [django.db.backends:89] (0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+[13/May/2016 07:01:39] DEBUG [django.db.backends:89] (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+[13/May/2016 07:02:09] DEBUG [django.db.backends:89] (0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+[13/May/2016 07:02:09] DEBUG [django.db.backends:89] (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+[13/May/2016 07:02:17] ERROR [django.request:284] Internal Server Error: /polls/getPostSummary/
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Volumes/HD_DATEN 1/BENUTZER/MARIA/UNI/FS 2016/Web Seminr/project/seminar2016/polls/views.py", line 113, in getPostSummary
+    data = summaryOfPost.getSummary(request.POST['filename'], request.POST['timerange'], request.POST['value'])
+NameError: global name 'summaryOfPost' is not defined
+[13/May/2016 07:02:35] DEBUG [django.db.backends:89] (0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+[13/May/2016 07:02:35] DEBUG [django.db.backends:89] (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+[13/May/2016 07:02:38] ERROR [django.request:284] Internal Server Error: /polls/getPostSummary/
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Volumes/HD_DATEN 1/BENUTZER/MARIA/UNI/FS 2016/Web Seminr/project/seminar2016/polls/views.py", line 113, in getPostSummary
+    data = analyseData.summaryOfPost.getSummary(request.POST['filename'], request.POST['timerange'], request.POST['value'])
+  File "/Volumes/HD_DATEN 1/BENUTZER/MARIA/UNI/FS 2016/Web Seminr/project/seminar2016/polls/analyseData/summaryOfPost.py", line 10, in getSummary
+    file = settings.JSONFILES_FOLDER+"/facebook"
+NameError: global name 'settings' is not defined
+[13/May/2016 07:02:58] DEBUG [django.db.backends:89] (0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+[13/May/2016 07:02:58] DEBUG [django.db.backends:89] (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+[13/May/2016 07:03:04] ERROR [django.request:284] Internal Server Error: /polls/getPostSummary/
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Volumes/HD_DATEN 1/BENUTZER/MARIA/UNI/FS 2016/Web Seminr/project/seminar2016/polls/views.py", line 113, in getPostSummary
+    data = analyseData.summaryOfPost.getSummary(request.POST['filename'], request.POST['timerange'], request.POST['value'])
+  File "/Volumes/HD_DATEN 1/BENUTZER/MARIA/UNI/FS 2016/Web Seminr/project/seminar2016/polls/analyseData/summaryOfPost.py", line 12, in getSummary
+    json_data=open(file).read()
+IOError: [Errno 21] Is a directory: '/Volumes/HD_DATEN 1/BENUTZER/MARIA/UNI/FS 2016/Web Seminr/project/seminar2016/json_files//facebook'
+[13/May/2016 07:03:24] DEBUG [django.db.backends:89] (0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+[13/May/2016 07:03:24] DEBUG [django.db.backends:89] (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+[13/May/2016 07:03:30] ERROR [django.request:284] Internal Server Error: /polls/getPostSummary/
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Volumes/HD_DATEN 1/BENUTZER/MARIA/UNI/FS 2016/Web Seminr/project/seminar2016/polls/views.py", line 113, in getPostSummary
+    data = analyseData.summaryOfPost.getSummary(request.POST['filename'], request.POST['timerange'], request.POST['value'])
+  File "/Volumes/HD_DATEN 1/BENUTZER/MARIA/UNI/FS 2016/Web Seminr/project/seminar2016/polls/analyseData/summaryOfPost.py", line 181, in getSummary
+    return json.dump(arr)
+TypeError: dump() takes at least 2 arguments (1 given)
+[13/May/2016 07:04:21] DEBUG [django.db.backends:89] (0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+[13/May/2016 07:04:21] DEBUG [django.db.backends:89] (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+[13/May/2016 07:04:31] DEBUG [django.db.backends:89] (0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+[13/May/2016 07:04:31] DEBUG [django.db.backends:89] (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+[13/May/2016 07:04:53] ERROR [django.request:284] Internal Server Error: /polls/getPostSummary/
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Volumes/HD_DATEN 1/BENUTZER/MARIA/UNI/FS 2016/Web Seminr/project/seminar2016/polls/views.py", line 113, in getPostSummary
+    data = analyseData.summaryOfPost.getSummary(request.POST['filename'], request.POST['timerange'], request.POST['value'])
+  File "/Volumes/HD_DATEN 1/BENUTZER/MARIA/UNI/FS 2016/Web Seminr/project/seminar2016/polls/analyseData/summaryOfPost.py", line 180, in getSummary
+    return json.dump(arr)
+TypeError: dump() takes at least 2 arguments (1 given)
+[13/May/2016 07:05:18] DEBUG [django.db.backends:89] (0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+[13/May/2016 07:05:18] DEBUG [django.db.backends:89] (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+[13/May/2016 10:14:18] DEBUG [django.db.backends:89] (0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+[13/May/2016 10:14:18] DEBUG [django.db.backends:89] (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+[13/May/2016 10:14:44] DEBUG [django.db.backends:89] (0.002) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+[13/May/2016 10:14:44] DEBUG [django.db.backends:89] (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+[13/May/2016 10:15:03] DEBUG [django.db.backends:89] (0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+[13/May/2016 10:15:03] DEBUG [django.db.backends:89] (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+[13/May/2016 10:15:39] DEBUG [django.db.backends:89] (0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+[13/May/2016 10:15:39] DEBUG [django.db.backends:89] (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+[13/May/2016 10:16:01] DEBUG [django.db.backends:89] (0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+[13/May/2016 10:16:01] DEBUG [django.db.backends:89] (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+[13/May/2016 10:16:14] DEBUG [django.db.backends:89] (0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+[13/May/2016 10:16:14] DEBUG [django.db.backends:89] (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+[13/May/2016 10:16:45] DEBUG [django.db.backends:89] (0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+[13/May/2016 10:16:45] DEBUG [django.db.backends:89] (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+[13/May/2016 10:16:49] ERROR [django.request:284] Internal Server Error: /polls/getPostSummary/
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Volumes/HD_DATEN 1/BENUTZER/MARIA/UNI/FS 2016/Web Seminr/project/seminar2016/polls/views.py", line 113, in getPostSummary
+    data = analyseData.summaryOfPost.getSummary(request.POST['filename'], request.POST['timerange'], request.POST['value'])
+  File "/Volumes/HD_DATEN 1/BENUTZER/MARIA/UNI/FS 2016/Web Seminr/project/seminar2016/polls/analyseData/summaryOfPost.py", line 90, in getSummary
+    edgesMessages[cT] = [i]
+NameError: global name 'edgesMessages' is not defined
+[13/May/2016 10:17:17] DEBUG [django.db.backends:89] (0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+[13/May/2016 10:17:17] DEBUG [django.db.backends:89] (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+[13/May/2016 10:17:22] ERROR [django.request:284] Internal Server Error: /polls/getPostSummary/
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Volumes/HD_DATEN 1/BENUTZER/MARIA/UNI/FS 2016/Web Seminr/project/seminar2016/polls/views.py", line 113, in getPostSummary
+    data = analyseData.summaryOfPost.getSummary(request.POST['filename'], request.POST['timerange'], request.POST['value'])
+  File "/Library/Python/2.7/site-packages/django/utils/datastructures.py", line 85, in __getitem__
+    raise MultiValueDictKeyError(repr(key))
+MultiValueDictKeyError: "'filename'"
+[13/May/2016 10:17:45] ERROR [django.request:284] Internal Server Error: /polls/getPostSummary/
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Volumes/HD_DATEN 1/BENUTZER/MARIA/UNI/FS 2016/Web Seminr/project/seminar2016/polls/views.py", line 113, in getPostSummary
+    data = analyseData.summaryOfPost.getSummary(request.POST['filename'], request.POST['timerange'], request.POST['value'])
+  File "/Volumes/HD_DATEN 1/BENUTZER/MARIA/UNI/FS 2016/Web Seminr/project/seminar2016/polls/analyseData/summaryOfPost.py", line 90, in getSummary
+    edgesMessages[cT] = [i]
+NameError: global name 'edgesMessages' is not defined
+[13/May/2016 10:17:59] DEBUG [django.db.backends:89] (0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+[13/May/2016 10:17:59] DEBUG [django.db.backends:89] (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+[13/May/2016 10:18:04] ERROR [django.request:284] Internal Server Error: /polls/getPostSummary/
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Volumes/HD_DATEN 1/BENUTZER/MARIA/UNI/FS 2016/Web Seminr/project/seminar2016/polls/views.py", line 113, in getPostSummary
+    data = analyseData.summaryOfPost.getSummary(request.POST['filename'], request.POST['timerange'], request.POST['value'])
+  File "/Volumes/HD_DATEN 1/BENUTZER/MARIA/UNI/FS 2016/Web Seminr/project/seminar2016/polls/analyseData/summaryOfPost.py", line 85, in getSummary
+    edgesMessages[cT].append(i)
+NameError: global name 'edgesMessages' is not defined
+[13/May/2016 10:18:21] DEBUG [django.db.backends:89] (0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+[13/May/2016 10:18:21] DEBUG [django.db.backends:89] (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+[13/May/2016 10:18:26] ERROR [django.request:284] Internal Server Error: /polls/getPostSummary/
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Volumes/HD_DATEN 1/BENUTZER/MARIA/UNI/FS 2016/Web Seminr/project/seminar2016/polls/views.py", line 113, in getPostSummary
+    data = analyseData.summaryOfPost.getSummary(request.POST['filename'], request.POST['timerange'], request.POST['value'])
+  File "/Volumes/HD_DATEN 1/BENUTZER/MARIA/UNI/FS 2016/Web Seminr/project/seminar2016/polls/analyseData/summaryOfPost.py", line 122, in getSummary
+    if edges[i][j] != 0:
+KeyError: 0
+[13/May/2016 10:19:03] DEBUG [django.db.backends:89] (0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+[13/May/2016 10:19:03] DEBUG [django.db.backends:89] (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+[13/May/2016 10:19:08] ERROR [django.request:284] Internal Server Error: /polls/getPostSummary/
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Volumes/HD_DATEN 1/BENUTZER/MARIA/UNI/FS 2016/Web Seminr/project/seminar2016/polls/views.py", line 113, in getPostSummary
+    data = analyseData.summaryOfPost.getSummary(request.POST['filename'], request.POST['timerange'], request.POST['value'])
+  File "/Volumes/HD_DATEN 1/BENUTZER/MARIA/UNI/FS 2016/Web Seminr/project/seminar2016/polls/analyseData/summaryOfPost.py", line 125, in getSummary
+    if edges[i][j] != 0:
+KeyError: 0
+[13/May/2016 10:20:09] DEBUG [django.db.backends:89] (0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+[13/May/2016 10:20:09] DEBUG [django.db.backends:89] (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+[13/May/2016 10:22:02] DEBUG [django.db.backends:89] (0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+[13/May/2016 10:22:02] DEBUG [django.db.backends:89] (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+[13/May/2016 10:22:20] DEBUG [django.db.backends:89] (0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+[13/May/2016 10:22:20] DEBUG [django.db.backends:89] (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+[13/May/2016 10:22:33] DEBUG [django.db.backends:89] (0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+[13/May/2016 10:22:33] DEBUG [django.db.backends:89] (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+[13/May/2016 10:22:42] ERROR [django.request:284] Internal Server Error: /polls/getPostSummary/
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Volumes/HD_DATEN 1/BENUTZER/MARIA/UNI/FS 2016/Web Seminr/project/seminar2016/polls/views.py", line 113, in getPostSummary
+    data = analyseData.summaryOfPost.getSummary(request.POST['filename'], request.POST['timerange'], request.POST['value'])
+  File "/Volumes/HD_DATEN 1/BENUTZER/MARIA/UNI/FS 2016/Web Seminr/project/seminar2016/polls/analyseData/summaryOfPost.py", line 125, in getSummary
+    if edges[(i,j)] != 0:
+KeyError: (0, 1)
+[13/May/2016 10:23:14] DEBUG [django.db.backends:89] (0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+[13/May/2016 10:23:14] DEBUG [django.db.backends:89] (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+[13/May/2016 10:23:18] ERROR [django.request:284] Internal Server Error: /polls/getPostSummary/
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Volumes/HD_DATEN 1/BENUTZER/MARIA/UNI/FS 2016/Web Seminr/project/seminar2016/polls/views.py", line 113, in getPostSummary
+    data = analyseData.summaryOfPost.getSummary(request.POST['filename'], request.POST['timerange'], request.POST['value'])
+  File "/Volumes/HD_DATEN 1/BENUTZER/MARIA/UNI/FS 2016/Web Seminr/project/seminar2016/polls/analyseData/summaryOfPost.py", line 125, in getSummary
+    if edges[(i,j)] in edges:
+KeyError: (0, 1)
+[13/May/2016 10:23:35] DEBUG [django.db.backends:89] (0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+[13/May/2016 10:23:35] DEBUG [django.db.backends:89] (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+[13/May/2016 10:25:14] DEBUG [django.db.backends:89] (0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+[13/May/2016 10:25:14] DEBUG [django.db.backends:89] (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+[13/May/2016 11:16:20] DEBUG [django.db.backends:89] (0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+[13/May/2016 11:16:20] DEBUG [django.db.backends:89] (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+[13/May/2016 11:17:02] DEBUG [django.db.backends:89] (0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+[13/May/2016 11:17:02] DEBUG [django.db.backends:89] (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+[13/May/2016 11:17:41] DEBUG [django.db.backends:89] (0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+[13/May/2016 11:17:41] DEBUG [django.db.backends:89] (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+[13/May/2016 11:17:47] DEBUG [django.db.backends:89] (0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+[13/May/2016 11:17:47] DEBUG [django.db.backends:89] (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+[13/May/2016 11:21:13] DEBUG [django.db.backends:89] (0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+[13/May/2016 11:21:13] DEBUG [django.db.backends:89] (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+[13/May/2016 11:21:23] DEBUG [django.db.backends:89] (0.002) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+[13/May/2016 11:21:23] DEBUG [django.db.backends:89] (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+[13/May/2016 11:21:32] DEBUG [django.db.backends:89] (0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+[13/May/2016 11:21:32] DEBUG [django.db.backends:89] (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+[13/May/2016 11:21:55] DEBUG [django.db.backends:89] (0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+[13/May/2016 11:21:55] DEBUG [django.db.backends:89] (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+[13/May/2016 11:22:31] DEBUG [django.db.backends:89] (0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+[13/May/2016 11:22:31] DEBUG [django.db.backends:89] (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+[13/May/2016 11:23:11] DEBUG [django.db.backends:89] (0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+[13/May/2016 11:23:11] DEBUG [django.db.backends:89] (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+[13/May/2016 11:23:48] DEBUG [django.db.backends:89] (0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+[13/May/2016 11:23:48] DEBUG [django.db.backends:89] (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+[13/May/2016 11:23:54] ERROR [django.request:284] Internal Server Error: /polls/getPostSummary/
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Volumes/HD_DATEN 1/BENUTZER/MARIA/UNI/FS 2016/Web Seminr/project/seminar2016/polls/views.py", line 113, in getPostSummary
+    data = analyseData.summaryOfPost.getSummary(request.POST['filename'], request.POST['timerange'], request.POST['value'])
+  File "/Volumes/HD_DATEN 1/BENUTZER/MARIA/UNI/FS 2016/Web Seminr/project/seminar2016/polls/analyseData/summaryOfPost.py", line 129, in getSummary
+    edge["weight"]=edges(e[0],e[1])
+TypeError: 'dict' object is not callable
+[13/May/2016 11:24:10] DEBUG [django.db.backends:89] (0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+[13/May/2016 11:24:10] DEBUG [django.db.backends:89] (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+[13/May/2016 11:24:34] DEBUG [django.db.backends:89] (0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+[13/May/2016 11:24:34] DEBUG [django.db.backends:89] (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+[13/May/2016 11:24:39] ERROR [django.request:284] Internal Server Error: /polls/getPostSummary/
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Volumes/HD_DATEN 1/BENUTZER/MARIA/UNI/FS 2016/Web Seminr/project/seminar2016/polls/views.py", line 113, in getPostSummary
+    data = analyseData.summaryOfPost.getSummary(request.POST['filename'], request.POST['timerange'], request.POST['value'])
+  File "/Volumes/HD_DATEN 1/BENUTZER/MARIA/UNI/FS 2016/Web Seminr/project/seminar2016/polls/analyseData/summaryOfPost.py", line 129, in getSummary
+    edge["weight"]=edges(e[0],e[1])
+TypeError: 'dict' object is not callable
+[13/May/2016 11:25:22] DEBUG [django.db.backends:89] (0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+[13/May/2016 11:25:22] DEBUG [django.db.backends:89] (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+[13/May/2016 11:25:31] ERROR [django.request:284] Internal Server Error: /polls/getPostSummary/
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Volumes/HD_DATEN 1/BENUTZER/MARIA/UNI/FS 2016/Web Seminr/project/seminar2016/polls/views.py", line 113, in getPostSummary
+    data = analyseData.summaryOfPost.getSummary(request.POST['filename'], request.POST['timerange'], request.POST['value'])
+  File "/Volumes/HD_DATEN 1/BENUTZER/MARIA/UNI/FS 2016/Web Seminr/project/seminar2016/polls/analyseData/summaryOfPost.py", line 131, in getSummary
+    if edges(i,j) > maxWeight:
+UnboundLocalError: local variable 'j' referenced before assignment
+[13/May/2016 11:25:53] DEBUG [django.db.backends:89] (0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+[13/May/2016 11:25:53] DEBUG [django.db.backends:89] (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+[13/May/2016 11:29:15] DEBUG [django.db.backends:89] (0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+[13/May/2016 11:29:15] DEBUG [django.db.backends:89] (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+[13/May/2016 11:29:22] ERROR [django.request:284] Internal Server Error: /polls/getPostSummary/
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Volumes/HD_DATEN 1/BENUTZER/MARIA/UNI/FS 2016/Web Seminr/project/seminar2016/polls/views.py", line 113, in getPostSummary
+    data = analyseData.summaryOfPost.getSummary(request.POST['filename'], request.POST['timerange'], request.POST['value'])
+  File "/Volumes/HD_DATEN 1/BENUTZER/MARIA/UNI/FS 2016/Web Seminr/project/seminar2016/polls/analyseData/summaryOfPost.py", line 166, in getSummary
+    v = edgeMessages[(i,j)]
+KeyError: (17, 17)
+[13/May/2016 11:30:34] DEBUG [django.db.backends:89] (0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+[13/May/2016 11:30:34] DEBUG [django.db.backends:89] (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+[13/May/2016 11:30:40] ERROR [django.request:284] Internal Server Error: /polls/getPostSummary/
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Volumes/HD_DATEN 1/BENUTZER/MARIA/UNI/FS 2016/Web Seminr/project/seminar2016/polls/views.py", line 113, in getPostSummary
+    data = analyseData.summaryOfPost.getSummary(request.POST['filename'], request.POST['timerange'], request.POST['value'])
+  File "/Volumes/HD_DATEN 1/BENUTZER/MARIA/UNI/FS 2016/Web Seminr/project/seminar2016/polls/analyseData/summaryOfPost.py", line 166, in getSummary
+    v = edgeMessages[(top50[i],top50[j])]
+KeyError: (u'seven', u'seven')
+[13/May/2016 11:31:06] DEBUG [django.db.backends:89] (0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+[13/May/2016 11:31:06] DEBUG [django.db.backends:89] (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+[13/May/2016 11:34:45] DEBUG [django.db.backends:89] (0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+[13/May/2016 11:34:45] DEBUG [django.db.backends:89] (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+[13/May/2016 11:35:25] DEBUG [django.db.backends:89] (0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+[13/May/2016 11:35:25] DEBUG [django.db.backends:89] (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+[13/May/2016 11:35:47] DEBUG [django.db.backends:89] (0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+[13/May/2016 11:35:47] DEBUG [django.db.backends:89] (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+[13/May/2016 11:36:45] DEBUG [django.db.backends:89] (0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+[13/May/2016 11:36:45] DEBUG [django.db.backends:89] (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+[13/May/2016 11:37:09] DEBUG [django.db.backends:89] (0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+[13/May/2016 11:37:09] DEBUG [django.db.backends:89] (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+[13/May/2016 11:37:20] DEBUG [django.db.backends:89] (0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+[13/May/2016 11:37:20] DEBUG [django.db.backends:89] (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+[13/May/2016 11:37:24] ERROR [django.request:284] Internal Server Error: /polls/getPostSummary/
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Volumes/HD_DATEN 1/BENUTZER/MARIA/UNI/FS 2016/Web Seminr/project/seminar2016/polls/views.py", line 113, in getPostSummary
+    data = analyseData.summaryOfPost.getSummary(request.POST['filename'], request.POST['timerange'], request.POST['value'])
+  File "/Volumes/HD_DATEN 1/BENUTZER/MARIA/UNI/FS 2016/Web Seminr/project/seminar2016/polls/analyseData/summaryOfPost.py", line 95, in getSummary
+    print(messages[edgeMessages[cT]])
+TypeError: list indices must be integers, not list
+[13/May/2016 11:38:16] DEBUG [django.db.backends:89] (0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+[13/May/2016 11:38:16] DEBUG [django.db.backends:89] (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+[13/May/2016 11:38:54] DEBUG [django.db.backends:89] (0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+[13/May/2016 11:38:54] DEBUG [django.db.backends:89] (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+[13/May/2016 11:42:37] DEBUG [django.db.backends:89] (0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+[13/May/2016 11:42:37] DEBUG [django.db.backends:89] (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+[13/May/2016 11:43:56] DEBUG [django.db.backends:89] (0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+[13/May/2016 11:43:56] DEBUG [django.db.backends:89] (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+[13/May/2016 11:45:09] DEBUG [django.db.backends:89] (0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+[13/May/2016 11:45:09] DEBUG [django.db.backends:89] (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+[13/May/2016 11:45:17] DEBUG [django.db.backends:89] (0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+[13/May/2016 11:45:17] DEBUG [django.db.backends:89] (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+[13/May/2016 11:47:19] DEBUG [django.db.backends:89] (0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+[13/May/2016 11:47:19] DEBUG [django.db.backends:89] (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+[13/May/2016 11:48:32] DEBUG [django.db.backends:89] (0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+[13/May/2016 11:48:32] DEBUG [django.db.backends:89] (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+[13/May/2016 11:48:35] DEBUG [django.db.backends:89] (0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+[13/May/2016 11:48:35] DEBUG [django.db.backends:89] (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+[13/May/2016 11:58:11] DEBUG [django.db.backends:89] (0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+[13/May/2016 11:58:11] DEBUG [django.db.backends:89] (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+[13/May/2016 12:00:18] DEBUG [django.db.backends:89] (0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+[13/May/2016 12:00:18] DEBUG [django.db.backends:89] (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+[13/May/2016 12:01:33] DEBUG [django.db.backends:89] (0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+[13/May/2016 12:01:33] DEBUG [django.db.backends:89] (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+[13/May/2016 12:08:38] DEBUG [django.db.backends:89] (0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+[13/May/2016 12:08:38] DEBUG [django.db.backends:89] (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+[13/May/2016 12:09:27] DEBUG [django.db.backends:89] (0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+[13/May/2016 12:09:27] DEBUG [django.db.backends:89] (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+[13/May/2016 12:15:15] DEBUG [django.db.backends:89] (0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+[13/May/2016 12:15:15] DEBUG [django.db.backends:89] (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+[13/May/2016 12:15:21] ERROR [django.request:284] Internal Server Error: /polls/getPostSummary/
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Volumes/HD_DATEN 1/BENUTZER/MARIA/UNI/FS 2016/Web Seminr/project/seminar2016/polls/views.py", line 113, in getPostSummary
+    data = analyseData.summaryOfPost.getSummary(request.POST['filename'], request.POST['timerange'], request.POST['value'])
+  File "/Volumes/HD_DATEN 1/BENUTZER/MARIA/UNI/FS 2016/Web Seminr/project/seminar2016/polls/analyseData/summaryOfPost.py", line 160, in getSummary
+    b = minWeightRange + ((weight-minWeight)*(maxWeightRange-minWeightRage))/(maxWeight-minWeight)
+NameError: global name 'minWeightRage' is not defined
+[13/May/2016 12:15:49] DEBUG [django.db.backends:89] (0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+[13/May/2016 12:15:49] DEBUG [django.db.backends:89] (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+[13/May/2016 12:16:16] DEBUG [django.db.backends:89] (0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+[13/May/2016 12:16:16] DEBUG [django.db.backends:89] (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+[13/May/2016 12:18:02] DEBUG [django.db.backends:89] (0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+[13/May/2016 12:18:02] DEBUG [django.db.backends:89] (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+[13/May/2016 12:18:31] DEBUG [django.db.backends:89] (0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+[13/May/2016 12:18:31] DEBUG [django.db.backends:89] (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+[13/May/2016 12:20:14] ERROR [django.request:284] Internal Server Error: /polls/getPostSummary/
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Volumes/HD_DATEN 1/BENUTZER/MARIA/UNI/FS 2016/Web Seminr/project/seminar2016/polls/views.py", line 113, in getPostSummary
+    data = analyseData.summaryOfPost.getSummary(request.POST['filename'], request.POST['timerange'], request.POST['value'], request.POST["numberWords"])
+  File "/Volumes/HD_DATEN 1/BENUTZER/MARIA/UNI/FS 2016/Web Seminr/project/seminar2016/polls/analyseData/summaryOfPost.py", line 108, in getSummary
+    for i in range(0, numberOfTopWords):
+TypeError: range() integer end argument expected, got unicode.
+[13/May/2016 12:20:22] ERROR [django.request:284] Internal Server Error: /polls/getPostSummary/
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Volumes/HD_DATEN 1/BENUTZER/MARIA/UNI/FS 2016/Web Seminr/project/seminar2016/polls/views.py", line 113, in getPostSummary
+    data = analyseData.summaryOfPost.getSummary(request.POST['filename'], request.POST['timerange'], request.POST['value'], request.POST["numberWords"])
+  File "/Library/Python/2.7/site-packages/django/utils/datastructures.py", line 85, in __getitem__
+    raise MultiValueDictKeyError(repr(key))
+MultiValueDictKeyError: "'filename'"
+[13/May/2016 12:20:25] ERROR [django.request:284] Internal Server Error: /polls/getPostSummary/
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Volumes/HD_DATEN 1/BENUTZER/MARIA/UNI/FS 2016/Web Seminr/project/seminar2016/polls/views.py", line 113, in getPostSummary
+    data = analyseData.summaryOfPost.getSummary(request.POST['filename'], request.POST['timerange'], request.POST['value'], request.POST["numberWords"])
+  File "/Library/Python/2.7/site-packages/django/utils/datastructures.py", line 85, in __getitem__
+    raise MultiValueDictKeyError(repr(key))
+MultiValueDictKeyError: "'filename'"
+[13/May/2016 12:21:09] DEBUG [django.db.backends:89] (0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+[13/May/2016 12:21:09] DEBUG [django.db.backends:89] (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+[13/May/2016 12:21:15] ERROR [django.request:284] Internal Server Error: /polls/getPostSummary/
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Volumes/HD_DATEN 1/BENUTZER/MARIA/UNI/FS 2016/Web Seminr/project/seminar2016/polls/views.py", line 113, in getPostSummary
+    console.log(request)
+NameError: global name 'console' is not defined
+[13/May/2016 12:21:30] DEBUG [django.db.backends:89] (0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+[13/May/2016 12:21:30] DEBUG [django.db.backends:89] (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+[13/May/2016 12:21:36] ERROR [django.request:284] Internal Server Error: /polls/getPostSummary/
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Volumes/HD_DATEN 1/BENUTZER/MARIA/UNI/FS 2016/Web Seminr/project/seminar2016/polls/views.py", line 114, in getPostSummary
+    data = analyseData.summaryOfPost.getSummary(request.POST['filename'], request.POST['timerange'], request.POST['value'], request.POST['numberWords'])
+  File "/Volumes/HD_DATEN 1/BENUTZER/MARIA/UNI/FS 2016/Web Seminr/project/seminar2016/polls/analyseData/summaryOfPost.py", line 108, in getSummary
+    for i in range(0, numberOfTopWords):
+TypeError: range() integer end argument expected, got unicode.
+[13/May/2016 12:22:58] ERROR [django.request:284] Internal Server Error: /polls/getPostSummary/
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Volumes/HD_DATEN 1/BENUTZER/MARIA/UNI/FS 2016/Web Seminr/project/seminar2016/polls/views.py", line 114, in getPostSummary
+    data = analyseData.summaryOfPost.getSummary(request.POST['filename'], request.POST['timerange'], request.POST['value'], request.POST['numberWords'])
+  File "/Volumes/HD_DATEN 1/BENUTZER/MARIA/UNI/FS 2016/Web Seminr/project/seminar2016/polls/analyseData/summaryOfPost.py", line 108, in getSummary
+    for i in range(0, numberOfTopWords):
+TypeError: range() integer end argument expected, got unicode.
+[13/May/2016 12:23:21] DEBUG [django.db.backends:89] (0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+[13/May/2016 12:23:21] DEBUG [django.db.backends:89] (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+[13/May/2016 12:23:27] DEBUG [django.db.backends:89] (0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+[13/May/2016 12:23:27] DEBUG [django.db.backends:89] (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+[13/May/2016 12:23:38] DEBUG [django.db.backends:89] (0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+[13/May/2016 12:23:38] DEBUG [django.db.backends:89] (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+[13/May/2016 12:23:43] ERROR [django.request:284] Internal Server Error: /polls/getPostSummary/
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Volumes/HD_DATEN 1/BENUTZER/MARIA/UNI/FS 2016/Web Seminr/project/seminar2016/polls/views.py", line 114, in getPostSummary
+    data = analyseData.summaryOfPost.getSummary(request.POST['filename'], request.POST['timerange'], request.POST['value'], request.POST['numberWords'])
+  File "/Volumes/HD_DATEN 1/BENUTZER/MARIA/UNI/FS 2016/Web Seminr/project/seminar2016/polls/analyseData/summaryOfPost.py", line 109, in getSummary
+    for i in range(0, numberOfTopWords):
+TypeError: range() integer end argument expected, got unicode.
+[13/May/2016 12:24:15] DEBUG [django.db.backends:89] (0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+[13/May/2016 12:24:15] DEBUG [django.db.backends:89] (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+[13/May/2016 12:30:05] DEBUG [django.db.backends:89] (0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+[13/May/2016 12:30:05] DEBUG [django.db.backends:89] (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+[13/May/2016 12:30:09] DEBUG [django.db.backends:89] (0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+[13/May/2016 12:30:09] DEBUG [django.db.backends:89] (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+[13/May/2016 12:30:13] DEBUG [django.db.backends:89] (0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+[13/May/2016 12:30:13] DEBUG [django.db.backends:89] (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+[13/May/2016 12:31:04] DEBUG [django.db.backends:89] (0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+[13/May/2016 12:31:04] DEBUG [django.db.backends:89] (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+[13/May/2016 12:31:12] DEBUG [django.db.backends:89] (0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+[13/May/2016 12:31:12] DEBUG [django.db.backends:89] (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+[13/May/2016 12:32:54] ERROR [django.request:284] Internal Server Error: /polls/getPostSummary/
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Volumes/HD_DATEN 1/BENUTZER/MARIA/UNI/FS 2016/Web Seminr/project/seminar2016/polls/views.py", line 114, in getPostSummary
+    data = analyseData.summaryOfPost.getSummary(request.POST['socialMedia'], request.POST['filename'], request.POST['timerange'], request.POST['value'], request.POST['numberWords'])
+  File "/Volumes/HD_DATEN 1/BENUTZER/MARIA/UNI/FS 2016/Web Seminr/project/seminar2016/polls/analyseData/summaryOfPost.py", line 16, in getSummary
+    for media in socialMedia:
+NameError: global name 'socialMedia' is not defined
+[13/May/2016 12:33:08] DEBUG [django.db.backends:89] (0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+[13/May/2016 12:33:08] DEBUG [django.db.backends:89] (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+[13/May/2016 12:33:13] ERROR [django.request:284] Internal Server Error: /polls/getPostSummary/
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Volumes/HD_DATEN 1/BENUTZER/MARIA/UNI/FS 2016/Web Seminr/project/seminar2016/polls/views.py", line 114, in getPostSummary
+    data = analyseData.summaryOfPost.getSummary(request.POST['socialMedia'], request.POST['filename'], request.POST['timerange'], request.POST['value'], request.POST['numberWords'])
+  File "/Volumes/HD_DATEN 1/BENUTZER/MARIA/UNI/FS 2016/Web Seminr/project/seminar2016/polls/analyseData/summaryOfPost.py", line 18, in getSummary
+    json_data=open(file).read()
+IOError: [Errno 2] No such file or directory: u'/Volumes/HD_DATEN 1/BENUTZER/MARIA/UNI/FS 2016/Web Seminr/project/seminar2016/json_files//F/barackobama.json'
+[13/May/2016 12:33:50] ERROR [django.request:284] Internal Server Error: /polls/getPostSummary/
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Volumes/HD_DATEN 1/BENUTZER/MARIA/UNI/FS 2016/Web Seminr/project/seminar2016/polls/views.py", line 114, in getPostSummary
+    data = analyseData.summaryOfPost.getSummary(request.POST['socialMedia'], request.POST['filename'], request.POST['timerange'], request.POST['value'], request.POST['numberWords'])
+  File "/Volumes/HD_DATEN 1/BENUTZER/MARIA/UNI/FS 2016/Web Seminr/project/seminar2016/polls/analyseData/summaryOfPost.py", line 18, in getSummary
+    json_data=open(file).read()
+IOError: [Errno 2] No such file or directory: u'/Volumes/HD_DATEN 1/BENUTZER/MARIA/UNI/FS 2016/Web Seminr/project/seminar2016/json_files//b/barackobama.json'
+[13/May/2016 12:34:25] ERROR [django.request:284] Internal Server Error: /polls/getPostSummary/
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Volumes/HD_DATEN 1/BENUTZER/MARIA/UNI/FS 2016/Web Seminr/project/seminar2016/polls/views.py", line 114, in getPostSummary
+    data = analyseData.summaryOfPost.getSummary(request.POST['socialMedia'], request.POST['filename'], request.POST['timerange'], request.POST['value'], request.POST['numberWords'])
+  File "/Volumes/HD_DATEN 1/BENUTZER/MARIA/UNI/FS 2016/Web Seminr/project/seminar2016/polls/analyseData/summaryOfPost.py", line 18, in getSummary
+    json_data=open(file).read()
+IOError: [Errno 2] No such file or directory: u'/Volumes/HD_DATEN 1/BENUTZER/MARIA/UNI/FS 2016/Web Seminr/project/seminar2016/json_files//F/barackobama.json'
+[13/May/2016 12:34:32] ERROR [django.request:284] Internal Server Error: /polls/getPostSummary/
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Volumes/HD_DATEN 1/BENUTZER/MARIA/UNI/FS 2016/Web Seminr/project/seminar2016/polls/views.py", line 114, in getPostSummary
+    data = analyseData.summaryOfPost.getSummary(request.POST['socialMedia'], request.POST['filename'], request.POST['timerange'], request.POST['value'], request.POST['numberWords'])
+  File "/Volumes/HD_DATEN 1/BENUTZER/MARIA/UNI/FS 2016/Web Seminr/project/seminar2016/polls/analyseData/summaryOfPost.py", line 18, in getSummary
+    json_data=open(file).read()
+IOError: [Errno 2] No such file or directory: u'/Volumes/HD_DATEN 1/BENUTZER/MARIA/UNI/FS 2016/Web Seminr/project/seminar2016/json_files//b/barackobama.json'
+[13/May/2016 12:34:55] ERROR [django.request:284] Internal Server Error: /polls/getPostSummary/
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Volumes/HD_DATEN 1/BENUTZER/MARIA/UNI/FS 2016/Web Seminr/project/seminar2016/polls/views.py", line 114, in getPostSummary
+    data = analyseData.summaryOfPost.getSummary(request.POST['socialMedia'], request.POST['filename'], request.POST['timerange'], request.POST['value'], request.POST['numberWords'])
+  File "/Library/Python/2.7/site-packages/django/utils/datastructures.py", line 85, in __getitem__
+    raise MultiValueDictKeyError(repr(key))
+MultiValueDictKeyError: "'socialMedia'"
+[13/May/2016 12:35:26] ERROR [django.request:284] Internal Server Error: /polls/getPostSummary/
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Volumes/HD_DATEN 1/BENUTZER/MARIA/UNI/FS 2016/Web Seminr/project/seminar2016/polls/views.py", line 114, in getPostSummary
+    data = analyseData.summaryOfPost.getSummary(request.POST['socialMedia'], request.POST['filename'], request.POST['timerange'], request.POST['value'], request.POST['numberWords'])
+  File "/Library/Python/2.7/site-packages/django/utils/datastructures.py", line 85, in __getitem__
+    raise MultiValueDictKeyError(repr(key))
+MultiValueDictKeyError: "'socialMedia'"
+[13/May/2016 12:36:32] DEBUG [django.db.backends:89] (0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+[13/May/2016 12:36:32] DEBUG [django.db.backends:89] (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+[13/May/2016 12:36:37] ERROR [django.request:284] Internal Server Error: /polls/getPostSummary/
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Volumes/HD_DATEN 1/BENUTZER/MARIA/UNI/FS 2016/Web Seminr/project/seminar2016/polls/views.py", line 114, in getPostSummary
+    data = analyseData.summaryOfPost.getSummary(request.POST['socialMedia'], request.POST['filename'], request.POST['timerange'], request.POST['value'], request.POST['numberWords[]'])
+  File "/Library/Python/2.7/site-packages/django/utils/datastructures.py", line 85, in __getitem__
+    raise MultiValueDictKeyError(repr(key))
+MultiValueDictKeyError: "'socialMedia'"
+[13/May/2016 12:36:50] DEBUG [django.db.backends:89] (0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+[13/May/2016 12:36:50] DEBUG [django.db.backends:89] (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+[13/May/2016 12:36:55] ERROR [django.request:284] Internal Server Error: /polls/getPostSummary/
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Volumes/HD_DATEN 1/BENUTZER/MARIA/UNI/FS 2016/Web Seminr/project/seminar2016/polls/views.py", line 114, in getPostSummary
+    data = analyseData.summaryOfPost.getSummary(request.POST['socialMedia[]'], request.POST['filename'], request.POST['timerange'], request.POST['value'], request.POST['numberWords'])
+  File "/Volumes/HD_DATEN 1/BENUTZER/MARIA/UNI/FS 2016/Web Seminr/project/seminar2016/polls/analyseData/summaryOfPost.py", line 18, in getSummary
+    json_data=open(file).read()
+IOError: [Errno 2] No such file or directory: u'/Volumes/HD_DATEN 1/BENUTZER/MARIA/UNI/FS 2016/Web Seminr/project/seminar2016/json_files//F/barackobama.json'
+[13/May/2016 12:37:13] ERROR [django.request:284] Internal Server Error: /polls/getPostSummary/
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Volumes/HD_DATEN 1/BENUTZER/MARIA/UNI/FS 2016/Web Seminr/project/seminar2016/polls/views.py", line 114, in getPostSummary
+    data = analyseData.summaryOfPost.getSummary(request.POST['socialMedia[]'], request.POST['filename'], request.POST['timerange'], request.POST['value'], request.POST['numberWords'])
+  File "/Volumes/HD_DATEN 1/BENUTZER/MARIA/UNI/FS 2016/Web Seminr/project/seminar2016/polls/analyseData/summaryOfPost.py", line 18, in getSummary
+    json_data=open(file).read()
+IOError: [Errno 2] No such file or directory: u'/Volumes/HD_DATEN 1/BENUTZER/MARIA/UNI/FS 2016/Web Seminr/project/seminar2016/json_files//t/barackobama.json'
+[13/May/2016 12:38:12] DEBUG [django.db.backends:89] (0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+[13/May/2016 12:38:12] DEBUG [django.db.backends:89] (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+[13/May/2016 12:38:17] ERROR [django.request:284] Internal Server Error: /polls/getPostSummary/
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Volumes/HD_DATEN 1/BENUTZER/MARIA/UNI/FS 2016/Web Seminr/project/seminar2016/polls/views.py", line 115, in getPostSummary
+    data = analyseData.summaryOfPost.getSummary(socialMedia, request.POST['filename'], request.POST['timerange'], request.POST['value'], request.POST['numberWords'])
+  File "/Volumes/HD_DATEN 1/BENUTZER/MARIA/UNI/FS 2016/Web Seminr/project/seminar2016/polls/analyseData/summaryOfPost.py", line 114, in getSummary
+    word = sorted_x[i][0]
+IndexError: list index out of range
+[13/May/2016 12:38:44] DEBUG [django.db.backends:89] (0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+[13/May/2016 12:38:44] DEBUG [django.db.backends:89] (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+[13/May/2016 12:38:49] ERROR [django.request:284] Internal Server Error: /polls/getPostSummary/
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Volumes/HD_DATEN 1/BENUTZER/MARIA/UNI/FS 2016/Web Seminr/project/seminar2016/polls/views.py", line 115, in getPostSummary
+    data = analyseData.summaryOfPost.getSummary(socialMedia, request.POST['filename'], request.POST['timerange'], request.POST['value'], request.POST['numberWords'])
+  File "/Volumes/HD_DATEN 1/BENUTZER/MARIA/UNI/FS 2016/Web Seminr/project/seminar2016/polls/analyseData/summaryOfPost.py", line 114, in getSummary
+    word = sorted_x[i][0]
+IndexError: list index out of range
+[13/May/2016 12:39:25] DEBUG [django.db.backends:89] (0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+[13/May/2016 12:39:25] DEBUG [django.db.backends:89] (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+[13/May/2016 12:39:38] ERROR [django.request:284] Internal Server Error: /polls/getPostSummary/
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Volumes/HD_DATEN 1/BENUTZER/MARIA/UNI/FS 2016/Web Seminr/project/seminar2016/polls/views.py", line 115, in getPostSummary
+    data = analyseData.summaryOfPost.getSummary(socialMedia, request.POST['filename'], request.POST['timerange'], request.POST['value'], request.POST['numberWords'])
+  File "/Volumes/HD_DATEN 1/BENUTZER/MARIA/UNI/FS 2016/Web Seminr/project/seminar2016/polls/analyseData/summaryOfPost.py", line 163, in getSummary
+    b = minWeightRange + ((weight-minWeight)*(maxWeightRange-minWeightRange))/(maxWeight-minWeight)
+ZeroDivisionError: integer division or modulo by zero
+[13/May/2016 12:40:15] DEBUG [django.db.backends:89] (0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+[13/May/2016 12:40:15] DEBUG [django.db.backends:89] (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+[13/May/2016 12:40:36] ERROR [django.request:284] Internal Server Error: /polls/getPostSummary/
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Volumes/HD_DATEN 1/BENUTZER/MARIA/UNI/FS 2016/Web Seminr/project/seminar2016/polls/views.py", line 115, in getPostSummary
+    data = analyseData.summaryOfPost.getSummary(socialMedia, request.POST['filename'], request.POST['timerange'], request.POST['value'], request.POST['numberWords'])
+  File "/Volumes/HD_DATEN 1/BENUTZER/MARIA/UNI/FS 2016/Web Seminr/project/seminar2016/polls/analyseData/summaryOfPost.py", line 164, in getSummary
+    b = minWeightRange + ((weight-minWeight)*(maxWeightRange-minWeightRange))/(maxWeight-minWeight)
+ZeroDivisionError: integer division or modulo by zero
+[13/May/2016 12:40:59] DEBUG [django.db.backends:89] (0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+[13/May/2016 12:40:59] DEBUG [django.db.backends:89] (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+[13/May/2016 12:41:04] ERROR [django.request:284] Internal Server Error: /polls/getPostSummary/
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Volumes/HD_DATEN 1/BENUTZER/MARIA/UNI/FS 2016/Web Seminr/project/seminar2016/polls/views.py", line 115, in getPostSummary
+    data = analyseData.summaryOfPost.getSummary(socialMedia, request.POST['filename'], request.POST['timerange'], request.POST['value'], request.POST['numberWords'])
+  File "/Volumes/HD_DATEN 1/BENUTZER/MARIA/UNI/FS 2016/Web Seminr/project/seminar2016/polls/analyseData/summaryOfPost.py", line 166, in getSummary
+    b = minWeightRange + ((weight-minWeight)*(maxWeightRange-minWeightRange))/(maxWeight-minWeight)
+ZeroDivisionError: integer division or modulo by zero
+[13/May/2016 12:41:55] DEBUG [django.db.backends:89] (0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+[13/May/2016 12:41:55] DEBUG [django.db.backends:89] (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+[13/May/2016 12:42:00] ERROR [django.request:284] Internal Server Error: /polls/getPostSummary/
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Volumes/HD_DATEN 1/BENUTZER/MARIA/UNI/FS 2016/Web Seminr/project/seminar2016/polls/views.py", line 115, in getPostSummary
+    data = analyseData.summaryOfPost.getSummary(socialMedia, request.POST['filename'], request.POST['timerange'], request.POST['value'], request.POST['numberWords'])
+  File "/Volumes/HD_DATEN 1/BENUTZER/MARIA/UNI/FS 2016/Web Seminr/project/seminar2016/polls/analyseData/summaryOfPost.py", line 167, in getSummary
+    b = minWeightRange + ((weight-minWeight)*(maxWeightRange-minWeightRange))/(maxWeight-minWeight)
+ZeroDivisionError: integer division or modulo by zero
+[13/May/2016 12:43:21] DEBUG [django.db.backends:89] (0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+[13/May/2016 12:43:21] DEBUG [django.db.backends:89] (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+[13/May/2016 12:43:47] DEBUG [django.db.backends:89] (0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+[13/May/2016 12:43:47] DEBUG [django.db.backends:89] (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+[13/May/2016 12:50:39] DEBUG [django.db.backends:89] (0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+[13/May/2016 12:50:39] DEBUG [django.db.backends:89] (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+[13/May/2016 12:51:14] DEBUG [django.db.backends:89] (0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+[13/May/2016 12:51:14] DEBUG [django.db.backends:89] (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+[13/May/2016 12:51:39] DEBUG [django.db.backends:89] (0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+[13/May/2016 12:51:39] DEBUG [django.db.backends:89] (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+[13/May/2016 12:52:04] DEBUG [django.db.backends:89] (0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+[13/May/2016 12:52:04] DEBUG [django.db.backends:89] (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+[13/May/2016 12:52:07] DEBUG [django.db.backends:89] (0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+[13/May/2016 12:52:07] DEBUG [django.db.backends:89] (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+[13/May/2016 12:52:38] DEBUG [django.db.backends:89] (0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+[13/May/2016 12:52:38] DEBUG [django.db.backends:89] (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+[13/May/2016 12:53:01] DEBUG [django.db.backends:89] (0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+[13/May/2016 12:53:01] DEBUG [django.db.backends:89] (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+[13/May/2016 12:53:13] DEBUG [django.db.backends:89] (0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+[13/May/2016 12:53:13] DEBUG [django.db.backends:89] (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+[13/May/2016 12:53:29] ERROR [django.request:284] Internal Server Error: /polls/getPostSummary/
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Volumes/HD_DATEN 1/BENUTZER/MARIA/UNI/FS 2016/Web Seminr/project/seminar2016/polls/views.py", line 115, in getPostSummary
+    data = analyseData.summaryOfPost.getSummary(socialMedia, request.POST['filename'], request.POST['timerange'], request.POST['value'], request.POST['numberWords'])
+  File "/Volumes/HD_DATEN 1/BENUTZER/MARIA/UNI/FS 2016/Web Seminr/project/seminar2016/polls/analyseData/summaryOfPost.py", line 38, in getSummary
+    delta = now - date
+TypeError: unsupported operand type(s) for -: 'builtin_function_or_method' and 'datetime.datetime'
+[13/May/2016 12:54:22] DEBUG [django.db.backends:89] (0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+[13/May/2016 12:54:22] DEBUG [django.db.backends:89] (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+[13/May/2016 12:54:27] DEBUG [django.db.backends:89] (0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+[13/May/2016 12:54:27] DEBUG [django.db.backends:89] (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+[13/May/2016 12:54:34] DEBUG [django.db.backends:89] (0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+[13/May/2016 12:54:34] DEBUG [django.db.backends:89] (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+[13/May/2016 12:54:44] ERROR [django.request:284] Internal Server Error: /polls/getPostSummary/
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Volumes/HD_DATEN 1/BENUTZER/MARIA/UNI/FS 2016/Web Seminr/project/seminar2016/polls/views.py", line 115, in getPostSummary
+    data = analyseData.summaryOfPost.getSummary(socialMedia, request.POST['filename'], request.POST['timerange'], request.POST['value'], request.POST['numberWords'])
+  File "/Volumes/HD_DATEN 1/BENUTZER/MARIA/UNI/FS 2016/Web Seminr/project/seminar2016/polls/analyseData/summaryOfPost.py", line 39, in getSummary
+    delta = now - dateInt
+TypeError: unsupported operand type(s) for -: 'builtin_function_or_method' and 'datetime.datetime'
+[13/May/2016 12:55:04] DEBUG [django.db.backends:89] (0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+[13/May/2016 12:55:04] DEBUG [django.db.backends:89] (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+[13/May/2016 12:55:15] DEBUG [django.db.backends:89] (0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+[13/May/2016 12:55:15] DEBUG [django.db.backends:89] (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+[13/May/2016 12:55:19] DEBUG [django.db.backends:89] (0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+[13/May/2016 12:55:19] DEBUG [django.db.backends:89] (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+[13/May/2016 12:55:24] ERROR [django.request:284] Internal Server Error: /polls/getPostSummary/
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Volumes/HD_DATEN 1/BENUTZER/MARIA/UNI/FS 2016/Web Seminr/project/seminar2016/polls/views.py", line 115, in getPostSummary
+    data = analyseData.summaryOfPost.getSummary(socialMedia, request.POST['filename'], request.POST['timerange'], request.POST['value'], request.POST['numberWords'])
+  File "/Volumes/HD_DATEN 1/BENUTZER/MARIA/UNI/FS 2016/Web Seminr/project/seminar2016/polls/analyseData/summaryOfPost.py", line 40, in getSummary
+    if delta.days <= int(value):
+TypeError: int() argument must be a string or a number, not 'list'
+[13/May/2016 12:55:56] DEBUG [django.db.backends:89] (0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+[13/May/2016 12:55:56] DEBUG [django.db.backends:89] (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+[13/May/2016 12:57:13] ERROR [django.request:284] Internal Server Error: /polls/getPostSummary/
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Volumes/HD_DATEN 1/BENUTZER/MARIA/UNI/FS 2016/Web Seminr/project/seminar2016/polls/views.py", line 115, in getPostSummary
+    data = analyseData.summaryOfPost.getSummary(socialMedia, request.POST['filename'], request.POST['timerange'], request.POST['value'], request.POST['numberWords'])
+  File "/Library/Python/2.7/site-packages/django/utils/datastructures.py", line 85, in __getitem__
+    raise MultiValueDictKeyError(repr(key))
+MultiValueDictKeyError: "'filename'"
+[13/May/2016 12:59:48] ERROR [django.request:284] Internal Server Error: /polls/getPostSummary/
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Volumes/HD_DATEN 1/BENUTZER/MARIA/UNI/FS 2016/Web Seminr/project/seminar2016/polls/views.py", line 115, in getPostSummary
+    data = analyseData.summaryOfPost.getSummary(socialMedia, request.POST['filename'], request.POST['timerange'], request.POST['value'], request.POST['numberWords'])
+  File "/Volumes/HD_DATEN 1/BENUTZER/MARIA/UNI/FS 2016/Web Seminr/project/seminar2016/polls/analyseData/summaryOfPost.py", line 40, in getSummary
+    if delta.days <= int(valueDate):
+ValueError: invalid literal for int() with base 10: '2016-01'
+[13/May/2016 13:00:49] ERROR [django.request:284] Internal Server Error: /polls/getPostSummary/
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Volumes/HD_DATEN 1/BENUTZER/MARIA/UNI/FS 2016/Web Seminr/project/seminar2016/polls/views.py", line 115, in getPostSummary
+    data = analyseData.summaryOfPost.getSummary(socialMedia, request.POST['filename'], request.POST['timerange'], request.POST['value'], request.POST['numberWords'])
+  File "/Volumes/HD_DATEN 1/BENUTZER/MARIA/UNI/FS 2016/Web Seminr/project/seminar2016/polls/analyseData/summaryOfPost.py", line 127, in getSummary
+    word = sorted_x[i][0]
+IndexError: list index out of range
+[13/May/2016 13:02:22] ERROR [django.request:284] Internal Server Error: /polls/getPostSummary/
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Volumes/HD_DATEN 1/BENUTZER/MARIA/UNI/FS 2016/Web Seminr/project/seminar2016/polls/views.py", line 115, in getPostSummary
+    data = analyseData.summaryOfPost.getSummary(socialMedia, request.POST['filename'], request.POST['timerange'], request.POST['value'], request.POST['numberWords'])
+  File "/Volumes/HD_DATEN 1/BENUTZER/MARIA/UNI/FS 2016/Web Seminr/project/seminar2016/polls/analyseData/summaryOfPost.py", line 40, in getSummary
+    if delta.days <= int(valueDate):
+ValueError: invalid literal for int() with base 10: '2016-01'
+[13/May/2016 13:02:45] ERROR [django.request:284] Internal Server Error: /polls/getPostSummary/
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Volumes/HD_DATEN 1/BENUTZER/MARIA/UNI/FS 2016/Web Seminr/project/seminar2016/polls/views.py", line 115, in getPostSummary
+    data = analyseData.summaryOfPost.getSummary(socialMedia, request.POST['filename'], request.POST['timerange'], request.POST['value'], request.POST['numberWords'])
+  File "/Volumes/HD_DATEN 1/BENUTZER/MARIA/UNI/FS 2016/Web Seminr/project/seminar2016/polls/analyseData/summaryOfPost.py", line 40, in getSummary
+    if delta.days <= int(valueDate):
+ValueError: invalid literal for int() with base 10: '2016-01'
+[13/May/2016 13:03:15] DEBUG [django.db.backends:89] (0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+[13/May/2016 13:03:15] DEBUG [django.db.backends:89] (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+[15/May/2016 12:15:11] DEBUG [django.db.backends:89] (0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+[15/May/2016 12:15:11] DEBUG [django.db.backends:89] (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+[15/May/2016 12:24:31] DEBUG [django.db.backends:89] (0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+[15/May/2016 12:24:31] DEBUG [django.db.backends:89] (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+[15/May/2016 12:25:19] WARNING [django.request:182] Not Found: /
+[15/May/2016 12:25:19] DEBUG [django.template:927] Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/template/base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [name] in u"<RegexURLResolver <module 'polls.urls' from '/Volumes/HD_DATEN/BENUTZER/MARIA/UNI/FS 2016/Web Seminr/project/seminar2016/polls/urls.pyc'> (None:None) ^polls/>"
+[15/May/2016 12:25:19] DEBUG [django.template:927] Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/template/base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [name] in u'<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>'
+[15/May/2016 12:25:19] WARNING [django.request:182] Not Found: /favicon.ico
+[15/May/2016 12:25:19] DEBUG [django.template:927] Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/template/base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [name] in u"<RegexURLResolver <module 'polls.urls' from '/Volumes/HD_DATEN/BENUTZER/MARIA/UNI/FS 2016/Web Seminr/project/seminar2016/polls/urls.pyc'> (None:None) ^polls/>"
+[15/May/2016 12:25:19] DEBUG [django.template:927] Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/template/base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [name] in u'<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>'
+[15/May/2016 12:25:25] WARNING [django.request:182] Not Found: /
+[15/May/2016 12:25:25] DEBUG [django.template:927] Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/template/base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [name] in u"<RegexURLResolver <module 'polls.urls' from '/Volumes/HD_DATEN/BENUTZER/MARIA/UNI/FS 2016/Web Seminr/project/seminar2016/polls/urls.pyc'> (None:None) ^polls/>"
+[15/May/2016 12:25:25] DEBUG [django.template:927] Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/template/base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [name] in u'<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>'
+[16/May/2016 07:13:28] DEBUG [django.db.backends:89] (0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+[16/May/2016 07:13:28] DEBUG [django.db.backends:89] (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+[16/May/2016 07:13:31] WARNING [django.request:182] Not Found: /
+[16/May/2016 07:13:31] DEBUG [django.template:927] Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/template/base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [name] in u"<RegexURLResolver <module 'polls.urls' from '/Volumes/HD_DATEN/BENUTZER/MARIA/UNI/FS 2016/Web Seminr/project/seminar2016/polls/urls.pyc'> (None:None) ^polls/>"
+[16/May/2016 07:13:31] DEBUG [django.template:927] Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/template/base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [name] in u'<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>'
+[16/May/2016 07:39:58] WARNING [django.request:182] Not Found: /
+[16/May/2016 07:39:58] DEBUG [django.template:927] Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/template/base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [name] in u"<RegexURLResolver <module 'polls.urls' from '/Volumes/HD_DATEN/BENUTZER/MARIA/UNI/FS 2016/Web Seminr/project/seminar2016/polls/urls.pyc'> (None:None) ^polls/>"
+[16/May/2016 07:39:58] DEBUG [django.template:927] Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/template/base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [name] in u'<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>'
+[16/May/2016 12:12:11] ERROR [django.request:284] Internal Server Error: /polls/postsByDate/
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Volumes/HD_DATEN/BENUTZER/MARIA/UNI/FS 2016/Web Seminr/project/seminar2016/polls/views.py", line 109, in postsByDate
+    data = getPostsByDate(request.POST['filename'])
+  File "/Volumes/HD_DATEN/BENUTZER/MARIA/UNI/FS 2016/Web Seminr/project/seminar2016/polls/analyseData/analyseData.py", line 152, in getPostsByDate
+    X = getPostByDate2(file, sm, minYear)
+  File "/Volumes/HD_DATEN/BENUTZER/MARIA/UNI/FS 2016/Web Seminr/project/seminar2016/polls/analyseData/analyseData.py", line 165, in getPostByDate2
+    json_data=open(file).read()
+IOError: [Errno 2] No such file or directory: u'/Volumes/HD_DATEN/BENUTZER/MARIA/UNI/FS 2016/Web Seminr/project/seminar2016/json_files//FB/mueller_posts.json'

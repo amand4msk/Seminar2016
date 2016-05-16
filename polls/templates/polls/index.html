@@ -1,65 +1,360 @@
-
+<!DOCTYPE html>
 {% load staticfiles %}
  {% csrf_token %}
-<link rel="stylesheet" type="text/css" href="{% static 'polls/style.css' %}" />
+ <script src="{% static 'polls/js/d3.v3.min.js' %}"></script>
+<link rel="stylesheet" type="text/css" href="{% static 'polls/index.css' %}">
+
+<script src="{% static 'polls/js/mainFunctions.js' %}"></script>
  <script src="{% static 'polls/js/jquery.js' %}"></script>
 <script src="{% static 'polls/js/rango-ajax.js' %}"></script>
-<script type="text/javascript" src="{% static 'polls/twitter_functions.js' %}"></script>
- <script type="text/javascript" src="{% static 'polls/fb_functions.js' %}"></script>
- <script type="text/javascript" src="{% static 'polls/inst_functions.js' %}"></script>
+<script src="{% static 'polls/js/getCookie.js' %}"></script>
 
+<script src="{% static 'polls/js/d3.layout.cloud.js' %}"></script>
+<script src="{% static 'polls/js/jquery.blockUI.js' %}"></script>
 
-<!DOCTYPE html>
+<script src="{% static 'polls/js/cooccurMatrix.js' %}"></script>
+<script src="{% static 'polls/js/cloud.js' %}"></script>
+<script src="{% static 'polls/js/pointCloud.js' %}"></script>
+<script src="{% static 'polls/js/showPostTimeline.js' %}"></script>
+
+<script src="{% static 'polls/js/visualizeTopics.js' %}"></script>
+<script src="{% static 'polls/js/app.js' %}"></script>
+<script src="{% static 'polls/js/summaryPost.js' %}"></script>
+
 <html>
+	
+	
+<style>
+.link {
+  stroke: #fff;
+  stroke-width: 1.5px;
+}
+
+.node circle {
+  stroke: #fff;
+  stroke-width: 1.5px;
+}
+
+text {
+  font: 10px sans-serif;
+  pointer-events: none;
+}
+    
+    .button {
+    background-color: #003399; /* Green */
+    border: none;
+    color: white;
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+    width: 150px;
+}
+</style>
+
 <head>
 <title>Facebook Login JavaScript Example</title>
-<meta charset="UTF-8">
-</head>
+
+
+
 <body>
 
-<p>
 
+	<div id="wrapper">
+       <aside data-sidebar>
+            <div id='sidebar' class="padding">
+            <div style="padding-top: 10px">
+			<label><b>Choose a person:</b>
+				<select id="selectPerson" name="selectPerson" onChange="selectedPersonChanged()";>
+        		</select>
+   		 	</label>
+                
+                
+        <p><input type="button" class="button" id="buttonShowPersonData" onclick="selectedPersonChanged()" value="Show Contributions" style="float: right;"></p>
+			
+		</div>
 
-<script type="text/javascript">
- window.fbAsyncInit = function() {
-	  		initFB(); 
-	  };
-		function fb()
-		{
+                <br>
+                <br>
+                <br>
+                <hr>
+	<p><b>Summary of posts</b></p>
+    <table>
+                
+    <tr>
+    
+        <td>Social Media: </td>
+        <td><select id="selectSocialMedia"                          style="float: center; width: 118px" >
+						<option value="facebook">Facebook</option>
+						<option value="twitter">Twitter</option>
+						<option value="both">both</option>
+            </select></td>
+    </tr> 
+        <tr>
+        <td> Choose a time: </td>
+        <td>	<input type="radio" id="mc" name="date" value="date">
+		<label for="mc"> 		
+			<select id="selectMonth";>
+				<option value="01">January</option>
+				<option value="02">February</option>
+				<option value="03">March</option>
+				<option value="04">April</option>
+				<option value="05">Mai</option>
+				<option value="06">June</option>
+				<option value="07">July</option>
+				<option value="08">August</option>
+				<option value="09">September</option>
+				<option value="10">October</option>
+				<option value="11">November</option>
+				<option value="12">December</option>
+			</select>
 			
-			
-            myFacebookLogin();
-		}
+			<select id="selectYear";>
+				<option value="2016">2016</option>
+				<option value="2015">2015</option>
+				<option value="2014">2014</option>
+				<option value="2013">2013</option>
+				<option value="2012">2012</option>
+				<option value="2011">2011</option>
+			</select>
+		</label><br>  </td>
+        
+    </tr>
+    
+        <tr>
+        <td></td>
+            <td>
+		 <input type="radio" id="ae" name="date" value="range">
+		 <label for="ae"> 
+		 	Last
+		 	 <input id="timeRange" type="number" name="timeRange" min="1" max="365" value="10" style="height:15px;">
+		 	 days
+		 </label> </td>
+        </tr>
+        
+        
+    </table>
+
+		<p> Number of top words to consider:
+		 <input id="numberOfWords" type="number" name="quantityWords" min="1" max="200" value="10" style="height:15px;">	
+            </p>
+	     <input type="button"  class="button" id="startSummary" onclick="buttonStartSummaryClicked()" value="Show Summary" style="float: right;">
+            
+	     <br>
+	     <br>
+                <br>
+                <hr>
+	     <p><b>Identify topics</b>  </p>
+		 <p> Number of topics:   
+	  		  <input id="numberOfTopics" type="number" name="quantity" min="1" max="15" value="10" style="height:15px;">
+	  		  <input type="button"   class="button" id="buttonTopicModels" onclick="buttonTopicModelsClick()" value="Show word clouds" ></p>
 		
-</script>
+		<br>
 
+        <hr>
+        <p><b>Compare the impact of posts</b></p>
+		<p><input type="button"  class="button" id="occurenceButton" onclick="getOccurenceMatrix()" value="Show impact" style="float: right;"></p>
 
+		
+		
+	   </aside>
+	</div>
+        
+       
+        <div class="overlay" data-sidebar-overlay></div>	
+	                            
+	  <div id="drawing" style="width:100%; height:80vh;"> 
+	  	<p id ="textbox"></p>
+	  	</div>
+	  
 
-<script type="text/javascript">
-	function twitter()
-	{
-		$.post('/polls/selectQuery/', 1, function(response){
-         console.log(response);
-        });
-	}
-</script>
-
-
-<script type="text/javascript">
-	function instagram()
-	{
-		testInstagram(); 
-	}
-</script>
-
-
-
-
-<p> hello world</p>
-<input type="text" name="textbox1" id="textbox1" /> 
-<input type="button" onclick="fb()" value="get FB Data">
-<input type="button" onclick="twitter()" value="get Twitter Data">
-<input type="button" onclick="instagram()" value="get Instagram Data">
-
+	
 
 </body>
+</head>
+
+<script type="text/javascript">
+
+			var colors = 
+			[d3.rgb(106, 90, 205),
+			d3.rgb(12, 67, 199),
+			d3.rgb(255, 127, 36),
+			d3.rgb(151, 255, 255),
+			d3.rgb(0, 139, 0),
+			d3.rgb(107, 142, 35),
+			d3.rgb(255, 20, 147),
+			d3.rgb(255, 69, 0),
+			d3.rgb(186,85 , 211),
+			d3.rgb(255, 215, 0),
+			d3.rgb(255, 127, 80)];
+			
+			
+	var files = [];
+	var names = [];
+	var selectedPerson;
+	var buttonWordCloud; 
+	window.onload = init();
+	
+
+	function showValue(newValue)
+	{
+		document.getElementById("range").innerHTML=newValue;
+	}
+	
+	function createDiv(id)
+	{
+		var div = document.createElement("div");
+			div.id=id;
+			
+			document.getElementById("drawing").appendChild(div);
+		return div;
+	}
+
+	function selectedPersonChanged()
+	{
+        
+        cleanScreen();
+        getDataForPerson();	
+	}
+
+	function init()
+	{
+		
+		var div = createDiv("textbox");
+		div.class = "SHOW_TEXT";
+		div.innerHTML = "Choose a person!";
+		div.style.marginTop ="10px";
+		div.style.marginLeft="60px";
+	
+		/*var buttonTopicModels = document.getElementById("buttonTopicModels");
+		buttonTopicModels.disabled=true; 
+		*/
+        
+		$.post('/polls/initTemplate/', "Test", function(response){
+
+			var obj = JSON.parse(response);
+			var select = document.getElementById("selectPerson");
+			
+			var option1 = document.createElement("option");
+			option1.value=obj.length;
+			option1.selected="";
+			option1.innerHTML='';
+				
+				select.appendChild(option1);
+			
+			for(var i = 0; i < obj.length; i++ ){
+				files.push(obj[i]["filename"]);
+				names.push(obj[i]["show"]);
+				
+				var option1 = document.createElement("option");
+				option1.value=i;
+				option1.selected="";
+				option1.innerHTML= obj[i]["show"];
+				
+				select.appendChild(option1);
+			}
+			
+		
+			
+		});
+	}
+
+			
+	function backFromViewPosts()
+		{
+			var iDiv = document.getElementById("clouds");
+			iDiv.style.display = 'block';           // Hide
+			
+			var divPosts = document.getElementById("posts");
+			divPosts.style.display ='none';
+
+			
+			var backButton = document.getElementById("backButton");
+			backButton.style.display = 'none';
+			
+			var buttonWordCloud = document.getElementById("getClouds");
+			buttonWordCloud.style.display = 'block';
+		}
+			
+   
+
+	function cleanScreen()
+	{
+		var el = document.getElementById('drawing');
+		 while ( el.firstChild ) el.removeChild( el.firstChild );
+	}
+	
+	function buttonStartSummaryClicked()
+	{
+		cleanScreen();	
+		getSummary();
+
+	}
+
+	/*function getOccurenceMatrix()
+	{
+		cleanScreen();
+		
+		
+		
+		var div = createDiv('occurence');
+        div.style.width="70%";
+        div.style.textAlign ="center";
+      
+
+		var file=files[selectedPerson]; 
+		var post={
+		 	filename: file
+		 };
+		 
+		 $.post('/polls/coOccurence/', post, function(response){
+         	var run = false;
+       		var obj = JSON.parse(response);
+       		console.log(obj["graph"]);
+       		
+       		drawMatrix("#occurence", obj["graph"], obj["minValue"], obj["maxValue"]);
+
+			var div = createDiv('container');
+			div.id ="box2";
+			div.style.display="inline-block";
+			div.style.height = "670px";
+			
+			 var text = document.createElement("div");
+			 			text.id = "informationBox";	
+			   			text.innerHTML ="The word matrix shows how often the 50 most used words are appearing together."
+			   							+ "<br> As darker the color as more often they appear together"
+			   							+ "<br> The colour white indicates that they don't appear together at all"
+			   							+ "<br><br> If you go over the field with your mouse you can see the count of apperances";
+			        	div.appendChild(text);
+			       
+       });
+		 
+	}*/
+	
+	/*function drawPosts(obj, tag, maxPost)
+	{
+		var div = document.createElement("div");
+		div.id ="pointCloud";
+		div.style.height = "80%";
+		div.style.width ="100%"; 
+		div.style.backgroundColor ="green"; 
+		
+		document.getElementById("drawing").appendChild(div); 
+		
+		var textbox = document.getElementById("textbox");			  
+		drawPointCloud(obj , "#pointCloud" , textbox,maxPost);
+	}*/
+
+    function buttonTopicModelsClick()
+    {	 
+	    cleanScreen();	
+		getTopicModels();
+		
+    }
+    	
+
+
+    
+</script>
+

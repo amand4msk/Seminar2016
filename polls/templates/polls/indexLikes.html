@@ -1,0 +1,65 @@
+
+{% load staticfiles %}
+ {% csrf_token %}
+<link rel="stylesheet" type="text/css" href="{% static 'polls/style.css' %}" />
+ <script src="{% static 'polls/js/jquery.js' %}"></script>
+<script src="{% static 'polls/js/rango-ajax.js' %}"></script>
+<script type="text/javascript" src="{% static 'polls/twitter_functions.js' %}"></script>
+ <script type="text/javascript" src="{% static 'polls/fb_functions.js' %}"></script>
+ <script type="text/javascript" src="{% static 'polls/inst_functions.js' %}"></script>
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Facebook Login JavaScript Example</title>
+<meta charset="UTF-8">
+</head>
+<body>
+
+<p>
+
+
+<script type="text/javascript">
+ window.fbAsyncInit = function() {
+	  		initFB(); 
+	  };
+		function fb()
+		{
+			
+			
+            myFacebookLogin();
+		}
+		
+</script>
+
+
+
+<script type="text/javascript">
+	function twitter()
+	{
+		$.post('/polls/selectQuery/', 1, function(response){
+         console.log(response);
+        });
+	}
+</script>
+
+
+<script type="text/javascript">
+	function instagram()
+	{
+		testInstagram(); 
+	}
+</script>
+
+
+
+
+<p> hello world</p>
+<input type="text" name="textbox1" id="textbox1" /> 
+<input type="button" onclick="fb()" value="get FB Data">
+<input type="button" onclick="twitter()" value="get Twitter Data">
+<input type="button" onclick="instagram()" value="get Instagram Data">
+
+
+</body>

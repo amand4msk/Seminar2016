@@ -10,7 +10,8 @@ from django.http import HttpResponse
 from .models import Person, Post, FacebookPost
 
 import logging
-#from analyseData.analyseData import getPersons, test, getcoOccurenceMatrix, getPosts, getPostsByDate
+from analyseData.analyseData import getPersons, test, getcoOccurenceMatrix, getPosts, getPostsByDate
+import analyseData.summaryOfPost
 
 def index(request):
     return render(request, 'polls/index.html')
@@ -107,4 +108,11 @@ def posts(request):
 def postsByDate(request):
     data = getPostsByDate(request.POST['filename'])
     return HttpResponse(data)
+
+def getPostSummary(request):
+    print(request)
+    socialMedia = request.POST.getlist('socialMedia[]')
+    data = analyseData.summaryOfPost.getSummary(socialMedia, request.POST['filename'], request.POST['timerange'], request.POST['value'], request.POST['numberWords'])
+    return HttpResponse(data)
+    
     

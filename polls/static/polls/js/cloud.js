@@ -1,4 +1,4 @@
- function cloud(id, frequentWords, idParent, numberOfDocument, posts)
+ function cloud(id, frequentWords, numberOfDocument, posts)
     {
     	var nrDocs = numberOfDocument;
     	var formatTime = d3.time.format("%e %B");

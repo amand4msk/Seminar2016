@@ -116,14 +116,15 @@ DIV.HEAD
 	background: -moz-linear-gradient(top,  #cfe7fa 0%, #6393c1 100%); /* FF3.6-15 */
 	background: -webkit-linear-gradient(top,  #cfe7fa 0%,#6393c1 100%); /* Chrome10-25,Safari5.1-6 */
 	background: linear-gradient(to bottom,  #cfe7fa 0%,#6393c1 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	color: white;
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cfe7fa', endColorstr='#6393c1',GradientType=0 ); /* IE6-9 */
 }
 
 div.inHEAD
 {
 	display: inline-block; 
-	margin-right: 20px;
-	
+	width: 100%;
+	text-align: center ; 	
 }
 
 div.SHOW_TEXT
@@ -165,14 +166,32 @@ div.SHOW_TEXT
 	
 } 
 
-
-.link {
-  fill: none;
-  stroke: #666;
-  stroke-width: 1.5px;
+ [data-sidebar] {
+ display: none;
+ position: fixed;
+ height: 100%;
+ z-index: 100;
+}
+ [data-sidebar-overlay] {
+ display: none;
+ position: fixed;
+ top: 0;
+ left: 0;
+ opacity: 0;
+ width: 100%;
+ min-height: inherit;
 }
 
-.node circle {
-  stroke: #fff;
-  stroke-width: 1.5px;
-}
+/* Additional styles */
+
+
+aside {  background-color: #ff9966;box-shadow: 0 6px 0 0 rgba(0,0,0,0.5); }
+aside  a { color:#fff; text-decoration:none;}
+.overlay { background-color: #ddd; }
+
+.padding { padding: 2em; }
+
+
+
+
+
