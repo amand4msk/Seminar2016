@@ -191,6 +191,13 @@ aside  a { color:#fff; text-decoration:none;}
 
 .padding { padding: 2em; }
 
+.chart{
+	  padding-left: 100px;
+	  padding-top: 10px;
+      overflow: hidden;
+      background-color: red;
+}
+
 .chart .legend {
   fill: white;
   font: 14px sans-serif;
@@ -202,12 +209,15 @@ aside  a { color:#fff; text-decoration:none;}
   fill: white;
   font: 10px sans-serif;
   text-anchor: end;
+
+	
 }
 
 .chart .label {
   fill: white;
   font: 14px sans-serif;
   text-anchor: end;
+
 }
 
 .bar:hover {

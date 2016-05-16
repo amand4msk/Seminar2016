@@ -11248,3 +11248,88 @@ Traceback (most recent call last):
   File "/Volumes/HD_DATEN/BENUTZER/MARIA/UNI/FS 2016/Web Seminr/project/seminar2016/polls/analyseData/cosineSimilarity.py", line 49, in compare
     with io.open(settings.JSONFILES_FOLDER +"Facebook/"  + file_likes, encoding='utf8') as data_file:
 IOError: [Errno 2] No such file or directory: '/Volumes/HD_DATEN/BENUTZER/MARIA/UNI/FS 2016/Web Seminr/project/seminar2016/json_files/Facebook/barackobama_likes.json'
+[16/May/2016 20:02:07] DEBUG [django.db.backends:89] (0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+[16/May/2016 20:02:07] DEBUG [django.db.backends:89] (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+[16/May/2016 20:02:27] ERROR [django.request:284] Internal Server Error: /polls/compareImpact/
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 158, in get_response
+    % (callback.__module__, view_name))
+ValueError: The view polls.views.compareImpact didn't return an HttpResponse object. It returned None instead.
+[16/May/2016 20:02:48] DEBUG [django.db.backends:89] (0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+[16/May/2016 20:02:48] DEBUG [django.db.backends:89] (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+[16/May/2016 20:08:08] DEBUG [django.db.backends:89] (0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+[16/May/2016 20:08:08] DEBUG [django.db.backends:89] (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+[16/May/2016 20:09:09] DEBUG [django.db.backends:89] (0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+[16/May/2016 20:09:09] DEBUG [django.db.backends:89] (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+[16/May/2016 21:26:16] DEBUG [django.db.backends:89] (0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+[16/May/2016 21:26:16] DEBUG [django.db.backends:89] (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+[16/May/2016 21:26:19] WARNING [django.request:182] Not Found: /
+[16/May/2016 21:26:19] DEBUG [django.template:927] Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/template/base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [name] in u"<RegexURLResolver <module 'polls.urls' from '/Volumes/HD_DATEN/BENUTZER/MARIA/UNI/FS 2016/Web Seminr/project/seminar2016/polls/urls.pyc'> (None:None) ^polls/>"
+[16/May/2016 21:26:19] DEBUG [django.template:927] Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/template/base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [name] in u'<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>'
+[16/May/2016 21:26:21] WARNING [django.request:182] Not Found: /polls
+[16/May/2016 21:26:21] DEBUG [django.template:927] Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/template/base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [name] in u"<RegexURLResolver <module 'polls.urls' from '/Volumes/HD_DATEN/BENUTZER/MARIA/UNI/FS 2016/Web Seminr/project/seminar2016/polls/urls.pyc'> (None:None) ^polls/>"
+[16/May/2016 21:26:21] DEBUG [django.template:927] Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/template/base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [name] in u'<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>'
+[16/May/2016 21:26:25] WARNING [django.request:182] Not Found: /polls
+[16/May/2016 21:26:25] DEBUG [django.template:927] Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/template/base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [name] in u"<RegexURLResolver <module 'polls.urls' from '/Volumes/HD_DATEN/BENUTZER/MARIA/UNI/FS 2016/Web Seminr/project/seminar2016/polls/urls.pyc'> (None:None) ^polls/>"
+[16/May/2016 21:26:25] DEBUG [django.template:927] Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/template/base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [name] in u'<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>'
+[16/May/2016 21:26:26] WARNING [django.request:182] Not Found: /
+[16/May/2016 21:26:26] DEBUG [django.template:927] Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/template/base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [name] in u"<RegexURLResolver <module 'polls.urls' from '/Volumes/HD_DATEN/BENUTZER/MARIA/UNI/FS 2016/Web Seminr/project/seminar2016/polls/urls.pyc'> (None:None) ^polls/>"
+[16/May/2016 21:26:26] DEBUG [django.template:927] Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/template/base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [name] in u'<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>'
+[16/May/2016 21:26:28] WARNING [django.request:182] Not Found: /polls
+[16/May/2016 21:26:28] DEBUG [django.template:927] Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/template/base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [name] in u"<RegexURLResolver <module 'polls.urls' from '/Volumes/HD_DATEN/BENUTZER/MARIA/UNI/FS 2016/Web Seminr/project/seminar2016/polls/urls.pyc'> (None:None) ^polls/>"
+[16/May/2016 21:26:28] DEBUG [django.template:927] Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/template/base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [name] in u'<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>'

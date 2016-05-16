@@ -121,7 +121,8 @@ def compareImpact(request):
     i = file.index(".json")
     file_likes = file[0:i] + "_likes.json"
     
-    analyseData.cosineSimilarity.compare(file, file_likes)
+    data= analyseData.cosineSimilarity.compare(file, file_likes)
+    return HttpResponse(data)
     
     
     

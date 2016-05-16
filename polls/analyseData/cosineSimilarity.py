@@ -135,6 +135,8 @@ def compare(file, file_likes):
         returnDict = dict()
         returnDict["sorted_tw"] = sorted_tw
         returnDict["sorted_fb"] = sorted_fb
+        
+        print returnDict
 
         #return HttpResponseRedirect('/polls/')
-        return returnDict 
+        return json.dumps(returnDict) 

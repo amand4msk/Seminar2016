@@ -235,8 +235,11 @@ function getTopicModels()
 function getImpact()
 {
 	 var div = createDiv('summary');
-     div.style.width="100%";
+    
      div.style.height="100vh";
+     div.className = "chart";
+
+     
 	var file=files[selectedPerson];
 
 	 var post={
@@ -244,9 +247,10 @@ function getImpact()
 	 };
 
 	 $.post('/polls/compareImpact/', post, function(response){
+		 console.log(response);
     		var obj = JSON.parse(response);
     		console.log(obj);
-    		drawImpact(div, "#summary", obj);
+    		drawImpact("summary", obj);
     		
    });
 	 
