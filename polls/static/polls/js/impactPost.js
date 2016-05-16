@@ -152,7 +152,7 @@ function update(dates,facebook_likes,twitter_likes,tw_text,fb_text)
 	  var color = d3.scale.category20();
 	  var chartHeight = barHeight * zippedData.length + gapBetweenGroups * data.labels.length;
 	  
-	  console.log(chartHeight);
+	  
 	
 	  var x = d3.scale.linear()
 	      .domain([0, d3.max(zippedData)])
