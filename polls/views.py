@@ -12,6 +12,7 @@ from .models import Person, Post, FacebookPost
 import logging
 from analyseData.analyseData import getPersons, test, getcoOccurenceMatrix, getPosts, getPostsByDate
 import analyseData.summaryOfPost
+import analyseData.cosineSimilarity
 
 def index(request):
     return render(request, 'polls/index.html')
@@ -114,5 +115,17 @@ def getPostSummary(request):
     socialMedia = request.POST.getlist('socialMedia[]')
     data = analyseData.summaryOfPost.getSummary(socialMedia, request.POST['filename'], request.POST['timerange'], request.POST['value'], request.POST['numberWords'])
     return HttpResponse(data)
+
+def compareImpact(request):
+    file = request.POST['filename']
+    i = file.index(".json")
+    file_likes = file[0:i] + "_likes.json"
+    
+    analyseData.cosineSimilarity.compare(file, file_likes)
+    
+    
+    
+    
+
     
     

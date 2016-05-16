@@ -4,6 +4,10 @@
  <script src="{% static 'polls/js/d3.v3.min.js' %}"></script>
 <link rel="stylesheet" type="text/css" href="{% static 'polls/index.css' %}">
 
+
+  <script src="https://d3js.org/d3-queue.v2.min.js"></script>
+  <script src="http://labratrevenge.com/d3-tip/javascripts/d3.tip.v0.6.3.js"></script>
+  
 <script src="{% static 'polls/js/mainFunctions.js' %}"></script>
  <script src="{% static 'polls/js/jquery.js' %}"></script>
 <script src="{% static 'polls/js/rango-ajax.js' %}"></script>
@@ -20,6 +24,7 @@
 <script src="{% static 'polls/js/visualizeTopics.js' %}"></script>
 <script src="{% static 'polls/js/app.js' %}"></script>
 <script src="{% static 'polls/js/summaryPost.js' %}"></script>
+<script src="{% static 'polls/js/impactPost.js' %}"></script>
 
 <html>
 	
@@ -154,7 +159,7 @@ text {
 
         <hr>
         <p><b>Compare the impact of posts</b></p>
-		<p><input type="button"  class="button" id="occurenceButton" onclick="getOccurenceMatrix()" value="Show impact" style="float: right;"></p>
+		<p><input type="button"  class="button" id="impactButton" onclick="getImpactOfPosts()" value="Show impact" style="float: right;"></p>
 
 		
 		
@@ -292,65 +297,18 @@ text {
 
 	}
 
-	/*function getOccurenceMatrix()
-	{
-		cleanScreen();
-		
-		
-		
-		var div = createDiv('occurence');
-        div.style.width="70%";
-        div.style.textAlign ="center";
-      
-
-		var file=files[selectedPerson]; 
-		var post={
-		 	filename: file
-		 };
-		 
-		 $.post('/polls/coOccurence/', post, function(response){
-         	var run = false;
-       		var obj = JSON.parse(response);
-       		console.log(obj["graph"]);
-       		
-       		drawMatrix("#occurence", obj["graph"], obj["minValue"], obj["maxValue"]);
-
-			var div = createDiv('container');
-			div.id ="box2";
-			div.style.display="inline-block";
-			div.style.height = "670px";
-			
-			 var text = document.createElement("div");
-			 			text.id = "informationBox";	
-			   			text.innerHTML ="The word matrix shows how often the 50 most used words are appearing together."
-			   							+ "<br> As darker the color as more often they appear together"
-			   							+ "<br> The colour white indicates that they don't appear together at all"
-			   							+ "<br><br> If you go over the field with your mouse you can see the count of apperances";
-			        	div.appendChild(text);
-			       
-       });
-		 
-	}*/
-	
-	/*function drawPosts(obj, tag, maxPost)
-	{
-		var div = document.createElement("div");
-		div.id ="pointCloud";
-		div.style.height = "80%";
-		div.style.width ="100%"; 
-		div.style.backgroundColor ="green"; 
-		
-		document.getElementById("drawing").appendChild(div); 
-		
-		var textbox = document.getElementById("textbox");			  
-		drawPointCloud(obj , "#pointCloud" , textbox,maxPost);
-	}*/
 
     function buttonTopicModelsClick()
     {	 
 	    cleanScreen();	
 		getTopicModels();
 		
+    }
+    
+    function getImpactOfPosts()
+    {
+    	cleanScreen();
+    	getImpact(); 
     }
     	
 

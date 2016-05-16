@@ -15,7 +15,8 @@ urlpatterns = [
      url(r'^posts/$', views.posts, name='posts'),
      url(r'^postsByDate/$', views.postsByDate, name='postsByDate'),
      url(r'^selectQuery/$', views.selectQuery, name='selectQuery'),
-     url(r'^getPostSummary/$', views.getPostSummary, name='getPostSummary')
+     url(r'^getPostSummary/$', views.getPostSummary, name='getPostSummary'),
+     url(r'^compareImpact/$', views.compareImpact, name='compareImpact')
 
 ]
 

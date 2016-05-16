@@ -152,7 +152,7 @@ function getSummary()
 
 function getTopicModels()
 {
-     var inp = document.getElementById("numberOfTopics");
+     	var inp = document.getElementById("numberOfTopics");
     	 var topics = inp.value; 
     	 var file=files[selectedPerson];
 
@@ -230,3 +230,26 @@ function getTopicModels()
 				
 			});
 }
+
+
+function getImpact()
+{
+	 var div = createDiv('summary');
+     div.style.width="100%";
+     div.style.height="100vh";
+	var file=files[selectedPerson];
+
+	 var post={
+	 				filename : file
+	 };
+
+	 $.post('/polls/compareImpact/', post, function(response){
+    		var obj = JSON.parse(response);
+    		console.log(obj);
+    		drawImpact(div, "#summary", obj);
+    		
+   });
+	 
+}
+
+

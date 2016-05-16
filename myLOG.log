@@ -11058,3 +11058,193 @@ Traceback (most recent call last):
   File "/Volumes/HD_DATEN/BENUTZER/MARIA/UNI/FS 2016/Web Seminr/project/seminar2016/polls/analyseData/analyseData.py", line 165, in getPostByDate2
     json_data=open(file).read()
 IOError: [Errno 2] No such file or directory: u'/Volumes/HD_DATEN/BENUTZER/MARIA/UNI/FS 2016/Web Seminr/project/seminar2016/json_files//FB/mueller_posts.json'
+[16/May/2016 19:49:50] DEBUG [django.db.backends:89] (0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+[16/May/2016 19:49:50] DEBUG [django.db.backends:89] (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+[16/May/2016 19:49:56] DEBUG [django.db.backends:89] (0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+[16/May/2016 19:49:56] DEBUG [django.db.backends:89] (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+[16/May/2016 19:50:02] WARNING [django.request:182] Not Found: /
+[16/May/2016 19:50:02] DEBUG [django.template:927] Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/template/base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [name] in u"<RegexURLResolver <module 'polls.urls' from '/Volumes/HD_DATEN/BENUTZER/MARIA/UNI/FS 2016/Web Seminr/project/seminar2016/polls/urls.pyc'> (None:None) ^polls/>"
+[16/May/2016 19:50:02] DEBUG [django.template:927] Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/template/base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [name] in u'<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>'
+[16/May/2016 19:53:29] ERROR [django.request:284] Internal Server Error: /polls/compareImpact/
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Volumes/HD_DATEN/BENUTZER/MARIA/UNI/FS 2016/Web Seminr/project/seminar2016/polls/views.py", line 124, in compareImpact
+    compare(file, file_likes)
+NameError: global name 'compare' is not defined
+[16/May/2016 19:54:14] DEBUG [django.db.backends:89] (0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+[16/May/2016 19:54:14] DEBUG [django.db.backends:89] (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+[16/May/2016 19:54:26] ERROR [django.request:284] Internal Server Error: /polls/compareImpact/
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Volumes/HD_DATEN/BENUTZER/MARIA/UNI/FS 2016/Web Seminr/project/seminar2016/polls/views.py", line 124, in compareImpact
+    analyseData.impactPost.compare(file, file_likes)
+AttributeError: 'module' object has no attribute 'impactPost'
+[16/May/2016 19:55:06] DEBUG [django.db.backends:89] (0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+[16/May/2016 19:55:06] DEBUG [django.db.backends:89] (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+[16/May/2016 19:55:11] ERROR [django.request:284] Internal Server Error: /polls/compareImpact/
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Volumes/HD_DATEN/BENUTZER/MARIA/UNI/FS 2016/Web Seminr/project/seminar2016/polls/views.py", line 124, in compareImpact
+    analyseData.cosineSymilarity.compare(file, file_likes)
+AttributeError: 'module' object has no attribute 'cosineSymilarity'
+[16/May/2016 19:55:20] DEBUG [django.db.backends:89] (0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+[16/May/2016 19:55:20] DEBUG [django.db.backends:89] (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+[16/May/2016 19:55:24] ERROR [django.request:284] Internal Server Error: /polls/compareImpact/
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Volumes/HD_DATEN/BENUTZER/MARIA/UNI/FS 2016/Web Seminr/project/seminar2016/polls/views.py", line 124, in compareImpact
+    analyseData.cosineSimilarity.compare(file, file_likes)
+  File "/Volumes/HD_DATEN/BENUTZER/MARIA/UNI/FS 2016/Web Seminr/project/seminar2016/polls/analyseData/cosineSimilarity.py", line 3, in compare
+    print username
+NameError: global name 'username' is not defined
+[16/May/2016 19:55:58] DEBUG [django.db.backends:89] (0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+[16/May/2016 19:55:58] DEBUG [django.db.backends:89] (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+[16/May/2016 19:56:03] ERROR [django.request:284] Internal Server Error: /polls/compareImpact/
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Volumes/HD_DATEN/BENUTZER/MARIA/UNI/FS 2016/Web Seminr/project/seminar2016/polls/views.py", line 124, in compareImpact
+    analyseData.cosineSimilarity.compare(file, file_likes)
+  File "/Volumes/HD_DATEN/BENUTZER/MARIA/UNI/FS 2016/Web Seminr/project/seminar2016/polls/analyseData/cosineSimilarity.py", line 9, in compare
+    with io.open('polls/Facebook/'+ file, encoding='utf8') as data_file:
+NameError: global name 'io' is not defined
+[16/May/2016 19:56:19] DEBUG [django.db.backends:89] (0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+[16/May/2016 19:56:19] DEBUG [django.db.backends:89] (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+[16/May/2016 19:56:55] DEBUG [django.db.backends:89] (0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+[16/May/2016 19:56:55] DEBUG [django.db.backends:89] (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+[16/May/2016 19:56:59] ERROR [django.request:284] Internal Server Error: /polls/compareImpact/
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Volumes/HD_DATEN/BENUTZER/MARIA/UNI/FS 2016/Web Seminr/project/seminar2016/polls/views.py", line 124, in compareImpact
+    analyseData.cosineSimilarity.compare(file, file_likes)
+  File "/Volumes/HD_DATEN/BENUTZER/MARIA/UNI/FS 2016/Web Seminr/project/seminar2016/polls/analyseData/cosineSimilarity.py", line 18, in compare
+    with io.open('polls/Facebook/'+ file, encoding='utf8') as data_file:
+IOError: [Errno 2] No such file or directory: 'polls/Facebook/barackobama.json'
+[16/May/2016 19:57:19] DEBUG [django.db.backends:89] (0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+[16/May/2016 19:57:19] DEBUG [django.db.backends:89] (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+[16/May/2016 19:57:56] DEBUG [django.db.backends:89] (0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+[16/May/2016 19:57:56] DEBUG [django.db.backends:89] (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+[16/May/2016 19:58:03] DEBUG [django.db.backends:89] (0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+[16/May/2016 19:58:03] DEBUG [django.db.backends:89] (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+[16/May/2016 19:58:17] DEBUG [django.db.backends:89] (0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+[16/May/2016 19:58:17] DEBUG [django.db.backends:89] (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+[16/May/2016 19:58:23] ERROR [django.request:284] Internal Server Error: /polls/compareImpact/
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Volumes/HD_DATEN/BENUTZER/MARIA/UNI/FS 2016/Web Seminr/project/seminar2016/polls/views.py", line 124, in compareImpact
+    analyseData.cosineSimilarity.compare(file, file_likes)
+  File "/Volumes/HD_DATEN/BENUTZER/MARIA/UNI/FS 2016/Web Seminr/project/seminar2016/polls/analyseData/cosineSimilarity.py", line 18, in compare
+    with io.open(settings.JSONFILES_FOLDER +"/" + file, encoding='utf8') as data_file:
+IOError: [Errno 2] No such file or directory: '/Volumes/HD_DATEN/BENUTZER/MARIA/UNI/FS 2016/Web Seminr/project/seminar2016/json_files//barackobama.json'
+[16/May/2016 19:59:01] DEBUG [django.db.backends:89] (0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+[16/May/2016 19:59:01] DEBUG [django.db.backends:89] (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+[16/May/2016 19:59:05] ERROR [django.request:284] Internal Server Error: /polls/compareImpact/
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Volumes/HD_DATEN/BENUTZER/MARIA/UNI/FS 2016/Web Seminr/project/seminar2016/polls/views.py", line 124, in compareImpact
+    analyseData.cosineSimilarity.compare(file, file_likes)
+  File "/Volumes/HD_DATEN/BENUTZER/MARIA/UNI/FS 2016/Web Seminr/project/seminar2016/polls/analyseData/cosineSimilarity.py", line 49, in compare
+    with io.open('polls/Facebook/' + file_likes, encoding='utf8') as data_file:
+IOError: [Errno 2] No such file or directory: 'polls/Facebook/barackobama_likes.json'
+[16/May/2016 19:59:46] DEBUG [django.db.backends:89] (0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+[16/May/2016 19:59:46] DEBUG [django.db.backends:89] (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+[16/May/2016 19:59:54] ERROR [django.request:284] Internal Server Error: /polls/compareImpact/
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Volumes/HD_DATEN/BENUTZER/MARIA/UNI/FS 2016/Web Seminr/project/seminar2016/polls/views.py", line 124, in compareImpact
+    analyseData.cosineSimilarity.compare(file, file_likes)
+  File "/Volumes/HD_DATEN/BENUTZER/MARIA/UNI/FS 2016/Web Seminr/project/seminar2016/polls/analyseData/cosineSimilarity.py", line 49, in compare
+    with io.open(settings.JSONFILES_FOLDER +"Facebook/" + + file_likes, encoding='utf8') as data_file:
+TypeError: bad operand type for unary +: 'unicode'
+[16/May/2016 20:00:09] DEBUG [django.db.backends:89] (0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+[16/May/2016 20:00:09] DEBUG [django.db.backends:89] (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+[16/May/2016 20:00:14] ERROR [django.request:284] Internal Server Error: /polls/compareImpact/
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Volumes/HD_DATEN/BENUTZER/MARIA/UNI/FS 2016/Web Seminr/project/seminar2016/polls/views.py", line 124, in compareImpact
+    analyseData.cosineSimilarity.compare(file, file_likes)
+  File "/Volumes/HD_DATEN/BENUTZER/MARIA/UNI/FS 2016/Web Seminr/project/seminar2016/polls/analyseData/cosineSimilarity.py", line 49, in compare
+    with io.open(settings.JSONFILES_FOLDER +"Facebook/"  + file_likes, encoding='utf8') as data_file:
+IOError: [Errno 2] No such file or directory: '/Volumes/HD_DATEN/BENUTZER/MARIA/UNI/FS 2016/Web Seminr/project/seminar2016/json_files/Facebook/barackobama_likes.json'
