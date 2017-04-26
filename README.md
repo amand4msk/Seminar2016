@@ -1,6 +1,6 @@
 ## Seminar Project
 
-The goal of this project is to analyze posts from Facebook and Twitter for politicians and athletes by visualizing them for different aspects, namely (i) contribution over time (ii) summary of posts (iii) identify topics from posts and (iv) impact of posts. 
+The goal of this project is to analyze posts from Facebook and Twitter for politicians and athletes by visualizing them for different aspects, namely (i) contribution over time (ii) summary of posts (iii) identify topics from posts and (iv) impact of posts using Django and Javascript D3. 
 
 ## Install
 
